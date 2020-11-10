@@ -1,0 +1,35 @@
+{
+	"name": "html2canvas-proxy",
+	"version": "0.1.0",
+	"private": true,
+	"description": "A node.js proxy for html2canvas. Takes in image urls, and spurts them out as base64 encoded jsonp",
+	"homepage": "https://github.com/BugHerd/html2canvas-proxy",
+	"keywords": [
+		"html2canvas",
+		"proxy",
+		"html2canvas-proxy",
+		"canvas"
+	],
+	"author": "BugHerd Pty Ltd <support@bugherd.com> (http://www.bugherd.com)",
+	"maintainers": [
+		"Benjamin Lupton <b@lupton.cc> (http://balupton.com)",
+		"Alan Downie <alan@bugherd.com> (http://www.bugherd.com)",
+		"Vincent Brendel <vincent.brendel@gmail.com> (https://github.com/vbrendel)"
+	],
+	"contributors": [
+		"Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
+	],
+	"bugs": {
+		"url": "https://github.com/BugHerd/html2canvas-proxy/issues"
+	},
+	"repository" : {
+		"type" : "git",
+		"url" : "https://github.com/BugHerd/html2canvas-proxy.git"
+	},
+	"dependencies": {
+		"request": "2.9.x"
+	},
+	"engines" : {
+		"node": ">=0.4.0"
+	}
+}
