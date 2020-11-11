@@ -100,13 +100,13 @@
 
 
         // Navionics Overlay
-        // var myNavionicsOverlay = new JNC.Leaflet.NavionicsOverlay({
-        //   navKey: 'Navionics_webapi_00583',
-        //   chartType: JNC.NAVIONICS_CHARTS.NAUTICAL,
-        //   isTransparent: false,
-        //   logoPayoff: false,
-        //   zIndex: 1
-        // }).addTo(map);
+//         var myNavionicsOverlay = new JNC.Leaflet.NavionicsOverlay({
+//            navKey: 'Navionics_webapi_00583',
+//            chartType: JNC.NAVIONICS_CHARTS.NAUTICAL,
+//            isTransparent: false,
+//            logoPayoff: false,
+//            zIndex: 1
+//          }).addTo(map);
 
 
         // Add openSeaMap Overlay
@@ -166,15 +166,16 @@
         // ----- LAYER CONTROL ---- //
 
         var baseLayers = {
-          "Claire" : clear,
+          "Clair" : clear,
           "Dark" : dark,
-          "Satelite" : satelit,
+          "Sattelite" : satelit
+          
         };
         
         var overlays = {
           "OpenSeaMap" : openSeaMap,
-          "Wind/vent": wind10mLayerGroup
-          // "Navionics" : myNavionicsOverlay,
+          "Wind/vent": wind10mLayerGroup,
+          //"Navionics" : myNavionicsOverlay
         };
 
         layerControl = L.control.layers(baseLayers, overlays, {position: 'topleft'});
@@ -182,15 +183,18 @@
 
         // ------ BOAT DATA ------ //
         var boatPositions = [];
-        $.getJSON( "data.json", function( data ) {
+        var boats =[];
+        $.getJSON( "vg2020.json"+"?"+Math.random(), function( data ) {
           
           $.each( data, function( key, val ) {
             var latlngs = [];
             var lastPosition = null;
             var lastRotation = null;
+            var lastSpeed = null;
             $.each( val.classements, function( elemK, elemV ) {
               lastPosition = [elemV.latitude, elemV.longitude];
               lastRotation = elemV.cap;
+              lastSpeed = elemV.vitesse;
               latlngs.push(lastPosition);
             }); 
             
@@ -202,10 +206,14 @@
               iconUrl: 'static/img/' + key + '.png',
               iconSize:     [width, height],
               iconAnchor:   [width/2, width/2],
-              popupAnchor:  [width/2, height]
+              popupAnchor:  [0, 0]
           });
             
-            var boat = L.marker(lastPosition, {icon: boatIcon, rotationAngle: lastRotation}).addTo(map);
+
+            var boat = L.marker(lastPosition, {icon: boatIcon, rotationAngle: 0,title:val.skipper});
+            boat.bindPopup(val.skipper+" \n"+val.bateau+" \nCap: "+lastRotation+" \nVitesse: "+lastSpeed).openPopup();
+            boat.setRotationAngle(90);
+            boat.addTo(map);
             boatPositions.push(lastPosition);
           });
 
@@ -213,7 +221,7 @@
         });
 
         // ------- DST DATA ------ //
-        $.getJSON( "dst.json", function( data ) {
+        $.getJSON( "dst.json"+"?"+Math.random(), function( data ) {
           L.polygon(data, {color: "red", weight: 1}).addTo(map);
         });       
 
