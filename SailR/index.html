@@ -38,10 +38,12 @@
     <link rel="stylesheet" href="static/style.css" />
   </head>
   <body>
-    <div>
+
       <div id="map"></div>
-      <div id="sidebar"></div>
-    </div>
+      
+    
+    
+    <div id="sidebar"></div>
     <script>
       // var
       var startTime = new Date(Date.UTC(GFS_server_year, GFS_server_month - 1, GFS_server_day, GFS_server_hour));
@@ -188,7 +190,7 @@
         var overlays = {
           "OpenSeaMap" : openSeaMap,
           "Wind": wind10mLayerGroup,
-          "Dy/Night": terminator,
+          "Day/Night": terminator,
           //"Navionics" : myNavionicsOverlay
         };
 
@@ -198,7 +200,8 @@
         // ------ SIDEBAR ----- //
 
         var sidebar = L.control.sidebar('sidebar', {
-            position: 'left'
+            position: 'left',
+            closeButton: 'true'
         });
         map.addControl(sidebar);
 
@@ -212,11 +215,13 @@
             var lastPosition = null;
             var lastRotation = null;
             var lastSpeed = null;
+            var lastRank = null;
             $.each( val.classements, function( elemK, elemV ) {
               lastPosition = [elemV.latitude, elemV.longitude];
               lastRotation = elemV.cap;
               lastSpeed = elemV.vitesse;
               latlngs.push(lastPosition);
+              lastRank = elemV.position;
             }); 
             
             var polyline = L.polyline(latlngs, {color: val.couleur}).addTo(map);
@@ -235,7 +240,8 @@
             
             boat.on("click", function(e){
               sidebar.show();
-              $('#sidebar').html(val.skipper+" \n"+val.bateau+" \nCap: "+lastRotation+" \nVitesse: "+lastSpeed);
+              //$('#sidebar').html(val.skipper+" \n"+val.bateau+" \nCap: "+lastRotation+" \nVitesse: "+lastSpeed);
+				sidebar.setContent("<h1>"+lastRank+" "+val.skipper+"</h1><br/>"+val.bateau+"<br/>Cap: "+lastRotation+"<br/>Vitesse: "+lastSpeed);            
             });
             
             boatPositions.push(lastPosition);
