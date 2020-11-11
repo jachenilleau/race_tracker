@@ -15,6 +15,11 @@
     <script src="static/velocity/IE_workarounds.js"></script>
     <!-- add Leafleet rotate -->
     <script type="text/javascript" src="static/leaflet.rotatedMarker.js"></script>
+    <!-- add Leafleet terminator -->
+    <script src="https://unpkg.com/@joergdietrich/leaflet.terminator"></script>
+    <!-- add Leafleet sidebar -->
+    <link rel="stylesheet" href="static/leaflet-sidebar/src/L.Control.Sidebar.css" />
+    <script src="static/leaflet-sidebar/src/L.Control.Sidebar.js"></script>
     <!--for timeslider-->
     <script type="text/javascript" src="static/timedimension/iso8601.min.js"></script>
     <script type="text/javascript" src="static/timedimension/leaflet.timedimension.noLayers.src.js"></script>
@@ -35,6 +40,7 @@
   <body>
     <div>
       <div id="map"></div>
+      <div id="sidebar"></div>
     </div>
     <script>
       // var
@@ -100,13 +106,13 @@
 
 
         // Navionics Overlay
-//         var myNavionicsOverlay = new JNC.Leaflet.NavionicsOverlay({
-//            navKey: 'Navionics_webapi_00583',
-//            chartType: JNC.NAVIONICS_CHARTS.NAUTICAL,
-//            isTransparent: false,
-//            logoPayoff: false,
-//            zIndex: 1
-//          }).addTo(map);
+        // var myNavionicsOverlay = new JNC.Leaflet.NavionicsOverlay({
+        //   navKey: 'Navionics_webapi_00583',
+        //   chartType: JNC.NAVIONICS_CHARTS.NAUTICAL,
+        //   isTransparent: false,
+        //   logoPayoff: false,
+        //   zIndex: 1
+        // }).addTo(map);
 
 
         // Add openSeaMap Overlay
@@ -162,24 +168,39 @@
           updateLayer(wind10mArray[actualTimeIndex]);
           }
         },100);
+
+        // ------ TERMINATOR ----- //
+        var terminator = L.terminator().addTo(map);
+        setInterval(function() {
+          terminator.setTime();
+        }, 60000);
+
         
         // ----- LAYER CONTROL ---- //
 
         var baseLayers = {
-          "Clair" : clear,
+          "Clear" : clear,
           "Dark" : dark,
-          "Sattelite" : satelit
+          "Satelite" : satelit
           
         };
         
         var overlays = {
           "OpenSeaMap" : openSeaMap,
-          "Wind/vent": wind10mLayerGroup,
+          "Wind": wind10mLayerGroup,
+          "Dy/Night": terminator,
           //"Navionics" : myNavionicsOverlay
         };
 
         layerControl = L.control.layers(baseLayers, overlays, {position: 'topleft'});
         layerControl.addTo(map);
+
+        // ------ SIDEBAR ----- //
+
+        var sidebar = L.control.sidebar('sidebar', {
+            position: 'left'
+        });
+        map.addControl(sidebar);
 
         // ------ BOAT DATA ------ //
         var boatPositions = [];
@@ -210,10 +231,13 @@
           });
             
 
-            var boat = L.marker(lastPosition, {icon: boatIcon, rotationAngle: 0,title:val.skipper});
-            boat.bindPopup(val.skipper+" \n"+val.bateau+" \nCap: "+lastRotation+" \nVitesse: "+lastSpeed).openPopup();
-            boat.setRotationAngle(90);
-            boat.addTo(map);
+            var boat = L.marker(lastPosition, {icon: boatIcon, rotationAngle: lastRotation,title:val.skipper}).addTo(map);
+            
+            boat.on("click", function(e){
+              sidebar.show();
+              $('#sidebar').html(val.skipper+" \n"+val.bateau+" \nCap: "+lastRotation+" \nVitesse: "+lastSpeed);
+            });
+            
             boatPositions.push(lastPosition);
           });
 

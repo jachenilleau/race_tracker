@@ -1,0 +1,5241 @@
+{
+  "FRA 01": {
+    "skipper": "Jean Le Cam",
+    "bateau": "Yes we Cam !",
+    "couleur": "#80bf89",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.1295,
+        "longitude": -2.974666666666667,
+        "cap": 255,
+        "vitesse": 19.0,
+        "position": 18
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.81966666666667,
+        "longitude": -4.2476666666666665,
+        "cap": 236,
+        "vitesse": 11.7,
+        "position": 9
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 45.74433333333333,
+        "longitude": -5.9425,
+        "cap": 274,
+        "vitesse": 12.1,
+        "position": 2
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 45.78366666666667,
+        "longitude": -6.868666666666667,
+        "cap": 284,
+        "vitesse": 10.7,
+        "position": 1
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 45.917833333333334,
+        "longitude": -7.572666666666667,
+        "cap": 292,
+        "vitesse": 9.9,
+        "position": 3
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 45.5095,
+        "longitude": -7.805833333333333,
+        "cap": 209,
+        "vitesse": 10.5,
+        "position": 3
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.0295,
+        "longitude": -8.1935,
+        "cap": 213,
+        "vitesse": 11.2,
+        "position": 3
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.29783333333334,
+        "longitude": -8.748,
+        "cap": 205,
+        "vitesse": 9.8,
+        "position": 3
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.48916666666667,
+        "longitude": -9.046166666666666,
+        "cap": 128,
+        "vitesse": 8.4,
+        "position": 3
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.181666666666665,
+        "longitude": -9.343166666666667,
+        "cap": 231,
+        "vitesse": 8.2,
+        "position": 2
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 42.822833333333335,
+        "longitude": -9.698,
+        "cap": 260,
+        "vitesse": 8.8,
+        "position": 2
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 42.544666666666664,
+        "longitude": -10.384666666666666,
+        "cap": 242,
+        "vitesse": 11.1,
+        "position": 3
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 42.289,
+        "longitude": -10.909666666666666,
+        "cap": 228,
+        "vitesse": 11.7,
+        "position": 3
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 41.807833333333335,
+        "longitude": -11.8315,
+        "cap": 237,
+        "vitesse": 11.8,
+        "position": 3
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 41.35483333333333,
+        "longitude": -13.693666666666667,
+        "cap": 257,
+        "vitesse": 14.4,
+        "position": 3
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 41.163333333333334,
+        "longitude": -14.95,
+        "cap": 267,
+        "vitesse": 14.4,
+        "position": 3
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 41.0795,
+        "longitude": -15.596,
+        "cap": 211,
+        "vitesse": 10.0,
+        "position": 3
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 40.8495,
+        "longitude": -16.221333333333334,
+        "cap": 240,
+        "vitesse": 11.4,
+        "position": 3
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 40.6395,
+        "longitude": -16.922833333333333,
+        "cap": 256,
+        "vitesse": 13.0,
+        "position": 4
+      }
+    ]
+  },
+  "FRA 53": {
+    "skipper": "Maxime Sorel",
+    "bateau": "V And B Mayenne",
+    "couleur": "#6a5ca5",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.23733333333333,
+        "longitude": -3.081166666666667,
+        "cap": 262,
+        "vitesse": 18.7,
+        "position": 16
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.10966666666667,
+        "longitude": -4.436333333333334,
+        "cap": 268,
+        "vitesse": 8.0,
+        "position": 16
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 45.9185,
+        "longitude": -6.2405,
+        "cap": 268,
+        "vitesse": 10.7,
+        "position": 1
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 45.896,
+        "longitude": -7.077166666666667,
+        "cap": 276,
+        "vitesse": 9.5,
+        "position": 2
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 45.902,
+        "longitude": -7.594333333333333,
+        "cap": 191,
+        "vitesse": 9.0,
+        "position": 2
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 45.4485,
+        "longitude": -7.807333333333333,
+        "cap": 201,
+        "vitesse": 10.8,
+        "position": 2
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 44.99966666666667,
+        "longitude": -8.197833333333334,
+        "cap": 214,
+        "vitesse": 11.0,
+        "position": 2
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.33833333333333,
+        "longitude": -8.783833333333334,
+        "cap": 205,
+        "vitesse": 7.9,
+        "position": 5
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.57266666666666,
+        "longitude": -9.057166666666667,
+        "cap": 162,
+        "vitesse": 5.9,
+        "position": 5
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.243,
+        "longitude": -9.287333333333333,
+        "cap": 226,
+        "vitesse": 6.8,
+        "position": 6
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 42.86266666666667,
+        "longitude": -9.6485,
+        "cap": 209,
+        "vitesse": 10.7,
+        "position": 5
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 42.4045,
+        "longitude": -10.104333333333333,
+        "cap": 218,
+        "vitesse": 12.2,
+        "position": 2
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 42.05616666666667,
+        "longitude": -10.579333333333333,
+        "cap": 226,
+        "vitesse": 12.2,
+        "position": 1
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 41.54216666666667,
+        "longitude": -11.640666666666666,
+        "cap": 247,
+        "vitesse": 13.7,
+        "position": 1
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 41.02166666666667,
+        "longitude": -13.381166666666667,
+        "cap": 249,
+        "vitesse": 11.6,
+        "position": 1
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 40.6975,
+        "longitude": -14.261833333333334,
+        "cap": 250,
+        "vitesse": 11.5,
+        "position": 1
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 40.6685,
+        "longitude": -15.1335,
+        "cap": 278,
+        "vitesse": 13.9,
+        "position": 1
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 40.60333333333333,
+        "longitude": -15.7915,
+        "cap": 248,
+        "vitesse": 12.7,
+        "position": 1
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 40.51566666666667,
+        "longitude": -16.578666666666667,
+        "cap": 271,
+        "vitesse": 10.8,
+        "position": 1
+      }
+    ]
+  },
+  "FRA 1000": {
+    "skipper": "Damien Seguin",
+    "bateau": "Groupe APICIL",
+    "couleur": "#bb0ad4",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.196666666666665,
+        "longitude": -3.038333333333333,
+        "cap": 260,
+        "vitesse": 19.1,
+        "position": 17
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.052,
+        "longitude": -4.367166666666667,
+        "cap": 257,
+        "vitesse": 9.2,
+        "position": 17
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 45.885666666666665,
+        "longitude": -6.093333333333334,
+        "cap": 268,
+        "vitesse": 11.8,
+        "position": 3
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 45.89216666666667,
+        "longitude": -6.985666666666667,
+        "cap": 278,
+        "vitesse": 10.5,
+        "position": 3
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 45.714666666666666,
+        "longitude": -7.45,
+        "cap": 193,
+        "vitesse": 10.2,
+        "position": 1
+      },
+      {
+        "heure": "14:30 FR",
+        "latitude": 45.3025,
+        "longitude": -7.597666666666667,
+        "cap": 193,
+        "vitesse": 10.4,
+        "position": 1
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 44.7365,
+        "longitude": -7.990333333333333,
+        "cap": 216,
+        "vitesse": 11.1,
+        "position": 1
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.097,
+        "longitude": -8.493333333333334,
+        "cap": 209,
+        "vitesse": 8.0,
+        "position": 1
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.4605,
+        "longitude": -8.756166666666667,
+        "cap": 244,
+        "vitesse": 7.4,
+        "position": 8
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.19683333333333,
+        "longitude": -9.240166666666667,
+        "cap": 246,
+        "vitesse": 3.2,
+        "position": 3
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 42.800666666666665,
+        "longitude": -9.69,
+        "cap": 226,
+        "vitesse": 12.1,
+        "position": 1
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 42.66766666666667,
+        "longitude": -10.533833333333334,
+        "cap": 260,
+        "vitesse": 12.3,
+        "position": 5
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 42.4735,
+        "longitude": -11.217166666666667,
+        "cap": 243,
+        "vitesse": 13.0,
+        "position": 5
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 42.19533333333333,
+        "longitude": -12.5045,
+        "cap": 249,
+        "vitesse": 13.4,
+        "position": 5
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 41.97666666666667,
+        "longitude": -14.273666666666667,
+        "cap": 260,
+        "vitesse": 12.7,
+        "position": 8
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 41.95766666666667,
+        "longitude": -15.4115,
+        "cap": 275,
+        "vitesse": 13.0,
+        "position": 9
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 41.547,
+        "longitude": -16.077,
+        "cap": 232,
+        "vitesse": 13.0,
+        "position": 13
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.195,
+        "longitude": -16.682833333333335,
+        "cap": 226,
+        "vitesse": 12.0,
+        "position": 10
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 40.901833333333336,
+        "longitude": -17.356666666666666,
+        "cap": 256,
+        "vitesse": 10.6,
+        "position": 9
+      }
+    ]
+  },
+  "FRA 92": {
+    "skipper": "Stéphane Le Diraison",
+    "bateau": "Time For Oceans",
+    "couleur": "#e660c9",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.23683333333334,
+        "longitude": -3.0673333333333335,
+        "cap": 261,
+        "vitesse": 19.1,
+        "position": 19
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.08683333333333,
+        "longitude": -4.387,
+        "cap": 271,
+        "vitesse": 8.0,
+        "position": 18
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 45.91266666666667,
+        "longitude": -5.9623333333333335,
+        "cap": 260,
+        "vitesse": 10.2,
+        "position": 9
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 45.991166666666665,
+        "longitude": -6.768833333333333,
+        "cap": 284,
+        "vitesse": 10.0,
+        "position": 4
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.14183333333333,
+        "longitude": -7.379333333333333,
+        "cap": 296,
+        "vitesse": 8.3,
+        "position": 7
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 45.682,
+        "longitude": -7.565666666666667,
+        "cap": 195,
+        "vitesse": 10.2,
+        "position": 8
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.21033333333333,
+        "longitude": -7.895166666666666,
+        "cap": 204,
+        "vitesse": 11.6,
+        "position": 8
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.51866666666667,
+        "longitude": -8.401,
+        "cap": 207,
+        "vitesse": 8.8,
+        "position": 11
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.7735,
+        "longitude": -8.6485,
+        "cap": 148,
+        "vitesse": 6.8,
+        "position": 12
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.4225,
+        "longitude": -8.7065,
+        "cap": 248,
+        "vitesse": 11.3,
+        "position": 13
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 43.20216666666666,
+        "longitude": -9.1735,
+        "cap": 235,
+        "vitesse": 8.2,
+        "position": 11
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 42.89483333333333,
+        "longitude": -9.6225,
+        "cap": 214,
+        "vitesse": 10.1,
+        "position": 11
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 42.56283333333333,
+        "longitude": -10.009166666666667,
+        "cap": 223,
+        "vitesse": 10.3,
+        "position": 8
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 42.04683333333333,
+        "longitude": -10.788333333333334,
+        "cap": 231,
+        "vitesse": 10.9,
+        "position": 8
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 41.44233333333333,
+        "longitude": -12.193166666666666,
+        "cap": 250,
+        "vitesse": 11.1,
+        "position": 7
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 41.149166666666666,
+        "longitude": -13.094,
+        "cap": 245,
+        "vitesse": 11.8,
+        "position": 7
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 41.037333333333336,
+        "longitude": -13.8315,
+        "cap": 266,
+        "vitesse": 11.8,
+        "position": 11
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.03483333333333,
+        "longitude": -14.446166666666667,
+        "cap": 254,
+        "vitesse": 10.6,
+        "position": 15
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 40.8925,
+        "longitude": -15.094333333333333,
+        "cap": 255,
+        "vitesse": 8.4,
+        "position": 15
+      }
+    ]
+  },
+  "FRA 49": {
+    "skipper": "Romain Attanasio",
+    "bateau": "Pure - Best Western Hotels and Resorts",
+    "couleur": "#72eadd",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.298833333333334,
+        "longitude": -3.0015,
+        "cap": 270,
+        "vitesse": 16.9,
+        "position": 21
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.295833333333334,
+        "longitude": -4.3773333333333335,
+        "cap": 280,
+        "vitesse": 8.4,
+        "position": 22
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.06633333333333,
+        "longitude": -6.151,
+        "cap": 272,
+        "vitesse": 12.2,
+        "position": 10
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.13333333333333,
+        "longitude": -6.9585,
+        "cap": 271,
+        "vitesse": 9.7,
+        "position": 5
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 45.993,
+        "longitude": -7.420333333333334,
+        "cap": 192,
+        "vitesse": 10.0,
+        "position": 5
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 45.49133333333333,
+        "longitude": -7.587833333333333,
+        "cap": 201,
+        "vitesse": 10.3,
+        "position": 4
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.025333333333336,
+        "longitude": -7.962,
+        "cap": 217,
+        "vitesse": 10.0,
+        "position": 5
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.4345,
+        "longitude": -8.566,
+        "cap": 218,
+        "vitesse": 8.0,
+        "position": 10
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.67183333333333,
+        "longitude": -8.8505,
+        "cap": 156,
+        "vitesse": 5.8,
+        "position": 9
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.25183333333333,
+        "longitude": -9.113333333333333,
+        "cap": 229,
+        "vitesse": 8.5,
+        "position": 9
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 42.949666666666666,
+        "longitude": -9.579833333333333,
+        "cap": 218,
+        "vitesse": 11.5,
+        "position": 7
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 42.59616666666667,
+        "longitude": -10.217666666666666,
+        "cap": 242,
+        "vitesse": 11.7,
+        "position": 6
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 42.389,
+        "longitude": -10.8095,
+        "cap": 242,
+        "vitesse": 11.8,
+        "position": 6
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 42.07683333333333,
+        "longitude": -11.951166666666667,
+        "cap": 256,
+        "vitesse": 13.5,
+        "position": 6
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 41.73716666666667,
+        "longitude": -13.832833333333333,
+        "cap": 254,
+        "vitesse": 13.1,
+        "position": 6
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 41.525166666666664,
+        "longitude": -14.961166666666667,
+        "cap": 263,
+        "vitesse": 11.4,
+        "position": 6
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 41.3665,
+        "longitude": -15.520333333333333,
+        "cap": 233,
+        "vitesse": 11.6,
+        "position": 9
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.10466666666667,
+        "longitude": -16.053166666666666,
+        "cap": 241,
+        "vitesse": 11.4,
+        "position": 12
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 40.85933333333333,
+        "longitude": -16.7675,
+        "cap": 257,
+        "vitesse": 12.5,
+        "position": 11
+      }
+    ]
+  },
+  "FRA 09": {
+    "skipper": "Benjamin Dutreux",
+    "bateau": "OMIA - Water Family",
+    "couleur": "#5a833",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.32183333333333,
+        "longitude": -2.9903333333333335,
+        "cap": 267,
+        "vitesse": 18.5,
+        "position": 23
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.289,
+        "longitude": -4.389166666666667,
+        "cap": 270,
+        "vitesse": 9.8,
+        "position": 21
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.15866666666667,
+        "longitude": -6.2443333333333335,
+        "cap": 270,
+        "vitesse": 11.3,
+        "position": 12
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.22366666666667,
+        "longitude": -7.097166666666666,
+        "cap": 284,
+        "vitesse": 9.9,
+        "position": 6
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.04333333333334,
+        "longitude": -7.504,
+        "cap": 188,
+        "vitesse": 10.4,
+        "position": 6
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 45.534666666666666,
+        "longitude": -7.706833333333333,
+        "cap": 208,
+        "vitesse": 10.7,
+        "position": 5
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.067166666666665,
+        "longitude": -8.104,
+        "cap": 212,
+        "vitesse": 10.8,
+        "position": 4
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.378166666666665,
+        "longitude": -8.694833333333333,
+        "cap": 210,
+        "vitesse": 9.6,
+        "position": 6
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.5505,
+        "longitude": -8.925333333333333,
+        "cap": 133,
+        "vitesse": 6.9,
+        "position": 6
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.211333333333336,
+        "longitude": -9.252833333333333,
+        "cap": 240,
+        "vitesse": 8.1,
+        "position": 4
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 42.828,
+        "longitude": -9.684,
+        "cap": 218,
+        "vitesse": 10.6,
+        "position": 3
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 42.4225,
+        "longitude": -10.239666666666666,
+        "cap": 233,
+        "vitesse": 12.0,
+        "position": 1
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 42.14033333333333,
+        "longitude": -10.821333333333333,
+        "cap": 232,
+        "vitesse": 12.5,
+        "position": 2
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 41.720666666666666,
+        "longitude": -11.845333333333333,
+        "cap": 247,
+        "vitesse": 12.5,
+        "position": 2
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 41.354,
+        "longitude": -13.678833333333333,
+        "cap": 257,
+        "vitesse": 12.7,
+        "position": 4
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 41.116,
+        "longitude": -14.739,
+        "cap": 257,
+        "vitesse": 12.1,
+        "position": 2
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 41.0505,
+        "longitude": -15.45,
+        "cap": 230,
+        "vitesse": 9.6,
+        "position": 2
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 40.80416666666667,
+        "longitude": -16.162166666666668,
+        "cap": 254,
+        "vitesse": 9.1,
+        "position": 2
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 40.622166666666665,
+        "longitude": -16.949166666666667,
+        "cap": 267,
+        "vitesse": 12.2,
+        "position": 3
+      }
+    ]
+  },
+  "ITA 34": {
+    "skipper": "Giancarlo Pedote",
+    "bateau": "Prysmian Group",
+    "couleur": "#b28157",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.223,
+        "longitude": -3.093166666666667,
+        "cap": 262,
+        "vitesse": 19.3,
+        "position": 13
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.07966666666667,
+        "longitude": -4.377,
+        "cap": 286,
+        "vitesse": 6.5,
+        "position": 19
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.12583333333333,
+        "longitude": -6.376166666666666,
+        "cap": 279,
+        "vitesse": 13.1,
+        "position": 8
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.298,
+        "longitude": -7.315333333333333,
+        "cap": 287,
+        "vitesse": 11.0,
+        "position": 7
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.2805,
+        "longitude": -7.800833333333333,
+        "cap": 190,
+        "vitesse": 9.7,
+        "position": 9
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.33316666666666,
+        "longitude": -8.304666666666666,
+        "cap": 185,
+        "vitesse": 9.3,
+        "position": 24
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.90833333333333,
+        "longitude": -8.6655,
+        "cap": 224,
+        "vitesse": 10.2,
+        "position": 24
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.3295,
+        "longitude": -9.3295,
+        "cap": 229,
+        "vitesse": 9.4,
+        "position": 23
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.611333333333334,
+        "longitude": -9.8585,
+        "cap": 266,
+        "vitesse": 10.4,
+        "position": 23
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 44.76316666666666,
+        "longitude": -10.830666666666668,
+        "cap": 288,
+        "vitesse": 11.3,
+        "position": 28
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 44.71216666666667,
+        "longitude": -11.559,
+        "cap": 247,
+        "vitesse": 10.9,
+        "position": 28
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 44.52283333333333,
+        "longitude": -12.276333333333334,
+        "cap": 248,
+        "vitesse": 11.2,
+        "position": 28
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 44.365,
+        "longitude": -12.902,
+        "cap": 248,
+        "vitesse": 12.1,
+        "position": 28
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.9785,
+        "longitude": -13.993833333333333,
+        "cap": 243,
+        "vitesse": 11.9,
+        "position": 27
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.38333333333333,
+        "longitude": -15.786333333333333,
+        "cap": 238,
+        "vitesse": 12.0,
+        "position": 23
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 42.7375,
+        "longitude": -16.469,
+        "cap": 200,
+        "vitesse": 14.1,
+        "position": 21
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 42.11416666666667,
+        "longitude": -16.877833333333335,
+        "cap": 218,
+        "vitesse": 11.4,
+        "position": 19
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.64633333333333,
+        "longitude": -17.393833333333333,
+        "cap": 223,
+        "vitesse": 11.4,
+        "position": 17
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 41.421,
+        "longitude": -17.67,
+        "cap": 242,
+        "vitesse": 7.8,
+        "position": 17
+      }
+    ]
+  },
+  "FRA 30": {
+    "skipper": "Clarisse Cremer",
+    "bateau": "Banque Populaire X",
+    "couleur": "#43ed1e",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.260666666666665,
+        "longitude": -3.033,
+        "cap": 265,
+        "vitesse": 18.2,
+        "position": 20
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.187,
+        "longitude": -4.406166666666667,
+        "cap": 274,
+        "vitesse": 8.4,
+        "position": 20
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.284,
+        "longitude": -6.495833333333334,
+        "cap": 282,
+        "vitesse": 13.1,
+        "position": 13
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.383833333333335,
+        "longitude": -7.4155,
+        "cap": 291,
+        "vitesse": 10.6,
+        "position": 8
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.481833333333334,
+        "longitude": -8.002333333333333,
+        "cap": 221,
+        "vitesse": 6.4,
+        "position": 17
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.0555,
+        "longitude": -8.259666666666666,
+        "cap": 204,
+        "vitesse": 8.7,
+        "position": 14
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.623,
+        "longitude": -8.683833333333334,
+        "cap": 225,
+        "vitesse": 13.1,
+        "position": 14
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.998,
+        "longitude": -9.3485,
+        "cap": 220,
+        "vitesse": 8.9,
+        "position": 18
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.2985,
+        "longitude": -9.913833333333333,
+        "cap": 262,
+        "vitesse": 9.0,
+        "position": 17
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 44.3365,
+        "longitude": -10.717833333333333,
+        "cap": 278,
+        "vitesse": 9.1,
+        "position": 19
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 44.2555,
+        "longitude": -11.3655,
+        "cap": 247,
+        "vitesse": 10.4,
+        "position": 19
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 44.036833333333334,
+        "longitude": -12.082833333333333,
+        "cap": 251,
+        "vitesse": 12.1,
+        "position": 18
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 43.88783333333333,
+        "longitude": -12.778666666666666,
+        "cap": 253,
+        "vitesse": 13.2,
+        "position": 19
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.6065,
+        "longitude": -14.004833333333334,
+        "cap": 250,
+        "vitesse": 12.8,
+        "position": 18
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.0805,
+        "longitude": -15.998666666666667,
+        "cap": 247,
+        "vitesse": 13.8,
+        "position": 17
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 42.55583333333333,
+        "longitude": -16.730166666666666,
+        "cap": 203,
+        "vitesse": 12.3,
+        "position": 19
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 42.08583333333333,
+        "longitude": -17.185833333333335,
+        "cap": 217,
+        "vitesse": 13.7,
+        "position": 17
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.6905,
+        "longitude": -17.637333333333334,
+        "cap": 220,
+        "vitesse": 10.9,
+        "position": 18
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 41.431333333333335,
+        "longitude": -18.0575,
+        "cap": 244,
+        "vitesse": 6.8,
+        "position": 16
+      }
+    ]
+  },
+  "FRA 17": {
+    "skipper": "Yannick Bestaven",
+    "bateau": "Maître Coq IV",
+    "couleur": "#8f27fc",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.242666666666665,
+        "longitude": -3.176833333333333,
+        "cap": 268,
+        "vitesse": 20.2,
+        "position": 9
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.18866666666667,
+        "longitude": -4.584,
+        "cap": 273,
+        "vitesse": 8.1,
+        "position": 14
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.24666666666667,
+        "longitude": -6.652666666666667,
+        "cap": 276,
+        "vitesse": 13.6,
+        "position": 7
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.450833333333335,
+        "longitude": -7.6335,
+        "cap": 292,
+        "vitesse": 10.2,
+        "position": 9
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.410666666666664,
+        "longitude": -8.075,
+        "cap": 201,
+        "vitesse": 8.9,
+        "position": 12
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.00333333333333,
+        "longitude": -8.294,
+        "cap": 199,
+        "vitesse": 8.5,
+        "position": 11
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.599333333333334,
+        "longitude": -8.697,
+        "cap": 225,
+        "vitesse": 12.9,
+        "position": 13
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.895833333333336,
+        "longitude": -9.3265,
+        "cap": 199,
+        "vitesse": 11.3,
+        "position": 14
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.01233333333333,
+        "longitude": -9.497666666666667,
+        "cap": 169,
+        "vitesse": 9.4,
+        "position": 11
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.539,
+        "longitude": -9.1705,
+        "cap": 129,
+        "vitesse": 9.3,
+        "position": 11
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 43.2725,
+        "longitude": -9.255,
+        "cap": 234,
+        "vitesse": 7.9,
+        "position": 12
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 42.915,
+        "longitude": -9.6965,
+        "cap": 207,
+        "vitesse": 10.4,
+        "position": 10
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 42.563833333333335,
+        "longitude": -10.131166666666667,
+        "cap": 228,
+        "vitesse": 12.1,
+        "position": 7
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 42.03366666666667,
+        "longitude": -11.160833333333333,
+        "cap": 235,
+        "vitesse": 12.7,
+        "position": 7
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 41.43533333333333,
+        "longitude": -12.827333333333334,
+        "cap": 248,
+        "vitesse": 12.2,
+        "position": 5
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 41.12716666666667,
+        "longitude": -13.963333333333333,
+        "cap": 254,
+        "vitesse": 15.0,
+        "position": 5
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 41.071,
+        "longitude": -14.9585,
+        "cap": 278,
+        "vitesse": 14.0,
+        "position": 6
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 40.8775,
+        "longitude": -15.547333333333333,
+        "cap": 251,
+        "vitesse": 6.4,
+        "position": 9
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 40.67283333333334,
+        "longitude": -16.2305,
+        "cap": 260,
+        "vitesse": 11.6,
+        "position": 8
+      }
+    ]
+  },
+  "JPN 11": {
+    "skipper": "Kojiro Shiraishi",
+    "bateau": "DMG MORI Global One",
+    "couleur": "#4b7f04",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.31916666666667,
+        "longitude": -3.1961666666666666,
+        "cap": 269,
+        "vitesse": 19.9,
+        "position": 12
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.24933333333333,
+        "longitude": -4.665666666666667,
+        "cap": 263,
+        "vitesse": 9.6,
+        "position": 12
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.303333333333335,
+        "longitude": -6.523166666666667,
+        "cap": 286,
+        "vitesse": 13.0,
+        "position": 14
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.402,
+        "longitude": -7.406666666666666,
+        "cap": 286,
+        "vitesse": 9.9,
+        "position": 10
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.5935,
+        "longitude": -7.959333333333333,
+        "cap": 296,
+        "vitesse": 9.2,
+        "position": 24
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.791333333333334,
+        "longitude": -8.519333333333334,
+        "cap": 255,
+        "vitesse": 5.9,
+        "position": 32
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 46.33866666666667,
+        "longitude": -8.751833333333334,
+        "cap": 192,
+        "vitesse": 10.5,
+        "position": 31
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.75633333333333,
+        "longitude": -9.362666666666666,
+        "cap": 210,
+        "vitesse": 9.8,
+        "position": 31
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.92316666666667,
+        "longitude": -9.520166666666666,
+        "cap": 186,
+        "vitesse": 7.9,
+        "position": 29
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 44.79066666666667,
+        "longitude": -10.022333333333334,
+        "cap": 275,
+        "vitesse": 9.0,
+        "position": 30
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 44.774166666666666,
+        "longitude": -10.686833333333333,
+        "cap": 262,
+        "vitesse": 10.4,
+        "position": 30
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 44.689166666666665,
+        "longitude": -11.559333333333333,
+        "cap": 254,
+        "vitesse": 12.8,
+        "position": 30
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 44.57266666666666,
+        "longitude": -12.326,
+        "cap": 253,
+        "vitesse": 12.1,
+        "position": 30
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.28033333333333,
+        "longitude": -13.668333333333333,
+        "cap": 257,
+        "vitesse": 11.8,
+        "position": 30
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.816833333333335,
+        "longitude": -15.348833333333333,
+        "cap": 238,
+        "vitesse": 10.7,
+        "position": 28
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.49966666666667,
+        "longitude": -15.4725,
+        "cap": 172,
+        "vitesse": 13.4,
+        "position": 28
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 42.811,
+        "longitude": -15.659333333333333,
+        "cap": 192,
+        "vitesse": 14.2,
+        "position": 26
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 42.215333333333334,
+        "longitude": -16.087666666666667,
+        "cap": 211,
+        "vitesse": 12.7,
+        "position": 23
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 41.8995,
+        "longitude": -16.432166666666667,
+        "cap": 221,
+        "vitesse": 7.0,
+        "position": 23
+      }
+    ]
+  },
+  "GBR 99": {
+    "skipper": "Alex Thomson",
+    "bateau": "Hugo Boss",
+    "couleur": "#e990e2",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.2555,
+        "longitude": -3.3156666666666665,
+        "cap": 265,
+        "vitesse": 20.2,
+        "position": 4
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.14416666666666,
+        "longitude": -4.668166666666667,
+        "cap": 266,
+        "vitesse": 5.1,
+        "position": 6
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.487833333333334,
+        "longitude": -6.8815,
+        "cap": 290,
+        "vitesse": 12.3,
+        "position": 19
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.531,
+        "longitude": -7.721,
+        "cap": 277,
+        "vitesse": 9.2,
+        "position": 11
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.3785,
+        "longitude": -8.115166666666667,
+        "cap": 202,
+        "vitesse": 8.9,
+        "position": 10
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 45.977666666666664,
+        "longitude": -8.346,
+        "cap": 201,
+        "vitesse": 9.0,
+        "position": 10
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.543,
+        "longitude": -8.749166666666667,
+        "cap": 219,
+        "vitesse": 15.5,
+        "position": 11
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.79216666666667,
+        "longitude": -9.328166666666666,
+        "cap": 221,
+        "vitesse": 10.4,
+        "position": 12
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.156,
+        "longitude": -9.823666666666666,
+        "cap": 281,
+        "vitesse": 8.8,
+        "position": 13
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 44.19133333333333,
+        "longitude": -10.764833333333334,
+        "cap": 281,
+        "vitesse": 10.4,
+        "position": 15
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 44.182,
+        "longitude": -11.535,
+        "cap": 268,
+        "vitesse": 12.7,
+        "position": 17
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 44.1655,
+        "longitude": -12.657333333333334,
+        "cap": 267,
+        "vitesse": 17.2,
+        "position": 17
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 44.024,
+        "longitude": -13.519333333333334,
+        "cap": 252,
+        "vitesse": 15.1,
+        "position": 17
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.80316666666667,
+        "longitude": -14.997333333333334,
+        "cap": 255,
+        "vitesse": 14.9,
+        "position": 19
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.169666666666664,
+        "longitude": -16.994166666666665,
+        "cap": 245,
+        "vitesse": 12.4,
+        "position": 16
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 42.58683333333333,
+        "longitude": -17.2815,
+        "cap": 189,
+        "vitesse": 12.9,
+        "position": 16
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 41.672333333333334,
+        "longitude": -17.743166666666667,
+        "cap": 208,
+        "vitesse": 17.5,
+        "position": 8
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.246833333333335,
+        "longitude": -18.291833333333333,
+        "cap": 228,
+        "vitesse": 8.9,
+        "position": 7
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 40.923,
+        "longitude": -18.4125,
+        "cap": 179,
+        "vitesse": 8.8,
+        "position": 6
+      }
+    ]
+  },
+  "FRA 27": {
+    "skipper": "Isabelle Joschke",
+    "bateau": "MACSF",
+    "couleur": "#84ceb7",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.32116666666667,
+        "longitude": -3.1703333333333332,
+        "cap": 272,
+        "vitesse": 19.8,
+        "position": 15
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.268,
+        "longitude": -4.6335,
+        "cap": 264,
+        "vitesse": 9.4,
+        "position": 15
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.3435,
+        "longitude": -6.6125,
+        "cap": 282,
+        "vitesse": 13.3,
+        "position": 15
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.50833333333333,
+        "longitude": -7.619,
+        "cap": 294,
+        "vitesse": 8.3,
+        "position": 12
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.51733333333333,
+        "longitude": -8.066333333333333,
+        "cap": 195,
+        "vitesse": 9.9,
+        "position": 18
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.080666666666666,
+        "longitude": -8.306833333333334,
+        "cap": 198,
+        "vitesse": 9.3,
+        "position": 15
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.656666666666666,
+        "longitude": -8.709,
+        "cap": 221,
+        "vitesse": 13.2,
+        "position": 15
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.05,
+        "longitude": -9.388166666666667,
+        "cap": 222,
+        "vitesse": 10.1,
+        "position": 19
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.361,
+        "longitude": -9.769333333333334,
+        "cap": 266,
+        "vitesse": 9.8,
+        "position": 20
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 44.0625,
+        "longitude": -10.076833333333333,
+        "cap": 261,
+        "vitesse": 10.3,
+        "position": 16
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 43.85333333333333,
+        "longitude": -10.474333333333334,
+        "cap": 150,
+        "vitesse": 10.8,
+        "position": 15
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 43.603833333333334,
+        "longitude": -10.723833333333333,
+        "cap": 267,
+        "vitesse": 7.5,
+        "position": 16
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 43.402833333333334,
+        "longitude": -11.278333333333332,
+        "cap": 252,
+        "vitesse": 11.7,
+        "position": 16
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.118833333333335,
+        "longitude": -12.531166666666667,
+        "cap": 242,
+        "vitesse": 11.2,
+        "position": 15
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 42.35766666666667,
+        "longitude": -12.479666666666667,
+        "cap": 139,
+        "vitesse": 10.4,
+        "position": 18
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 41.9875,
+        "longitude": -13.216833333333334,
+        "cap": 246,
+        "vitesse": 11.8,
+        "position": 20
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 41.845,
+        "longitude": -13.952666666666667,
+        "cap": 267,
+        "vitesse": 11.2,
+        "position": 21
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.671,
+        "longitude": -14.360333333333333,
+        "cap": 228,
+        "vitesse": 5.6,
+        "position": 22
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 41.42433333333334,
+        "longitude": -14.783166666666666,
+        "cap": 238,
+        "vitesse": 10.9,
+        "position": 22
+      }
+    ]
+  },
+  "FRA 71": {
+    "skipper": "Manuel Cousin",
+    "bateau": "Groupe Sétin",
+    "couleur": "#2d1d0e",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.2055,
+        "longitude": -2.8248333333333333,
+        "cap": 257,
+        "vitesse": 16.8,
+        "position": 26
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.044333333333334,
+        "longitude": -4.016,
+        "cap": 250,
+        "vitesse": 11.6,
+        "position": 24
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.10783333333333,
+        "longitude": -5.6225000000000005,
+        "cap": 261,
+        "vitesse": 10.8,
+        "position": 27
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.10166666666667,
+        "longitude": -6.456166666666666,
+        "cap": 277,
+        "vitesse": 9.1,
+        "position": 13
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.15116666666667,
+        "longitude": -7.0855,
+        "cap": 296,
+        "vitesse": 9.0,
+        "position": 13
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 45.904333333333334,
+        "longitude": -7.429833333333334,
+        "cap": 200,
+        "vitesse": 9.8,
+        "position": 21
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.464,
+        "longitude": -7.753833333333334,
+        "cap": 214,
+        "vitesse": 10.7,
+        "position": 21
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.741166666666665,
+        "longitude": -8.301166666666667,
+        "cap": 203,
+        "vitesse": 10.6,
+        "position": 20
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.966,
+        "longitude": -8.805166666666667,
+        "cap": 259,
+        "vitesse": 7.6,
+        "position": 16
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.626,
+        "longitude": -8.8795,
+        "cap": 232,
+        "vitesse": 8.2,
+        "position": 14
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 43.388666666666666,
+        "longitude": -9.334166666666667,
+        "cap": 225,
+        "vitesse": 9.4,
+        "position": 14
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 43.071333333333335,
+        "longitude": -9.433666666666667,
+        "cap": 132,
+        "vitesse": 10.0,
+        "position": 14
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 42.785,
+        "longitude": -9.664166666666667,
+        "cap": 225,
+        "vitesse": 10.3,
+        "position": 13
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 42.32033333333333,
+        "longitude": -10.4775,
+        "cap": 228,
+        "vitesse": 10.0,
+        "position": 10
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 41.682833333333335,
+        "longitude": -11.803666666666667,
+        "cap": 247,
+        "vitesse": 10.5,
+        "position": 9
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 41.388666666666666,
+        "longitude": -12.663166666666667,
+        "cap": 242,
+        "vitesse": 11.0,
+        "position": 10
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 41.2225,
+        "longitude": -13.290666666666667,
+        "cap": 258,
+        "vitesse": 10.2,
+        "position": 16
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.208333333333336,
+        "longitude": -13.8475,
+        "cap": 333,
+        "vitesse": 4.5,
+        "position": 19
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 41.06283333333333,
+        "longitude": -14.536166666666666,
+        "cap": 258,
+        "vitesse": 10.9,
+        "position": 19
+      }
+    ]
+  },
+  "ESP 33": {
+    "skipper": "Didac Costa",
+    "bateau": "One Planet One Ocean",
+    "couleur": "#c7f8d7",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.29216666666667,
+        "longitude": -2.889666666666667,
+        "cap": 265,
+        "vitesse": 16.6,
+        "position": 27
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.2395,
+        "longitude": -4.160166666666667,
+        "cap": 268,
+        "vitesse": 9.8,
+        "position": 26
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.136,
+        "longitude": -5.7635000000000005,
+        "cap": 262,
+        "vitesse": 9.7,
+        "position": 24
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.15716666666667,
+        "longitude": -6.533833333333334,
+        "cap": 281,
+        "vitesse": 8.9,
+        "position": 14
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.20766666666667,
+        "longitude": -7.115166666666667,
+        "cap": 289,
+        "vitesse": 8.6,
+        "position": 16
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 45.794666666666664,
+        "longitude": -7.2545,
+        "cap": 195,
+        "vitesse": 9.9,
+        "position": 19
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.316,
+        "longitude": -7.479333333333333,
+        "cap": 205,
+        "vitesse": 10.6,
+        "position": 18
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.63,
+        "longitude": -7.9094999999999995,
+        "cap": 205,
+        "vitesse": 9.3,
+        "position": 21
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.804,
+        "longitude": -8.382166666666667,
+        "cap": 172,
+        "vitesse": 7.4,
+        "position": 18
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.548833333333334,
+        "longitude": -8.918,
+        "cap": 229,
+        "vitesse": 6.2,
+        "position": 12
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 43.306333333333335,
+        "longitude": -9.223166666666666,
+        "cap": 223,
+        "vitesse": 7.0,
+        "position": 13
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 43.02316666666667,
+        "longitude": -9.65,
+        "cap": 218,
+        "vitesse": 9.8,
+        "position": 13
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 42.788833333333336,
+        "longitude": -9.4285,
+        "cap": 177,
+        "vitesse": 6.5,
+        "position": 15
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 42.412166666666664,
+        "longitude": -10.1935,
+        "cap": 240,
+        "vitesse": 9.9,
+        "position": 13
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 41.881,
+        "longitude": -11.614666666666666,
+        "cap": 257,
+        "vitesse": 9.9,
+        "position": 11
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 41.67916666666667,
+        "longitude": -12.497666666666667,
+        "cap": 251,
+        "vitesse": 10.7,
+        "position": 17
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 41.64416666666666,
+        "longitude": -13.255833333333333,
+        "cap": 274,
+        "vitesse": 11.5,
+        "position": 20
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.56966666666667,
+        "longitude": -13.898666666666667,
+        "cap": 234,
+        "vitesse": 11.3,
+        "position": 21
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 41.346333333333334,
+        "longitude": -14.490833333333333,
+        "cap": 273,
+        "vitesse": 8.7,
+        "position": 21
+      }
+    ]
+  },
+  "FRA 50": {
+    "skipper": "Miranda Merron",
+    "bateau": "Campagne de France",
+    "couleur": "#cf2783",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.1735,
+        "longitude": -2.797,
+        "cap": 253,
+        "vitesse": 16.7,
+        "position": 25
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.003,
+        "longitude": -4.017,
+        "cap": 255,
+        "vitesse": 11.2,
+        "position": 23
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.0215,
+        "longitude": -5.5775,
+        "cap": 258,
+        "vitesse": 10.6,
+        "position": 25
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.082,
+        "longitude": -6.370666666666667,
+        "cap": 280,
+        "vitesse": 9.4,
+        "position": 15
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.1635,
+        "longitude": -6.999666666666666,
+        "cap": 290,
+        "vitesse": 9.3,
+        "position": 15
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.023833333333336,
+        "longitude": -7.428,
+        "cap": 198,
+        "vitesse": 10.1,
+        "position": 22
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.619,
+        "longitude": -7.723166666666667,
+        "cap": 224,
+        "vitesse": 9.6,
+        "position": 23
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.078833333333336,
+        "longitude": -8.371833333333333,
+        "cap": 223,
+        "vitesse": 8.9,
+        "position": 24
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.30083333333334,
+        "longitude": -8.744333333333334,
+        "cap": 169,
+        "vitesse": 7.4,
+        "position": 24
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 44.04366666666667,
+        "longitude": -9.271833333333333,
+        "cap": 252,
+        "vitesse": 8.7,
+        "position": 21
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 43.9895,
+        "longitude": -9.845,
+        "cap": 258,
+        "vitesse": 9.1,
+        "position": 25
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 43.933166666666665,
+        "longitude": -10.492166666666666,
+        "cap": 257,
+        "vitesse": 10.5,
+        "position": 25
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 43.826166666666666,
+        "longitude": -11.035166666666667,
+        "cap": 248,
+        "vitesse": 10.7,
+        "position": 26
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.559333333333335,
+        "longitude": -12.102666666666666,
+        "cap": 254,
+        "vitesse": 11.3,
+        "position": 26
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.098166666666664,
+        "longitude": -13.777166666666666,
+        "cap": 252,
+        "vitesse": 11.4,
+        "position": 24
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 42.99966666666667,
+        "longitude": -14.698,
+        "cap": 270,
+        "vitesse": 11.2,
+        "position": 26
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 42.647166666666664,
+        "longitude": -15.079833333333333,
+        "cap": 219,
+        "vitesse": 11.4,
+        "position": 25
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 42.277166666666666,
+        "longitude": -15.564333333333334,
+        "cap": 226,
+        "vitesse": 10.1,
+        "position": 24
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 42.02016666666667,
+        "longitude": -15.963666666666667,
+        "cap": 230,
+        "vitesse": 7.7,
+        "position": 25
+      }
+    ]
+  },
+  "SUI 7": {
+    "skipper": "Alan Roura",
+    "bateau": "La Fabrique",
+    "couleur": "#7902a3",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.38133333333333,
+        "longitude": -3.0596666666666668,
+        "cap": 275,
+        "vitesse": 19.9,
+        "position": 22
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.462,
+        "longitude": -4.4158333333333335,
+        "cap": 273,
+        "vitesse": 10.9,
+        "position": 27
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.337,
+        "longitude": -6.2035,
+        "cap": 289,
+        "vitesse": 10.8,
+        "position": 23
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.43183333333333,
+        "longitude": -7.1193333333333335,
+        "cap": 277,
+        "vitesse": 10.8,
+        "position": 16
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.62433333333333,
+        "longitude": -7.754166666666666,
+        "cap": 298,
+        "vitesse": 9.9,
+        "position": 27
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.514,
+        "longitude": -8.217666666666666,
+        "cap": 206,
+        "vitesse": 10.2,
+        "position": 27
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 46.086333333333336,
+        "longitude": -8.520833333333334,
+        "cap": 209,
+        "vitesse": 9.6,
+        "position": 27
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.45133333333333,
+        "longitude": -9.192833333333333,
+        "cap": 219,
+        "vitesse": 11.8,
+        "position": 26
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.76883333333333,
+        "longitude": -9.762833333333333,
+        "cap": 256,
+        "vitesse": 6.0,
+        "position": 28
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 44.234,
+        "longitude": -9.740166666666667,
+        "cap": 170,
+        "vitesse": 10.2,
+        "position": 24
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 44.105333333333334,
+        "longitude": -10.311333333333334,
+        "cap": 257,
+        "vitesse": 9.7,
+        "position": 24
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 43.96666666666667,
+        "longitude": -11.043666666666667,
+        "cap": 255,
+        "vitesse": 11.7,
+        "position": 24
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 43.869166666666665,
+        "longitude": -11.678666666666667,
+        "cap": 254,
+        "vitesse": 11.8,
+        "position": 24
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.71816666666667,
+        "longitude": -12.896833333333333,
+        "cap": 260,
+        "vitesse": 12.2,
+        "position": 25
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.46383333333333,
+        "longitude": -14.974333333333334,
+        "cap": 254,
+        "vitesse": 13.4,
+        "position": 25
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.07333333333333,
+        "longitude": -15.8785,
+        "cap": 195,
+        "vitesse": 15.1,
+        "position": 24
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 42.3455,
+        "longitude": -16.294833333333333,
+        "cap": 206,
+        "vitesse": 16.9,
+        "position": 22
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.83166666666666,
+        "longitude": -16.818,
+        "cap": 227,
+        "vitesse": 11.6,
+        "position": 20
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 41.62733333333333,
+        "longitude": -17.188333333333333,
+        "cap": 242,
+        "vitesse": 6.6,
+        "position": 20
+      }
+    ]
+  },
+  "FRA 8": {
+    "skipper": "Jérémie Beyou",
+    "bateau": "Charal",
+    "couleur": "#e15fce",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.329166666666666,
+        "longitude": -3.4503333333333335,
+        "cap": 268,
+        "vitesse": 20.2,
+        "position": 1
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.2125,
+        "longitude": -5.070666666666667,
+        "cap": 260,
+        "vitesse": 17.1,
+        "position": 1
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.411,
+        "longitude": -7.303333333333334,
+        "cap": 290,
+        "vitesse": 13.3,
+        "position": 4
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.81283333333333,
+        "longitude": -8.349,
+        "cap": 303,
+        "vitesse": 13.8,
+        "position": 17
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.540333333333336,
+        "longitude": -8.7095,
+        "cap": 193,
+        "vitesse": 10.4,
+        "position": 8
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.09166666666667,
+        "longitude": -8.914666666666667,
+        "cap": 206,
+        "vitesse": 10.3,
+        "position": 9
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.59016666666667,
+        "longitude": -9.273166666666667,
+        "cap": 202,
+        "vitesse": 12.9,
+        "position": 7
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.64233333333333,
+        "longitude": -9.919333333333332,
+        "cap": 193,
+        "vitesse": 13.2,
+        "position": 4
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.608333333333334,
+        "longitude": -9.856,
+        "cap": 146,
+        "vitesse": 13.5,
+        "position": 1
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.47866666666667,
+        "longitude": -10.523166666666667,
+        "cap": 270,
+        "vitesse": 9.5,
+        "position": 1
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 43.39683333333333,
+        "longitude": -11.212,
+        "cap": 267,
+        "vitesse": 16.1,
+        "position": 6
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 43.4095,
+        "longitude": -12.368166666666667,
+        "cap": 276,
+        "vitesse": 16.6,
+        "position": 7
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 43.415,
+        "longitude": -13.187833333333334,
+        "cap": 269,
+        "vitesse": 13.8,
+        "position": 9
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.32533333333333,
+        "longitude": -13.833166666666667,
+        "cap": 252,
+        "vitesse": 10.9,
+        "position": 14
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 42.97716666666667,
+        "longitude": -16.063666666666666,
+        "cap": 250,
+        "vitesse": 14.1,
+        "position": 15
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 42.524166666666666,
+        "longitude": -16.53783333333333,
+        "cap": 178,
+        "vitesse": 8.9,
+        "position": 18
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 42.53066666666667,
+        "longitude": -16.0475,
+        "cap": 54,
+        "vitesse": 8.4,
+        "position": 23
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 42.87916666666667,
+        "longitude": -15.602333333333334,
+        "cap": 36,
+        "vitesse": 9.2,
+        "position": 29
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 43.26466666666666,
+        "longitude": -15.2915,
+        "cap": 33,
+        "vitesse": 9.9,
+        "position": 32
+      }
+    ]
+  },
+  "FRA 18": {
+    "skipper": "Louis Burton",
+    "bateau": "Bureau Vallée 2",
+    "couleur": "#f7d369",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.36216666666667,
+        "longitude": -3.2836666666666665,
+        "cap": 271,
+        "vitesse": 20.3,
+        "position": 11
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.2745,
+        "longitude": -4.7965,
+        "cap": 262,
+        "vitesse": 12.3,
+        "position": 8
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.47266666666667,
+        "longitude": -7.064,
+        "cap": 294,
+        "vitesse": 13.9,
+        "position": 11
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.75983333333333,
+        "longitude": -8.041,
+        "cap": 300,
+        "vitesse": 11.6,
+        "position": 18
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.90866666666667,
+        "longitude": -8.606,
+        "cap": 194,
+        "vitesse": 10.0,
+        "position": 28
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.467166666666664,
+        "longitude": -8.917333333333334,
+        "cap": 207,
+        "vitesse": 10.5,
+        "position": 23
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.98416666666667,
+        "longitude": -9.215,
+        "cap": 205,
+        "vitesse": 11.2,
+        "position": 22
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.39,
+        "longitude": -9.957833333333333,
+        "cap": 208,
+        "vitesse": 6.6,
+        "position": 22
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.8835,
+        "longitude": -10.7005,
+        "cap": 289,
+        "vitesse": 8.5,
+        "position": 25
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 44.917833333333334,
+        "longitude": -11.655333333333333,
+        "cap": 278,
+        "vitesse": 12.5,
+        "position": 27
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 44.851333333333336,
+        "longitude": -12.608,
+        "cap": 267,
+        "vitesse": 14.3,
+        "position": 27
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 44.704166666666666,
+        "longitude": -13.512,
+        "cap": 246,
+        "vitesse": 13.2,
+        "position": 27
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 44.5075,
+        "longitude": -14.207833333333333,
+        "cap": 249,
+        "vitesse": 12.1,
+        "position": 25
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.19116666666667,
+        "longitude": -15.560166666666667,
+        "cap": 253,
+        "vitesse": 14.0,
+        "position": 24
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.51133333333333,
+        "longitude": -17.5315,
+        "cap": 227,
+        "vitesse": 11.6,
+        "position": 22
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 42.634,
+        "longitude": -18.258666666666667,
+        "cap": 217,
+        "vitesse": 15.9,
+        "position": 14
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 42.0505,
+        "longitude": -18.810166666666667,
+        "cap": 208,
+        "vitesse": 13.6,
+        "position": 15
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.594,
+        "longitude": -19.1605,
+        "cap": 214,
+        "vitesse": 7.3,
+        "position": 14
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 41.40083333333333,
+        "longitude": -19.398666666666667,
+        "cap": 225,
+        "vitesse": 5.6,
+        "position": 14
+      }
+    ]
+  },
+  "FRA 6": {
+    "skipper": "Nicolas Troussel",
+    "bateau": "CORUM L'Épargne",
+    "couleur": "#d53dbe",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.37433333333333,
+        "longitude": -3.375,
+        "cap": 266,
+        "vitesse": 21.0,
+        "position": 6
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.24666666666667,
+        "longitude": -5.096,
+        "cap": 266,
+        "vitesse": 20.4,
+        "position": 2
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.51166666666666,
+        "longitude": -7.5536666666666665,
+        "cap": 293,
+        "vitesse": 16.3,
+        "position": 5
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.91016666666667,
+        "longitude": -8.574833333333334,
+        "cap": 281,
+        "vitesse": 7.6,
+        "position": 19
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.34616666666667,
+        "longitude": -8.685833333333333,
+        "cap": 182,
+        "vitesse": 11.2,
+        "position": 4
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 45.930166666666665,
+        "longitude": -8.861333333333333,
+        "cap": 206,
+        "vitesse": 10.6,
+        "position": 6
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.457166666666666,
+        "longitude": -9.2895,
+        "cap": 209,
+        "vitesse": 13.7,
+        "position": 6
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.49033333333333,
+        "longitude": -9.563333333333333,
+        "cap": 177,
+        "vitesse": 13.6,
+        "position": 2
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.576,
+        "longitude": -9.583833333333333,
+        "cap": 204,
+        "vitesse": 5.1,
+        "position": 2
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.227833333333336,
+        "longitude": -9.278,
+        "cap": 234,
+        "vitesse": 4.4,
+        "position": 5
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 42.8725,
+        "longitude": -9.711,
+        "cap": 227,
+        "vitesse": 11.5,
+        "position": 4
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 42.590833333333336,
+        "longitude": -10.422166666666667,
+        "cap": 251,
+        "vitesse": 12.2,
+        "position": 4
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 42.368833333333335,
+        "longitude": -11.075,
+        "cap": 243,
+        "vitesse": 15.5,
+        "position": 4
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 42.035666666666664,
+        "longitude": -12.453666666666667,
+        "cap": 245,
+        "vitesse": 14.0,
+        "position": 4
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 41.50233333333333,
+        "longitude": -14.5275,
+        "cap": 255,
+        "vitesse": 12.3,
+        "position": 2
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 41.38133333333333,
+        "longitude": -15.732666666666667,
+        "cap": 273,
+        "vitesse": 13.7,
+        "position": 4
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 41.245666666666665,
+        "longitude": -16.32283333333333,
+        "cap": 245,
+        "vitesse": 11.5,
+        "position": 4
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.034666666666666,
+        "longitude": -17.00733333333333,
+        "cap": 227,
+        "vitesse": 8.9,
+        "position": 6
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 40.809,
+        "longitude": -17.74266666666667,
+        "cap": 268,
+        "vitesse": 10.6,
+        "position": 5
+      }
+    ]
+  },
+  "FRA 14": {
+    "skipper": "Arnaud Boissieres",
+    "bateau": "La Mie Câline - Artisans Artipôle",
+    "couleur": "#8d5800",
+    "classements": [
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.40716666666667,
+        "longitude": -4.286333333333333,
+        "cap": 264,
+        "vitesse": 9.5,
+        "position": 28
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.295833333333334,
+        "longitude": -6.041666666666667,
+        "cap": 276,
+        "vitesse": 11.2,
+        "position": 26
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.4435,
+        "longitude": -6.932,
+        "cap": 289,
+        "vitesse": 11.6,
+        "position": 20
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.686,
+        "longitude": -7.548166666666667,
+        "cap": 312,
+        "vitesse": 8.1,
+        "position": 30
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.55733333333333,
+        "longitude": -7.867166666666667,
+        "cap": 190,
+        "vitesse": 10.2,
+        "position": 30
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 46.117333333333335,
+        "longitude": -8.055666666666667,
+        "cap": 180,
+        "vitesse": 8.5,
+        "position": 30
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.513,
+        "longitude": -8.538333333333334,
+        "cap": 223,
+        "vitesse": 9.5,
+        "position": 30
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.69583333333333,
+        "longitude": -8.6505,
+        "cap": 175,
+        "vitesse": 9.3,
+        "position": 30
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 44.348166666666664,
+        "longitude": -8.890333333333333,
+        "cap": 270,
+        "vitesse": 8.0,
+        "position": 29
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 44.070166666666665,
+        "longitude": -8.622166666666667,
+        "cap": 137,
+        "vitesse": 7.7,
+        "position": 29
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 43.85816666666667,
+        "longitude": -9.052666666666667,
+        "cap": 258,
+        "vitesse": 10.5,
+        "position": 29
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 43.718333333333334,
+        "longitude": -9.658166666666666,
+        "cap": 246,
+        "vitesse": 11.6,
+        "position": 29
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.36,
+        "longitude": -10.757166666666667,
+        "cap": 251,
+        "vitesse": 11.3,
+        "position": 28
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 42.951,
+        "longitude": -12.466166666666666,
+        "cap": 249,
+        "vitesse": 12.2,
+        "position": 27
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 42.70883333333333,
+        "longitude": -13.462,
+        "cap": 254,
+        "vitesse": 11.4,
+        "position": 25
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 42.52033333333333,
+        "longitude": -14.067333333333334,
+        "cap": 209,
+        "vitesse": 13.6,
+        "position": 27
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 42.091,
+        "longitude": -14.580333333333334,
+        "cap": 229,
+        "vitesse": 10.5,
+        "position": 25
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 41.7855,
+        "longitude": -15.166166666666667,
+        "cap": 242,
+        "vitesse": 9.3,
+        "position": 24
+      }
+    ]
+  },
+  "FRA 4": {
+    "skipper": "Sébastien Simon",
+    "bateau": "ARKEA PAPREC",
+    "couleur": "#6714e7",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.2745,
+        "longitude": -3.2281666666666666,
+        "cap": 269,
+        "vitesse": 18.5,
+        "position": 8
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.219833333333334,
+        "longitude": -4.624,
+        "cap": 271,
+        "vitesse": 8.0,
+        "position": 13
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.49333333333333,
+        "longitude": -6.951333333333333,
+        "cap": 292,
+        "vitesse": 16.0,
+        "position": 16
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.81483333333333,
+        "longitude": -8.065833333333334,
+        "cap": 304,
+        "vitesse": 12.9,
+        "position": 21
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.647666666666666,
+        "longitude": -8.4555,
+        "cap": 199,
+        "vitesse": 10.4,
+        "position": 20
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.21816666666667,
+        "longitude": -8.635333333333334,
+        "cap": 199,
+        "vitesse": 8.7,
+        "position": 20
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.81666666666667,
+        "longitude": -9.0085,
+        "cap": 206,
+        "vitesse": 9.3,
+        "position": 20
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.0305,
+        "longitude": -9.705166666666667,
+        "cap": 199,
+        "vitesse": 12.1,
+        "position": 16
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.26766666666666,
+        "longitude": -10.173,
+        "cap": 286,
+        "vitesse": 9.2,
+        "position": 14
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 44.35016666666667,
+        "longitude": -11.056166666666666,
+        "cap": 273,
+        "vitesse": 9.9,
+        "position": 17
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 44.22566666666667,
+        "longitude": -11.827,
+        "cap": 250,
+        "vitesse": 13.0,
+        "position": 16
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 44.0055,
+        "longitude": -12.832666666666666,
+        "cap": 255,
+        "vitesse": 15.5,
+        "position": 15
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 43.872,
+        "longitude": -13.711,
+        "cap": 257,
+        "vitesse": 15.7,
+        "position": 14
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.76883333333333,
+        "longitude": -15.251333333333333,
+        "cap": 262,
+        "vitesse": 15.5,
+        "position": 16
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.41866666666667,
+        "longitude": -17.426166666666667,
+        "cap": 263,
+        "vitesse": 10.2,
+        "position": 19
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 42.597833333333334,
+        "longitude": -18.2105,
+        "cap": 211,
+        "vitesse": 16.3,
+        "position": 13
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 41.93233333333333,
+        "longitude": -18.731333333333332,
+        "cap": 220,
+        "vitesse": 13.8,
+        "position": 12
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.54933333333334,
+        "longitude": -19.187,
+        "cap": 220,
+        "vitesse": 7.3,
+        "position": 11
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 41.380833333333335,
+        "longitude": -19.469166666666666,
+        "cap": 252,
+        "vitesse": 6.0,
+        "position": 13
+      }
+    ]
+  },
+  "FRA 109": {
+    "skipper": "Samantha Davies",
+    "bateau": "Initiatives - Coeur",
+    "couleur": "#720420",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.349,
+        "longitude": -3.2758333333333334,
+        "cap": 271,
+        "vitesse": 19.9,
+        "position": 10
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.25683333333333,
+        "longitude": -4.731,
+        "cap": 265,
+        "vitesse": 11.5,
+        "position": 10
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.54966666666667,
+        "longitude": -7.005333333333334,
+        "cap": 287,
+        "vitesse": 13.3,
+        "position": 21
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.814,
+        "longitude": -7.995333333333333,
+        "cap": 302,
+        "vitesse": 11.0,
+        "position": 22
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.4215,
+        "longitude": -8.255,
+        "cap": 187,
+        "vitesse": 9.1,
+        "position": 11
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 45.935833333333335,
+        "longitude": -8.426,
+        "cap": 200,
+        "vitesse": 10.1,
+        "position": 7
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.505,
+        "longitude": -8.86,
+        "cap": 235,
+        "vitesse": 11.0,
+        "position": 9
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.706833333333336,
+        "longitude": -9.515333333333333,
+        "cap": 212,
+        "vitesse": 11.3,
+        "position": 9
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.99783333333333,
+        "longitude": -9.912333333333333,
+        "cap": 165,
+        "vitesse": 9.2,
+        "position": 10
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.6065,
+        "longitude": -10.137,
+        "cap": 267,
+        "vitesse": 8.0,
+        "position": 10
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 43.56766666666667,
+        "longitude": -10.779,
+        "cap": 260,
+        "vitesse": 10.7,
+        "position": 10
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 43.51766666666666,
+        "longitude": -11.679,
+        "cap": 270,
+        "vitesse": 12.8,
+        "position": 12
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 43.44433333333333,
+        "longitude": -12.563666666666666,
+        "cap": 266,
+        "vitesse": 15.6,
+        "position": 12
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.312333333333335,
+        "longitude": -13.9725,
+        "cap": 252,
+        "vitesse": 12.8,
+        "position": 12
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 42.834833333333336,
+        "longitude": -15.857833333333334,
+        "cap": 246,
+        "vitesse": 13.4,
+        "position": 12
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 42.42966666666667,
+        "longitude": -16.619166666666665,
+        "cap": 203,
+        "vitesse": 11.4,
+        "position": 15
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 41.805,
+        "longitude": -17.204666666666668,
+        "cap": 219,
+        "vitesse": 15.7,
+        "position": 14
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.4075,
+        "longitude": -17.730833333333333,
+        "cap": 224,
+        "vitesse": 9.0,
+        "position": 13
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 41.2285,
+        "longitude": -18.273666666666667,
+        "cap": 268,
+        "vitesse": 7.7,
+        "position": 12
+      }
+    ]
+  },
+  "FRA 59": {
+    "skipper": "Thomas Ruyant",
+    "bateau": "LinkedOut",
+    "couleur": "#b5f6a6",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.31766666666667,
+        "longitude": -3.402,
+        "cap": 265,
+        "vitesse": 20.9,
+        "position": 3
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.18033333333333,
+        "longitude": -4.902,
+        "cap": 263,
+        "vitesse": 13.0,
+        "position": 4
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.58733333333333,
+        "longitude": -7.2125,
+        "cap": 283,
+        "vitesse": 15.9,
+        "position": 18
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.9295,
+        "longitude": -8.373166666666666,
+        "cap": 297,
+        "vitesse": 13.0,
+        "position": 23
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.866,
+        "longitude": -8.880333333333333,
+        "cap": 198,
+        "vitesse": 11.7,
+        "position": 26
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.343833333333336,
+        "longitude": -9.1165,
+        "cap": 195,
+        "vitesse": 9.6,
+        "position": 17
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.885333333333335,
+        "longitude": -9.4275,
+        "cap": 214,
+        "vitesse": 9.9,
+        "position": 16
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.16283333333333,
+        "longitude": -10.209,
+        "cap": 204,
+        "vitesse": 5.5,
+        "position": 15
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.82716666666666,
+        "longitude": -10.767,
+        "cap": 280,
+        "vitesse": 9.6,
+        "position": 22
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 44.908,
+        "longitude": -11.868666666666666,
+        "cap": 267,
+        "vitesse": 14.0,
+        "position": 26
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 44.7785,
+        "longitude": -12.752333333333333,
+        "cap": 261,
+        "vitesse": 12.0,
+        "position": 26
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 44.52066666666666,
+        "longitude": -13.6225,
+        "cap": 239,
+        "vitesse": 13.0,
+        "position": 23
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 44.295,
+        "longitude": -14.298833333333333,
+        "cap": 248,
+        "vitesse": 12.1,
+        "position": 22
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.94383333333333,
+        "longitude": -15.723166666666666,
+        "cap": 252,
+        "vitesse": 14.6,
+        "position": 20
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.22983333333333,
+        "longitude": -17.7915,
+        "cap": 221,
+        "vitesse": 13.5,
+        "position": 14
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 42.288833333333336,
+        "longitude": -18.430333333333333,
+        "cap": 208,
+        "vitesse": 16.6,
+        "position": 8
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 41.7035,
+        "longitude": -19.016333333333332,
+        "cap": 217,
+        "vitesse": 11.6,
+        "position": 5
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.36083333333333,
+        "longitude": -19.414833333333334,
+        "cap": 231,
+        "vitesse": 8.0,
+        "position": 5
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 41.187333333333335,
+        "longitude": -19.4705,
+        "cap": 148,
+        "vitesse": 3.3,
+        "position": 10
+      }
+    ]
+  },
+  "FRA 02": {
+    "skipper": "Armel Tripon",
+    "bateau": "L'Occitane en Provence",
+    "couleur": "#d2d42d",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.35483333333333,
+        "longitude": -3.3323333333333336,
+        "cap": 270,
+        "vitesse": 21.9,
+        "position": 7
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.229,
+        "longitude": -5.0135,
+        "cap": 260,
+        "vitesse": 18.1,
+        "position": 3
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.4815,
+        "longitude": -7.4095,
+        "cap": 294,
+        "vitesse": 16.0,
+        "position": 6
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.930166666666665,
+        "longitude": -8.3495,
+        "cap": 312,
+        "vitesse": 12.9,
+        "position": 24
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.8325,
+        "longitude": -8.7665,
+        "cap": 196,
+        "vitesse": 10.2,
+        "position": 25
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.304833333333335,
+        "longitude": -8.972833333333334,
+        "cap": 194,
+        "vitesse": 9.8,
+        "position": 18
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.844833333333334,
+        "longitude": -9.2605,
+        "cap": 209,
+        "vitesse": 11.2,
+        "position": 17
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.040333333333336,
+        "longitude": -9.969833333333334,
+        "cap": 215,
+        "vitesse": 8.5,
+        "position": 13
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.56216666666667,
+        "longitude": -10.692833333333333,
+        "cap": 281,
+        "vitesse": 9.6,
+        "position": 19
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 44.70766666666667,
+        "longitude": -11.703833333333334,
+        "cap": 263,
+        "vitesse": 12.0,
+        "position": 23
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 44.587,
+        "longitude": -12.595,
+        "cap": 259,
+        "vitesse": 13.9,
+        "position": 21
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 44.437333333333335,
+        "longitude": -13.510333333333334,
+        "cap": 252,
+        "vitesse": 13.2,
+        "position": 21
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 44.260333333333335,
+        "longitude": -14.217,
+        "cap": 257,
+        "vitesse": 11.4,
+        "position": 21
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.983666666666664,
+        "longitude": -15.617833333333333,
+        "cap": 254,
+        "vitesse": 14.0,
+        "position": 22
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.1045,
+        "longitude": -16.8575,
+        "cap": 86,
+        "vitesse": 7.1,
+        "position": 29
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.8525,
+        "longitude": -15.9645,
+        "cap": 98,
+        "vitesse": 8.5,
+        "position": 31
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 43.831,
+        "longitude": -15.275,
+        "cap": 145,
+        "vitesse": 11.4,
+        "position": 32
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 43.23533333333334,
+        "longitude": -15.126,
+        "cap": 169,
+        "vitesse": 12.6,
+        "position": 32
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 42.76883333333333,
+        "longitude": -15.0985,
+        "cap": 183,
+        "vitesse": 7.7,
+        "position": 31
+      }
+    ]
+  },
+  "FRA 79": {
+    "skipper": "Charlie Dalin",
+    "bateau": "APIVIA",
+    "couleur": "#90b208",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.26533333333333,
+        "longitude": -3.3665,
+        "cap": 266,
+        "vitesse": 20.1,
+        "position": 2
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.17216666666667,
+        "longitude": -4.790333333333333,
+        "cap": 263,
+        "vitesse": 9.3,
+        "position": 5
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.595166666666664,
+        "longitude": -7.240333333333333,
+        "cap": 288,
+        "vitesse": 15.9,
+        "position": 17
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.909666666666666,
+        "longitude": -8.2735,
+        "cap": 294,
+        "vitesse": 11.9,
+        "position": 25
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.721666666666664,
+        "longitude": -8.694166666666666,
+        "cap": 190,
+        "vitesse": 10.3,
+        "position": 21
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.17,
+        "longitude": -8.8175,
+        "cap": 197,
+        "vitesse": 10.8,
+        "position": 12
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.672666666666665,
+        "longitude": -9.182833333333333,
+        "cap": 205,
+        "vitesse": 11.9,
+        "position": 12
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.727333333333334,
+        "longitude": -9.7555,
+        "cap": 205,
+        "vitesse": 10.2,
+        "position": 8
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.813,
+        "longitude": -9.9205,
+        "cap": 266,
+        "vitesse": 9.8,
+        "position": 4
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.663,
+        "longitude": -10.56,
+        "cap": 252,
+        "vitesse": 8.4,
+        "position": 8
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 43.6435,
+        "longitude": -11.399000000000001,
+        "cap": 275,
+        "vitesse": 14.5,
+        "position": 9
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 43.563,
+        "longitude": -12.596333333333334,
+        "cap": 265,
+        "vitesse": 18.6,
+        "position": 8
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 43.59283333333333,
+        "longitude": -13.271333333333333,
+        "cap": 257,
+        "vitesse": 15.9,
+        "position": 11
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.46,
+        "longitude": -14.825166666666666,
+        "cap": 267,
+        "vitesse": 16.0,
+        "position": 11
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.07716666666666,
+        "longitude": -16.854666666666667,
+        "cap": 263,
+        "vitesse": 11.5,
+        "position": 13
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 42.402833333333334,
+        "longitude": -17.170833333333334,
+        "cap": 171,
+        "vitesse": 10.9,
+        "position": 12
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 41.59133333333333,
+        "longitude": -17.596166666666665,
+        "cap": 213,
+        "vitesse": 18.0,
+        "position": 7
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.1895,
+        "longitude": -18.1685,
+        "cap": 229,
+        "vitesse": 7.4,
+        "position": 4
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 40.8295,
+        "longitude": -18.381333333333334,
+        "cap": 170,
+        "vitesse": 11.0,
+        "position": 2
+      }
+    ]
+  },
+  "FIN 222": {
+    "skipper": "Ari Huusela",
+    "bateau": "Stark",
+    "couleur": "#64841a",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.22716666666667,
+        "longitude": -2.700833333333333,
+        "cap": 255,
+        "vitesse": 14.0,
+        "position": 32
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.96383333333333,
+        "longitude": -3.775166666666667,
+        "cap": 247,
+        "vitesse": 10.8,
+        "position": 30
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 45.925333333333334,
+        "longitude": -4.923666666666667,
+        "cap": 280,
+        "vitesse": 9.0,
+        "position": 30
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 45.903333333333336,
+        "longitude": -5.6866666666666665,
+        "cap": 262,
+        "vitesse": 8.3,
+        "position": 26
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 45.90416666666667,
+        "longitude": -6.308333333333334,
+        "cap": 275,
+        "vitesse": 9.5,
+        "position": 22
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 45.990833333333335,
+        "longitude": -6.919833333333333,
+        "cap": 281,
+        "vitesse": 8.6,
+        "position": 26
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.69566666666667,
+        "longitude": -7.2495,
+        "cap": 223,
+        "vitesse": 9.3,
+        "position": 28
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.145,
+        "longitude": -7.878,
+        "cap": 210,
+        "vitesse": 11.3,
+        "position": 28
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.29216666666667,
+        "longitude": -8.220166666666668,
+        "cap": 177,
+        "vitesse": 5.3,
+        "position": 27
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.837833333333336,
+        "longitude": -8.428166666666666,
+        "cap": 247,
+        "vitesse": 11.9,
+        "position": 25
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 43.7,
+        "longitude": -9.139166666666666,
+        "cap": 257,
+        "vitesse": 11.3,
+        "position": 22
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 43.57516666666667,
+        "longitude": -9.885166666666667,
+        "cap": 262,
+        "vitesse": 10.6,
+        "position": 22
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 43.4685,
+        "longitude": -10.512,
+        "cap": 245,
+        "vitesse": 10.8,
+        "position": 23
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.347166666666666,
+        "longitude": -11.620333333333333,
+        "cap": 266,
+        "vitesse": 11.8,
+        "position": 23
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.160833333333336,
+        "longitude": -13.434333333333333,
+        "cap": 263,
+        "vitesse": 11.4,
+        "position": 26
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.0935,
+        "longitude": -14.517166666666666,
+        "cap": 273,
+        "vitesse": 9.4,
+        "position": 27
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 42.732166666666664,
+        "longitude": -14.809833333333334,
+        "cap": 214,
+        "vitesse": 8.4,
+        "position": 28
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 42.362833333333334,
+        "longitude": -15.294666666666666,
+        "cap": 224,
+        "vitesse": 10.7,
+        "position": 27
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 42.11033333333334,
+        "longitude": -15.731833333333332,
+        "cap": 245,
+        "vitesse": 7.3,
+        "position": 28
+      }
+    ]
+  },
+  "FRA 85": {
+    "skipper": "Kevin Escoffier",
+    "bateau": "PRB",
+    "couleur": "#ed2b7",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.35783333333333,
+        "longitude": -3.218,
+        "cap": 272,
+        "vitesse": 19.5,
+        "position": 14
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.31666666666667,
+        "longitude": -4.765666666666666,
+        "cap": 265,
+        "vitesse": 12.9,
+        "position": 11
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.590333333333334,
+        "longitude": -7.17,
+        "cap": 289,
+        "vitesse": 14.5,
+        "position": 20
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.889,
+        "longitude": -8.167166666666667,
+        "cap": 296,
+        "vitesse": 11.5,
+        "position": 27
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.60966666666667,
+        "longitude": -8.5275,
+        "cap": 198,
+        "vitesse": 10.5,
+        "position": 14
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.149166666666666,
+        "longitude": -8.7365,
+        "cap": 205,
+        "vitesse": 10.1,
+        "position": 13
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.633,
+        "longitude": -9.1,
+        "cap": 199,
+        "vitesse": 12.2,
+        "position": 10
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.64566666666666,
+        "longitude": -9.469666666666667,
+        "cap": 186,
+        "vitesse": 9.5,
+        "position": 7
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.81733333333333,
+        "longitude": -9.811666666666667,
+        "cap": 273,
+        "vitesse": 10.7,
+        "position": 7
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.554833333333335,
+        "longitude": -10.304333333333334,
+        "cap": 262,
+        "vitesse": 9.6,
+        "position": 7
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 43.5455,
+        "longitude": -11.109,
+        "cap": 268,
+        "vitesse": 14.4,
+        "position": 8
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 43.482166666666664,
+        "longitude": -12.2125,
+        "cap": 265,
+        "vitesse": 15.5,
+        "position": 9
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 43.40866666666667,
+        "longitude": -13.132333333333333,
+        "cap": 261,
+        "vitesse": 15.8,
+        "position": 10
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.21966666666667,
+        "longitude": -14.585666666666667,
+        "cap": 262,
+        "vitesse": 13.2,
+        "position": 9
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 42.8715,
+        "longitude": -16.727333333333334,
+        "cap": 268,
+        "vitesse": 11.1,
+        "position": 10
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 42.3875,
+        "longitude": -17.138333333333332,
+        "cap": 196,
+        "vitesse": 13.3,
+        "position": 11
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 41.726333333333336,
+        "longitude": -17.584833333333332,
+        "cap": 213,
+        "vitesse": 15.1,
+        "position": 10
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.275166666666664,
+        "longitude": -18.131833333333333,
+        "cap": 229,
+        "vitesse": 9.4,
+        "position": 8
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 41.010333333333335,
+        "longitude": -18.4915,
+        "cap": 173,
+        "vitesse": 8.2,
+        "position": 7
+      }
+    ]
+  },
+  "FRA 83": {
+    "skipper": "Clément Giraud",
+    "bateau": "Compagnie du lit - Jiliti",
+    "couleur": "#a10fa6",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.1665,
+        "longitude": -2.6938333333333335,
+        "cap": 246,
+        "vitesse": 12.6,
+        "position": 30
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.849666666666664,
+        "longitude": -3.7678333333333334,
+        "cap": 242,
+        "vitesse": 9.3,
+        "position": 25
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 45.86033333333334,
+        "longitude": -4.822,
+        "cap": 281,
+        "vitesse": 8.1,
+        "position": 31
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 45.884166666666665,
+        "longitude": -5.571,
+        "cap": 270,
+        "vitesse": 10.1,
+        "position": 28
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 45.951,
+        "longitude": -6.2815,
+        "cap": 278,
+        "vitesse": 10.1,
+        "position": 23
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.11633333333333,
+        "longitude": -6.926833333333334,
+        "cap": 293,
+        "vitesse": 10.2,
+        "position": 28
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.648666666666664,
+        "longitude": -7.148,
+        "cap": 213,
+        "vitesse": 10.4,
+        "position": 26
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.025333333333336,
+        "longitude": -7.783833333333334,
+        "cap": 218,
+        "vitesse": 9.9,
+        "position": 27
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.21233333333333,
+        "longitude": -8.2065,
+        "cap": 194,
+        "vitesse": 5.0,
+        "position": 26
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.82183333333333,
+        "longitude": -8.566333333333333,
+        "cap": 255,
+        "vitesse": 12.1,
+        "position": 22
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 43.682,
+        "longitude": -9.2455,
+        "cap": 254,
+        "vitesse": 11.8,
+        "position": 20
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 43.54983333333333,
+        "longitude": -9.9805,
+        "cap": 258,
+        "vitesse": 10.3,
+        "position": 20
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 43.363166666666665,
+        "longitude": -10.527333333333333,
+        "cap": 239,
+        "vitesse": 10.9,
+        "position": 20
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.031,
+        "longitude": -11.528,
+        "cap": 248,
+        "vitesse": 10.7,
+        "position": 17
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 42.655,
+        "longitude": -13.109333333333334,
+        "cap": 258,
+        "vitesse": 10.6,
+        "position": 21
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 42.174,
+        "longitude": -12.556,
+        "cap": 131,
+        "vitesse": 10.4,
+        "position": 23
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 41.7955,
+        "longitude": -12.146,
+        "cap": 177,
+        "vitesse": 6.1,
+        "position": 24
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.7275,
+        "longitude": -12.869666666666667,
+        "cap": 271,
+        "vitesse": 11.2,
+        "position": 26
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 41.50116666666667,
+        "longitude": -13.299,
+        "cap": 241,
+        "vitesse": 10.6,
+        "position": 27
+      }
+    ]
+  },
+  "MON 10": {
+    "skipper": "Boris Herrmann",
+    "bateau": "Seaexplorer - Yacht Club De Monaco",
+    "couleur": "#237c8",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.284,
+        "longitude": -3.3118333333333334,
+        "cap": 269,
+        "vitesse": 18.8,
+        "position": 5
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.231,
+        "longitude": -4.767333333333333,
+        "cap": 269,
+        "vitesse": 10.9,
+        "position": 7
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.588166666666666,
+        "longitude": -7.071,
+        "cap": 298,
+        "vitesse": 15.5,
+        "position": 22
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.901833333333336,
+        "longitude": -8.075833333333334,
+        "cap": 292,
+        "vitesse": 11.7,
+        "position": 29
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.626666666666665,
+        "longitude": -8.413833333333333,
+        "cap": 200,
+        "vitesse": 10.4,
+        "position": 19
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.170833333333334,
+        "longitude": -8.577333333333334,
+        "cap": 206,
+        "vitesse": 9.6,
+        "position": 16
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.77616666666667,
+        "longitude": -8.958,
+        "cap": 208,
+        "vitesse": 9.1,
+        "position": 19
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.06333333333333,
+        "longitude": -9.662666666666667,
+        "cap": 204,
+        "vitesse": 9.9,
+        "position": 17
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.315666666666665,
+        "longitude": -10.085,
+        "cap": 274,
+        "vitesse": 9.7,
+        "position": 15
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 44.3905,
+        "longitude": -10.969833333333334,
+        "cap": 272,
+        "vitesse": 10.2,
+        "position": 18
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 44.267,
+        "longitude": -11.6765,
+        "cap": 244,
+        "vitesse": 11.4,
+        "position": 18
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 44.209666666666664,
+        "longitude": -12.701833333333333,
+        "cap": 262,
+        "vitesse": 10.9,
+        "position": 19
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 44.05383333333333,
+        "longitude": -13.5435,
+        "cap": 252,
+        "vitesse": 14.9,
+        "position": 18
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.827,
+        "longitude": -15.020333333333333,
+        "cap": 252,
+        "vitesse": 14.0,
+        "position": 21
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.364333333333335,
+        "longitude": -16.870166666666666,
+        "cap": 268,
+        "vitesse": 9.5,
+        "position": 20
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 42.95516666666666,
+        "longitude": -17.748833333333334,
+        "cap": 235,
+        "vitesse": 15.3,
+        "position": 22
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 42.298,
+        "longitude": -18.179,
+        "cap": 203,
+        "vitesse": 15.1,
+        "position": 18
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 41.80416666666667,
+        "longitude": -18.542666666666666,
+        "cap": 212,
+        "vitesse": 9.7,
+        "position": 16
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 41.6005,
+        "longitude": -18.656333333333333,
+        "cap": 139,
+        "vitesse": 2.4,
+        "position": 18
+      }
+    ]
+  },
+  "GBR 777": {
+    "skipper": "Pip Hare",
+    "bateau": "Medallia",
+    "couleur": "#b9f246",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.29366666666667,
+        "longitude": -2.8678333333333335,
+        "cap": 265,
+        "vitesse": 15.9,
+        "position": 28
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.2955,
+        "longitude": -4.14,
+        "cap": 274,
+        "vitesse": 10.0,
+        "position": 29
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.324,
+        "longitude": -5.838333333333333,
+        "cap": 280,
+        "vitesse": 11.5,
+        "position": 28
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.49433333333333,
+        "longitude": -6.7236666666666665,
+        "cap": 292,
+        "vitesse": 10.9,
+        "position": 30
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.55616666666667,
+        "longitude": -7.247,
+        "cap": 194,
+        "vitesse": 8.8,
+        "position": 29
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.083,
+        "longitude": -7.417666666666666,
+        "cap": 192,
+        "vitesse": 10.3,
+        "position": 25
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.62616666666667,
+        "longitude": -7.625333333333334,
+        "cap": 215,
+        "vitesse": 10.0,
+        "position": 25
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.043166666666664,
+        "longitude": -8.1975,
+        "cap": 209,
+        "vitesse": 9.7,
+        "position": 25
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.14266666666666,
+        "longitude": -8.525666666666666,
+        "cap": 166,
+        "vitesse": 8.8,
+        "position": 21
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.89033333333333,
+        "longitude": -8.902833333333334,
+        "cap": 289,
+        "vitesse": 6.6,
+        "position": 20
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 43.87983333333333,
+        "longitude": -9.503833333333333,
+        "cap": 298,
+        "vitesse": 9.9,
+        "position": 23
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 43.9115,
+        "longitude": -10.215333333333334,
+        "cap": 274,
+        "vitesse": 10.6,
+        "position": 26
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 43.841,
+        "longitude": -10.8005,
+        "cap": 255,
+        "vitesse": 9.7,
+        "position": 27
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.7845,
+        "longitude": -11.979166666666666,
+        "cap": 270,
+        "vitesse": 11.5,
+        "position": 29
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.63066666666667,
+        "longitude": -13.735166666666666,
+        "cap": 262,
+        "vitesse": 11.7,
+        "position": 30
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.51016666666666,
+        "longitude": -14.6575,
+        "cap": 252,
+        "vitesse": 3.8,
+        "position": 29
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 42.93416666666667,
+        "longitude": -14.784333333333333,
+        "cap": 192,
+        "vitesse": 13.0,
+        "position": 29
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 42.38916666666667,
+        "longitude": -14.984833333333333,
+        "cap": 197,
+        "vitesse": 12.5,
+        "position": 28
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 41.9245,
+        "longitude": -15.368333333333334,
+        "cap": 220,
+        "vitesse": 10.7,
+        "position": 26
+      }
+    ]
+  },
+  "FRA 72": {
+    "skipper": "Alexia Barrier",
+    "bateau": "TSE - 4myplanet",
+    "couleur": "#903d16",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.37383333333333,
+        "longitude": -2.8481666666666667,
+        "cap": 274,
+        "vitesse": 16.2,
+        "position": 31
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.26,
+        "longitude": -3.961666666666667,
+        "cap": 253,
+        "vitesse": 10.3,
+        "position": 32
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.275166666666664,
+        "longitude": -5.612666666666667,
+        "cap": 268,
+        "vitesse": 11.5,
+        "position": 29
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.412166666666664,
+        "longitude": -6.41,
+        "cap": 288,
+        "vitesse": 9.4,
+        "position": 31
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.55283333333333,
+        "longitude": -7.0441666666666665,
+        "cap": 301,
+        "vitesse": 8.4,
+        "position": 32
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.376,
+        "longitude": -7.317833333333334,
+        "cap": 190,
+        "vitesse": 10.1,
+        "position": 29
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 45.92483333333333,
+        "longitude": -7.5649999999999995,
+        "cap": 222,
+        "vitesse": 10.4,
+        "position": 29
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.362833333333334,
+        "longitude": -8.2085,
+        "cap": 225,
+        "vitesse": 9.7,
+        "position": 29
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 45.14333333333333,
+        "longitude": -9.206166666666666,
+        "cap": 281,
+        "vitesse": 8.7,
+        "position": 32
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 44.84316666666667,
+        "longitude": -9.490833333333333,
+        "cap": 183,
+        "vitesse": 9.6,
+        "position": 31
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 44.62383333333333,
+        "longitude": -9.817,
+        "cap": 255,
+        "vitesse": 9.6,
+        "position": 31
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 44.5215,
+        "longitude": -10.479833333333334,
+        "cap": 254,
+        "vitesse": 9.6,
+        "position": 31
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 44.45333333333333,
+        "longitude": -11.05,
+        "cap": 257,
+        "vitesse": 10.4,
+        "position": 32
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 44.2385,
+        "longitude": -12.088333333333333,
+        "cap": 254,
+        "vitesse": 10.4,
+        "position": 32
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.014,
+        "longitude": -13.441833333333333,
+        "cap": 251,
+        "vitesse": 9.2,
+        "position": 32
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.82633333333333,
+        "longitude": -14.272666666666666,
+        "cap": 269,
+        "vitesse": 9.5,
+        "position": 32
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 43.483333333333334,
+        "longitude": -14.517833333333334,
+        "cap": 207,
+        "vitesse": 9.8,
+        "position": 31
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 43.0265,
+        "longitude": -14.8595,
+        "cap": 211,
+        "vitesse": 9.1,
+        "position": 31
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 42.6165,
+        "longitude": -15.246333333333334,
+        "cap": 223,
+        "vitesse": 8.8,
+        "position": 30
+      }
+    ]
+  },
+  "FRA 69": {
+    "skipper": "Sébastien Destremau",
+    "bateau": "Merci",
+    "couleur": "#1c8fb5",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.25033333333333,
+        "longitude": -2.8093333333333335,
+        "cap": 259,
+        "vitesse": 16.2,
+        "position": 29
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.13333333333333,
+        "longitude": -3.9253333333333336,
+        "cap": 255,
+        "vitesse": 11.2,
+        "position": 31
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.3905,
+        "longitude": -5.530666666666667,
+        "cap": 269,
+        "vitesse": 11.8,
+        "position": 32
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.502,
+        "longitude": -6.401666666666666,
+        "cap": 284,
+        "vitesse": 8.4,
+        "position": 32
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.55116666666667,
+        "longitude": -7.0488333333333335,
+        "cap": 291,
+        "vitesse": 8.4,
+        "position": 31
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.472833333333334,
+        "longitude": -7.465,
+        "cap": 208,
+        "vitesse": 8.8,
+        "position": 31
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 46.12016666666667,
+        "longitude": -7.782333333333334,
+        "cap": 226,
+        "vitesse": 8.6,
+        "position": 32
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 45.633,
+        "longitude": -8.338666666666667,
+        "cap": 232,
+        "vitesse": 8.5,
+        "position": 32
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 44.98833333333333,
+        "longitude": -8.814333333333334,
+        "cap": 189,
+        "vitesse": 5.2,
+        "position": 31
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 44.73566666666667,
+        "longitude": -9.105,
+        "cap": 250,
+        "vitesse": 7.7,
+        "position": 32
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 44.625166666666665,
+        "longitude": -9.5695,
+        "cap": 244,
+        "vitesse": 7.3,
+        "position": 32
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 44.457166666666666,
+        "longitude": -10.0975,
+        "cap": 249,
+        "vitesse": 8.6,
+        "position": 32
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 44.29266666666667,
+        "longitude": -10.553333333333333,
+        "cap": 243,
+        "vitesse": 8.8,
+        "position": 31
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 43.995,
+        "longitude": -11.393333333333333,
+        "cap": 247,
+        "vitesse": 9.7,
+        "position": 31
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 43.521166666666666,
+        "longitude": -12.769666666666666,
+        "cap": 245,
+        "vitesse": 9.9,
+        "position": 31
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 43.32566666666666,
+        "longitude": -13.502333333333333,
+        "cap": 249,
+        "vitesse": 9.0,
+        "position": 30
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 43.20016666666667,
+        "longitude": -13.714166666666667,
+        "cap": 184,
+        "vitesse": 4.5,
+        "position": 30
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 42.74033333333333,
+        "longitude": -13.9065,
+        "cap": 190,
+        "vitesse": 9.5,
+        "position": 30
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 42.328,
+        "longitude": -14.084666666666667,
+        "cap": 200,
+        "vitesse": 7.8,
+        "position": 29
+      }
+    ]
+  },
+  "FRA 56": {
+    "skipper": "Fabrice Amedeo",
+    "bateau": "Newrest - Art et Fenetres",
+    "couleur": "#9670a5",
+    "classements": [
+      {
+        "heure": "18:30 FR",
+        "latitude": 46.4025,
+        "longitude": -3.0541666666666667,
+        "cap": 287,
+        "vitesse": 12.3,
+        "position": 24
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.463166666666666,
+        "longitude": -2.4965,
+        "cap": 83,
+        "vitesse": 7.1,
+        "position": 33
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.48866666666667,
+        "longitude": -1.7868333333333335,
+        "cap": 215,
+        "vitesse": 0.0,
+        "position": 33
+      },
+      {
+        "heure": "09:00 FR",
+        "latitude": 46.50216666666667,
+        "longitude": -1.7903333333333333,
+        "cap": 352,
+        "vitesse": 1.6,
+        "position": 33
+      },
+      {
+        "heure": "12:00 FR",
+        "latitude": 46.50216666666667,
+        "longitude": -1.7903333333333333,
+        "cap": 0,
+        "vitesse": 0.0,
+        "position": 33
+      },
+      {
+        "heure": "15:00 FR",
+        "latitude": 46.50216666666667,
+        "longitude": -1.7903333333333333,
+        "cap": 250,
+        "vitesse": 0.0,
+        "position": 33
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 46.50216666666667,
+        "longitude": -1.7903333333333333,
+        "cap": 350,
+        "vitesse": 0.0,
+        "position": 33
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.50216666666667,
+        "longitude": -1.7903333333333333,
+        "cap": 215,
+        "vitesse": 0.0,
+        "position": 33
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.50216666666667,
+        "longitude": -1.7903333333333333,
+        "cap": 0,
+        "vitesse": 0.0,
+        "position": 33
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 46.50216666666667,
+        "longitude": -1.7903333333333333,
+        "cap": 90,
+        "vitesse": 0.0,
+        "position": 33
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 46.50216666666667,
+        "longitude": -1.7903333333333333,
+        "cap": 90,
+        "vitesse": 0.0,
+        "position": 33
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 46.50216666666667,
+        "longitude": -1.7903333333333333,
+        "cap": 199,
+        "vitesse": 0.0,
+        "position": 33
+      },
+      {
+        "heure": "18:00 FR",
+        "latitude": 46.50216666666667,
+        "longitude": -1.7903333333333333,
+        "cap": 170,
+        "vitesse": 0.0,
+        "position": 33
+      },
+      {
+        "heure": "22:30 FR",
+        "latitude": 46.50216666666667,
+        "longitude": -1.7903333333333333,
+        "cap": 325,
+        "vitesse": 0.0,
+        "position": 33
+      },
+      {
+        "heure": "05:30 FR",
+        "latitude": 46.009166666666665,
+        "longitude": -2.693,
+        "cap": 237,
+        "vitesse": 12.1,
+        "position": 33
+      },
+      {
+        "heure": "09:30 FR",
+        "latitude": 45.500166666666665,
+        "longitude": -3.7383333333333333,
+        "cap": 236,
+        "vitesse": 16.7,
+        "position": 33
+      },
+      {
+        "heure": "12:30 FR",
+        "latitude": 45.166666666666664,
+        "longitude": -4.6978333333333335,
+        "cap": 255,
+        "vitesse": 13.7,
+        "position": 33
+      },
+      {
+        "heure": "15:30 FR",
+        "latitude": 45.036833333333334,
+        "longitude": -5.4565,
+        "cap": 265,
+        "vitesse": 10.8,
+        "position": 33
+      },
+      {
+        "heure": "18:30 FR",
+        "latitude": 45.03483333333333,
+        "longitude": -6.149,
+        "cap": 260,
+        "vitesse": 9.8,
+        "position": 33
+      }
+    ]
+  }
+}
