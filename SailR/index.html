@@ -22,7 +22,7 @@
     <!-- load variable values from server-->
     <script type="text/javascript" src="https://weather.openportguide.org/weather/javascript_vars.js"></script>
     <script type="text/javascript" src="https://weather.openportguide.org/weather/javascript_vars_rtofs.js"></script>
-    <script type="text/javascript" src="include/rotatedmarker.js"></script>
+    
     <!-- add Polyline -->
 	  <link rel="stylesheet" href="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.css" />
     <script src="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.js"></script>
@@ -210,9 +210,9 @@
           });
             
 
-            var boat = L.marker(lastPosition, {icon: boatIcon, rotationAngle: 0,title:val.skipper});
+            var boat = L.marker(lastPosition, {icon: boatIcon, rotationAngle: lastRotation,title:val.skipper});
             boat.bindPopup(val.skipper+" \n"+val.bateau+" \nCap: "+lastRotation+" \nVitesse: "+lastSpeed).openPopup();
-            boat.setRotationAngle(90);
+            
             boat.addTo(map);
             boatPositions.push(lastPosition);
           });
