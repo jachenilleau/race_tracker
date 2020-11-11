@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+    web:
+        image: lavoweb/php-5.6
+        ports:
+            - "80:80"
+        volumes:
+            - ./SailR:/var/www/html

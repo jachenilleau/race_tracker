@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SailR</title>
+    <script src="static/jquery-3.5.1.min.js" ></script>
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="static/leaflet/leaflet.css"/>
+    <script src="static/leaflet/leaflet.js" ></script>
+    <!--leaflet-velocity-->
+    <link rel="stylesheet" href="static/velocity/leaflet-velocity.css" />
+    <script src="static/velocity/leaflet-velocity.js"></script>
+    <script src="static/velocity/IE_workarounds.js"></script>
+    <!-- add Leafleet rotate -->
+    <script type="text/javascript" src="static/leaflet.rotatedMarker.js"></script>
+    <!--for timeslider-->
+    <script type="text/javascript" src="static/timedimension/iso8601.min.js"></script>
+    <script type="text/javascript" src="static/timedimension/leaflet.timedimension.noLayers.src.js"></script>
+    <link rel="stylesheet" href="static/timedimension/leaflet.timedimension.control.min.css" />
+    <!-- load variable values from server-->
+    <script type="text/javascript" src="https://weather.openportguide.org/weather/javascript_vars.js"></script>
+    <script type="text/javascript" src="https://weather.openportguide.org/weather/javascript_vars_rtofs.js"></script>
+    <script type="text/javascript" src="include/rotatedmarker.js"></script>
+    <!-- add Polyline -->
+	  <link rel="stylesheet" href="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.css" />
+    <script src="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.js"></script>
+    <!-- add Navionics -->
+    <link rel="stylesheet" href="https://webapiv2.navionics.com/dist/webapi/webapi.min.css" >
+    <script type="text/javascript" src="https://webapiv2.navionics.com/dist/webapi/webapi.min.no-dep.js"></script>
+    <!-- Custom -->
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <body>
+    <div>
+      <div id="map"></div>
+    </div>
+    <script>
+      // var
+      var startTime = new Date(Date.UTC(GFS_server_year, GFS_server_month - 1, GFS_server_day, GFS_server_hour));
+      var actualTime = new Date(Date.UTC(GFS_server_year, GFS_server_month - 1, GFS_server_day, GFS_server_hour + 6)); //actual time is about 6 hours ahead to the first forecast timestep
+      var endTime = new Date(Date.UTC(GFS_server_year, GFS_server_month - 1, GFS_server_day, GFS_server_hour + ((GFS_timesteps-1)*GFS_interval)));
+      var dataTimeInterval = startTime.toISOString() + "/" + endTime.toISOString();
+      var actualInterval = GFS_interval*2 ; // show only every second available timestep (GFS_interval is "3" hours
+      var dataPeriod = "PT" + (actualInterval) + "H";
+  
+      // Set map
+      var map = L.map(
+        'map',
+        {
+          zoomControl: false,
+          timeDimension: true,
+          timeDimensionOptions: {
+            timeInterval: dataTimeInterval,
+            period: dataPeriod,
+            currentTime: actualTime
+          },
+          timeDimensionControl: true,
+          timeDimensionControlOptions: {
+          position: "bottomright",
+          loopButton: false,
+          limitSliders: false,
+          playButton: false,
+          speedSlider: false
+        } }).setView({lon: 0, lat: 0}, 2);
+
+
+        // --- LAYOUTS --- //
+
+        // Add OSM tiles
+        var clear = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+        }).addTo(map);
+
+
+        // Add OSM tiles
+        var dark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+          maxZoom: 20,
+          attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+        });
+
+
+        // Add Imagery tiles
+        var satelit = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+          attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+        });
+
+
+        // Add Zoom control
+        L.control.zoom({
+            position: 'topright'
+        }).addTo(map);
+
+
+        // Add Polyline Measure
+        var optionspoly = {position: 'topright',unit: 'nauticalmiles', showClearControl: true,showBearings: true};
+        L.control.polylineMeasure(optionspoly).addTo(map);
+
+
+        // Navionics Overlay
+        // var myNavionicsOverlay = new JNC.Leaflet.NavionicsOverlay({
+        //   navKey: 'Navionics_webapi_00583',
+        //   chartType: JNC.NAVIONICS_CHARTS.NAUTICAL,
+        //   isTransparent: false,
+        //   logoPayoff: false,
+        //   zIndex: 1
+        // }).addTo(map);
+
+
+        // Add openSeaMap Overlay
+        var openSeaMap = L.tileLayer('https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png', {
+          attribution: 'Map data: &copy; <a href="http://www.openseamap.org">OpenSeaMap</a> contributors'
+        }).addTo(map);
+
+
+        // Wind
+        var baseIndex = 1;
+        var wind10mBaseURL = 'https://weather.openportguide.org/weather/wind10m/';
+        var wind10mBaseName = 'wind10m_{h}h';
+        var wind10mName = '';
+        var wind10mArray = [];
+
+        var wind10mLayerGroup = new L.layerGroup([], {});
+        wind10mArray.length = map.timeDimension._availableTimes.length;
+        var actualTimeIndex = map.timeDimension._currentTimeIndex;
+        updateLayer(wind10mArray[actualTimeIndex]);
+
+        function updateLayer(Layer){ //updates the actual layer
+          wind10mLayerGroup.clearLayers();
+          wind10mName = wind10mBaseName.replace(/{h}/g, (actualTimeIndex - baseIndex) * actualInterval);
+          
+          $.getJSON(wind10mBaseURL + wind10mName + ".json", function(data) {
+            this[wind10mName] = L.velocityLayer({
+                displayValues: true,
+                displayOptions: {
+                    velocityType: "Wind",
+                    emptyString: "No wind data",
+                    angleConvention: "MeteoCW",
+                    speedUnit: "kt"
+                },
+                data: data,
+                minVelocity: 0,
+                maxVelocity: 30,
+                particleAge: 90,
+                lineWidth: 1,
+                particleMultiplier: 0.0033,
+                frameRate: 25,
+                colorScale: ["#2468b4", "#3c9dc2", "#80cdc1", "#97daa8", "#c6e7b5", "#eef7d9", "#ffee9f", "#fcd97d", "#ffb664", "#fc964b", "#fa7034", "#f54020", "#ed2d1c", "#dc1820", "#b40023"]
+              });
+        
+            wind10mLayerGroup.addLayer(this[wind10mName]);
+            wind10mArray[actualTimeIndex] = wind10mLayerGroup.getLayer(wind10mLayerGroup.getLayerId(this[wind10mName]));
+            wind10mLayerGroup;
+        });
+        } 
+
+        window.setInterval(function() { //check if time index changed
+          if (actualTimeIndex != map.timeDimension._currentTimeIndex) {
+          actualTimeIndex = map.timeDimension._currentTimeIndex;
+          updateLayer(wind10mArray[actualTimeIndex]);
+          }
+        },100);
+        
+        // ----- LAYER CONTROL ---- //
+
+        var baseLayers = {
+          "Claire" : clear,
+          "Dark" : dark,
+          "Satelite" : satelit,
+        };
+        
+        var overlays = {
+          "OpenSeaMap" : openSeaMap,
+          "Wind/vent": wind10mLayerGroup
+          // "Navionics" : myNavionicsOverlay,
+        };
+
+        layerControl = L.control.layers(baseLayers, overlays, {position: 'topleft'});
+        layerControl.addTo(map);
+
+        // ------ BOAT DATA ------ //
+        var boatPositions = [];
+        $.getJSON( "data.json", function( data ) {
+          
+          $.each( data, function( key, val ) {
+            var latlngs = [];
+            var lastPosition = null;
+            var lastRotation = null;
+            $.each( val.classements, function( elemK, elemV ) {
+              lastPosition = [elemV.latitude, elemV.longitude];
+              lastRotation = elemV.cap;
+              latlngs.push(lastPosition);
+            }); 
+            
+            var polyline = L.polyline(latlngs, {color: val.couleur}).addTo(map);
+            
+            var width = 40;
+            var height = 60;
+            var boatIcon = L.icon({
+              iconUrl: 'static/img/' + key + '.png',
+              iconSize:     [width, height],
+              iconAnchor:   [width/2, width/2],
+              popupAnchor:  [width/2, height]
+          });
+            
+            var boat = L.marker(lastPosition, {icon: boatIcon, rotationAngle: lastRotation}).addTo(map);
+            boatPositions.push(lastPosition);
+          });
+
+          map.fitBounds(boatPositions);
+        });
+
+        // ------- DST DATA ------ //
+        $.getJSON( "dst.json", function( data ) {
+          L.polygon(data, {color: "red", weight: 1}).addTo(map);
+        });       
+
+    </script>
+  </body>
+</html>
