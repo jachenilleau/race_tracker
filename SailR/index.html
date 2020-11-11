@@ -231,7 +231,6 @@
           });
             
 
-<<<<<<< HEAD
             var boat = L.marker(lastPosition, {icon: boatIcon, rotationAngle: lastRotation,title:val.skipper}).addTo(map);
             
             boat.on("click", function(e){
@@ -239,12 +238,6 @@
               $('#sidebar').html(val.skipper+" \n"+val.bateau+" \nCap: "+lastRotation+" \nVitesse: "+lastSpeed);
             });
             
-=======
-            var boat = L.marker(lastPosition, {icon: boatIcon, rotationAngle: lastRotation,title:val.skipper});
-            boat.bindPopup(val.skipper+" \n"+val.bateau+" \nCap: "+lastRotation+" \nVitesse: "+lastSpeed).openPopup();
-            
-            boat.addTo(map);
->>>>>>> e486ba917f015206a93236b5de20a313950d2258
             boatPositions.push(lastPosition);
           });
 
