@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="static/style.css" />
   </head>
   <body>
-    <div>
+
       <div id="map"></div>
       <div class="black-container">
         <div class="container chronodata">
@@ -315,7 +315,7 @@
         var overlays = {
           "OpenSeaMap" : openSeaMap,
           "Wind": wind10mLayerGroup,
-          "Dy/Night": terminator,
+          "Day/Night": terminator,
           //"Navionics" : myNavionicsOverlay
         };
 
@@ -330,7 +330,8 @@
         // ------ SIDEBAR ----- //
 
         var sidebar = L.control.sidebar('sidebar', {
-            position: 'left'
+            position: 'left',
+            closeButton: 'true'
         });
         map.addControl(sidebar);
 
@@ -344,39 +345,48 @@
             var latlngs = [];
             var lastPosition = null;
             var lastRotation = null;
-            var lastSpeed = null;
             
             $.each( val.classements, function( elemK, elemV ) {
               lastPosition = [elemV.latitude, elemV.longitude];
               lastRotation = elemV.cap;
-              lastSpeed = elemV.vitesse;
               latlngs.push(lastPosition);
             }); 
             
+            // Trace boat line
             var polyline = L.polyline(latlngs, {color: val.couleur}).addTo(map);
             
+            // Design boat icon
             var width = 40;
             var height = 60;
             var boatIcon = L.icon({
-              iconUrl: 'static/img/markers/' + key + '.png',
-              iconSize:     [width, height],
-              iconAnchor:   [width/2, width/2],
-              popupAnchor:  [0, 0]
-          });
-            
+                iconUrl: 'static/img/markers/' + key + '.png',
+                iconSize:     [width, height],
+                iconAnchor:   [width/2, width/2],
+                popupAnchor:  [0, 0]
+            });
+          
+          // Add boa on map
           var boat = L.marker(lastPosition, {id: key, icon: boatIcon, rotationAngle: lastRotation,title:val.skipper}).addTo(map);
+          
+          // Add click boat
           boat.on("click", function(event){
             var id = event.sourceTarget.options.id;
             openSidebar(id);
           });
-            
+          
           boatPositions.push(lastPosition);
         });
+
+          // autoFit map
           map.fitBounds(boatPositions);
+
+          // Count boat for skipper count
           $('#skipperCount').html(boatPositions.length);
+
         });
         
         // ----- SIDEBAR POPULATE FUNCTION ----- //
+        
         function openSidebar(id){
           var url = "skipper.json"+"?id="+id+'&r='+Math.random();
           $.getJSON( url, function( skipperData ) {
