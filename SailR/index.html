@@ -27,22 +27,94 @@
     <!-- load variable values from server-->
     <script type="text/javascript" src="https://weather.openportguide.org/weather/javascript_vars.js"></script>
     <script type="text/javascript" src="https://weather.openportguide.org/weather/javascript_vars_rtofs.js"></script>
-    
     <!-- add Polyline -->
 	  <link rel="stylesheet" href="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.css" />
     <script src="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.js"></script>
     <!-- add Navionics -->
     <link rel="stylesheet" href="https://webapiv2.navionics.com/dist/webapi/webapi.min.css" >
     <script type="text/javascript" src="https://webapiv2.navionics.com/dist/webapi/webapi.min.no-dep.js"></script>
+    <!-- add chartjs -->
+    <link rel="stylesheet" href="static/chartjs/Chart.min.css" >
+    <script type="text/javascript" src="static/chartjs/Chart.min.js"></script>
+    <!-- add timer -->
+    <script type="text/javascript" src="static/easytimer.min.js"></script>
+    <!-- fontello -->
+    <link rel="stylesheet" href="static/fontello/css/fontello.css" />
     <!-- Custom -->
     <link rel="stylesheet" href="static/style.css" />
   </head>
   <body>
     <div>
       <div id="map"></div>
-      <div id="sidebar"></div>
+      <div class="black-container">
+        <div class="container chronodata">
+          <div id="timer">
+            <div>Chronométre</div>
+            <div><span class="blue">J+</span><span class="days blue">00</span> <span class="hours">00</span><span class="blue">:</span><span class="minutes">00</span><span class="blue">:</span><span class="seconds">00</span></div>
+          </div>
+          <div>
+            <div>Skippers en course</div>
+            <div><span class="blue" id="skipperCount">33</span> / 33</div>
+        </div>
+      </div>
+      <div id="sidebar">
+        <button id="close"><i class="icon-cancel-circle"></i></button>
+       <div class="header">
+          <img id="data_skipper_pict"  src="static/img/avatar/default.jpg" class="skipper_pict" />
+          <div>
+            <h1 id="data_skipper">--</h1>
+            <h2><span id="data_team">--</span><span id="data_foiler" class="boat-type">--</span><h2>
+          </div>
+       </div>
+       <div class="bloc metrics">
+         <div><div>Position</div><div id="data_postion">--</div></div>
+         <div><div>Vitesse</div><div id="data_speed">--</div></div>
+         <div><div>Cap</div><div id="data_heading">--</div></div>
+       </div>
+       <div class="bloc">
+          <h2 class="sidebar-title">Vitesse sur 24 heures</h2>
+          <canvas id="speedChart" height="150"></canvas>
+       </div>
+       <div class="bloc">
+        <h2 class="sidebar-title">Historique classement</h2>
+        <div class="tableOverflow">
+          <table cellspacing="0" id="positionHistory">
+            <thead>
+              <tr>
+                <th>Jour</th>
+                <th>classement</th>
+                <th>VMG</th>
+              </tr>
+              <tbody></tbody>
+            </thead>
+          </table>
+        </div>
+        <div class="gradient"></div>
+        </div>
+        <div class="bloc metrics">
+          <div><div>Distance restante</div><div id="data_dist">--</div></div>
+          <div><div>VMG MAX</div><div id="data_vmgmax">--</div></div>
+        </div>
+      </div>
     </div>
+
     <script>
+    window.onload = function() {
+      var depart = new Date(2020, 10, 8, 14, 20);
+      var dateNow = new Date();
+      var timerdelta = Math.abs(dateNow -depart) / 1000;
+      console.log(timerdelta)
+      var timer = new easytimer.Timer();
+      timer.start({precision: 'seconds', startValues: {seconds: timerdelta}});
+      timer.addEventListener('secondsUpdated', function (e) {
+          $('#timer .days').html(('0' + timer.getTimeValues().days).slice(-2));
+          $('#timer .hours').html(('0' + timer.getTimeValues().hours).slice(-2));
+          $('#timer .minutes').html(('0' + timer.getTimeValues().minutes).slice(-2));
+          $('#timer .seconds').html(('0' + timer.getTimeValues().seconds).slice(-2));
+      });
+
+      // ----- CARTO ----- //
+
       // var
       var startTime = new Date(Date.UTC(GFS_server_year, GFS_server_month - 1, GFS_server_day, GFS_server_hour));
       var actualTime = new Date(Date.UTC(GFS_server_year, GFS_server_month - 1, GFS_server_day, GFS_server_hour + 6)); //actual time is about 6 hours ahead to the first forecast timestep
@@ -50,7 +122,62 @@
       var dataTimeInterval = startTime.toISOString() + "/" + endTime.toISOString();
       var actualInterval = GFS_interval*2 ; // show only every second available timestep (GFS_interval is "3" hours
       var dataPeriod = "PT" + (actualInterval) + "H";
-  
+
+      function hexToRgb(hex) {
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return parseInt(result[1], 16) +', '+ parseInt(result[2], 16)+ ', '+ parseInt(result[3], 16);
+      }
+
+      function setSideBarChartConfig(label, data){
+        return {
+          type: 'line',
+          data: {
+            labels: label,
+            datasets: [{
+              label: 'Speed dataset',
+              borderColor: '#01A7FA',
+              data: data,
+              fill: false,
+              pointBorderColor: '#01A7FA',
+              pointBackgroundColor: '#01A7FA',
+              pointBorderWidth: 4,
+              lineTension: 0.2,
+              borderWidth:4,
+            }]
+          },
+          options: {
+            scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero: true,
+                      fontColor: '#FFFFFF'
+                  },
+                  gridLines: {
+                    color: "#333A43",
+                    zeroLineColor: '#333A43'
+                  },
+              }],
+              xAxes: [{
+                ticks: {
+                    fontColor: '#FFFFFF'
+                },
+                gridLines: {
+                  zeroLineColor: '#333A43',
+                  color: "#333A43",
+                  borderDash: [8, 8],
+                }
+              }]
+            },
+            legend: {
+              display: false
+            },
+            tooltips: {
+              enabled: false
+            }
+          }
+        };
+      }
+
       // Set map
       var map = L.map(
         'map',
@@ -159,8 +286,8 @@
             wind10mLayerGroup.addLayer(this[wind10mName]);
             wind10mArray[actualTimeIndex] = wind10mLayerGroup.getLayer(wind10mLayerGroup.getLayerId(this[wind10mName]));
             wind10mLayerGroup;
-        });
-        } 
+          });
+        }
 
         window.setInterval(function() { //check if time index changed
           if (actualTimeIndex != map.timeDimension._currentTimeIndex) {
@@ -195,6 +322,11 @@
         layerControl = L.control.layers(baseLayers, overlays, {position: 'topleft'});
         layerControl.addTo(map);
 
+        // ------- DST DATA ------ //
+        $.getJSON( "dst.json"+"?"+Math.random(), function( data ) {
+          L.polygon(data, {color: "red", weight: 1}).addTo(map);
+        }); 
+
         // ------ SIDEBAR ----- //
 
         var sidebar = L.control.sidebar('sidebar', {
@@ -202,16 +334,18 @@
         });
         map.addControl(sidebar);
 
+        $('#close').click(function(){sidebar.hide();});
+
         // ------ BOAT DATA ------ //
         var boatPositions = [];
-        var boats =[];
+
         $.getJSON( "vg2020.json"+"?"+Math.random(), function( data ) {
-          
           $.each( data, function( key, val ) {
             var latlngs = [];
             var lastPosition = null;
             var lastRotation = null;
             var lastSpeed = null;
+            
             $.each( val.classements, function( elemK, elemV ) {
               lastPosition = [elemV.latitude, elemV.longitude];
               lastRotation = elemV.cap;
@@ -224,31 +358,67 @@
             var width = 40;
             var height = 60;
             var boatIcon = L.icon({
-              iconUrl: 'static/img/' + key + '.png',
+              iconUrl: 'static/img/markers/' + key + '.png',
               iconSize:     [width, height],
               iconAnchor:   [width/2, width/2],
               popupAnchor:  [0, 0]
           });
             
-
-            var boat = L.marker(lastPosition, {icon: boatIcon, rotationAngle: lastRotation,title:val.skipper}).addTo(map);
-            
-            boat.on("click", function(e){
-              sidebar.show();
-              $('#sidebar').html(val.skipper+" \n"+val.bateau+" \nCap: "+lastRotation+" \nVitesse: "+lastSpeed);
-            });
-            
-            boatPositions.push(lastPosition);
+          var boat = L.marker(lastPosition, {id: key, icon: boatIcon, rotationAngle: lastRotation,title:val.skipper}).addTo(map);
+          boat.on("click", function(event){
+            var id = event.sourceTarget.options.id;
+            openSidebar(id);
           });
-
-          map.fitBounds(boatPositions);
+            
+          boatPositions.push(lastPosition);
         });
+          map.fitBounds(boatPositions);
+          $('#skipperCount').html(boatPositions.length);
+        });
+        
+        // ----- SIDEBAR POPULATE FUNCTION ----- //
+        function openSidebar(id){
+          var url = "skipper.json"+"?id="+id+'&r='+Math.random();
+          $.getJSON( url, function( skipperData ) {
+            sidebar.show();
+            // Stuff
+            $('#data_skipper_pict').attr('src', 'static/img/avatar/'+skipperData.number+'.jpg');
+            $('#data_skipper_pict').attr('style', 'border-color:'+skipperData.color+'; box-shadow:0 0 0 10px rgba('+hexToRgb(skipperData.color)+',0.2);');
+            $('#data_skipper').text(skipperData.skipper);
+            $('#data_team').text(skipperData.team);
+            $('#data_postion').text(skipperData.position);
+            $('#data_speed').text(skipperData.speed);
+            $('#data_heading').text(skipperData.heading+'°');
+            $('#data_dist').text(skipperData.dist+' nm');
+            $('#data_vmgmax').text(skipperData.vmgmax+' nds');
 
-        // ------- DST DATA ------ //
-        $.getJSON( "dst.json"+"?"+Math.random(), function( data ) {
-          L.polygon(data, {color: "red", weight: 1}).addTo(map);
-        });       
+            // Foiler
+            if (skipperData.foiler){
+              $('#data_foiler').text('foiler').addClass('foiler').removeClass('derive');
+            } else {
+              $('#data_foiler').text('Derives').addClass('derive').removeClass('foiler');
+            }
 
+            // Speed chart
+            var speed_history = skipperData.speed_history;
+            var labels = [];
+            for (var i = 0; i < speed_history.length; ++i) {
+              labels.push('+'+i.toString());
+            }
+            console.log(labels)
+            var ctx = document.getElementById('speedChart').getContext('2d');
+            var sidebarChart = new Chart(ctx, setSideBarChartConfig(labels, speed_history));
+        
+            // position history
+            var htmlData = '';
+            $.each(skipperData.position_history, function(key, val) {
+              htmlData += '<tr><td><span class="grey">J+</span>'+skipperData.position_history[key][0]+'</td><td>'+skipperData.position_history[key][1]+'</td><td>'+skipperData.position_history[key][2]+' <span class="grey">nds</span></td></tr>';
+            });
+            $('#positionHistory>tbody').html(htmlData);
+          });
+        }
+      
+      };
     </script>
   </body>
 </html>
