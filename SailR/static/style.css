@@ -87,7 +87,7 @@ body {
   font-weight: 600;
 }
 
-div.metrics>div>div:first-child, .chronodata>div>div:first-child{
+div.metrics>div>div:first-child, .chronodata>div>div:first-child, .txtheader{
   text-transform: uppercase;
   font-family: 'Montserrat', serif;
   font-weight: 700;
@@ -95,6 +95,11 @@ div.metrics>div>div:first-child, .chronodata>div>div:first-child{
   color: #4F5B66;
   text-align: center;
 }
+
+.txtheader{
+  color:white;
+}
+
 
 div.metrics>div>div:last-child, .chronodata>div>div:last-child{
   font-family: 'Montserrat', serif;

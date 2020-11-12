@@ -44,7 +44,9 @@
     <link rel="stylesheet" href="static/style.css" />
   </head>
   <body>
-
+    <div class="black-container">
+      <div class="container txtheader">Cartographie non officielle du <span class="blue">Vendée-Globe 2020/2021</span></div>
+      </div>
       <div id="map"></div>
       <div class="black-container">
         <div class="container chronodata">
@@ -72,7 +74,7 @@
          <div><div>Cap</div><div id="data_heading">--</div></div>
        </div>
        <div class="bloc">
-          <h2 class="sidebar-title">Vitesse sur 24 heures</h2>
+          <h2 class="sidebar-title">Vitesse sur 48 heures</h2>
           <canvas id="speedChart" height="150"></canvas>
        </div>
        <div class="bloc">
@@ -150,7 +152,8 @@
               yAxes: [{
                   ticks: {
                       beginAtZero: true,
-                      fontColor: '#FFFFFF'
+                      fontColor: '#FFFFFF',
+                      max: 40,
                   },
                   gridLines: {
                     color: "#333A43",
@@ -410,50 +413,52 @@
           // Count boat for skipper count
           $('#skipperCount').html(boatPositions.length);
 
+
+          // ----- SIDEBAR POPULATE FUNCTION ----- //
+
+          function openSidebar(id){
+              sidebar.show();
+              var skipper = data[id];
+              var current = skipper.classements.slice(-1)[0];
+              
+              var vitesses = [];
+              var labels = [];
+              $.each( skipper.classements.slice(-12), function( i, elem ) {
+                vitesses.push(elem.vitesse);
+                labels.push(elem.heure.slice(0, -3));
+              });
+
+              // Stuff
+              $('#data_skipper_pict').attr('src', 'static/img/avatar/'+id+'.jpg');
+              $('#data_skipper_pict').attr('style', 'border-color:'+skipper.couleur+'; box-shadow:0 0 0 10px rgba('+hexToRgb(skipper.couleur)+',0.2);');
+              $('#data_skipper').text(skipper.skipper);
+              $('#data_team').text(skipper.bateau);
+              $('#data_postion').text(current.position);
+              $('#data_speed').text(current.vitesse);
+              $('#data_heading').text(current.cap+'°');
+              $('#data_dist').text('-- nm');
+              $('#data_vmgmax').text('-- nds');
+
+              // Foiler
+              if (skipper.foiler){
+                $('#data_foiler').text('foiler').addClass('foiler').removeClass('derive');
+              } else {
+                $('#data_foiler').text('Derives').addClass('derive').removeClass('foiler');
+              }
+
+              // Speed chart
+              var ctx = document.getElementById('speedChart').getContext('2d');
+              var sidebarChart = new Chart(ctx, setSideBarChartConfig(labels, vitesses));
+          
+              // position history
+              var htmlData = '';
+              //$.each(skipperData.position_history, function(key, val) {
+               // htmlData += '<tr><td><span class="grey">J+</span>'+skipperData.position_history[key][0]+'</td><td>'+skipperData.position_history[key][1]+'</td><td>'+skipperData.position_history[key][2]+' <span class="grey">nds</span></td></tr>';
+              //});
+              $('#positionHistory>tbody').html(htmlData);
+          }
+
         });
-
-        // ----- SIDEBAR POPULATE FUNCTION ----- //
-
-        function openSidebar(id){
-          var url = "skipper.json"+"?id="+id+'&r='+Math.random();
-          $.getJSON( url, function( skipperData ) {
-            sidebar.show();
-            // Stuff
-            $('#data_skipper_pict').attr('src', 'static/img/avatar/'+skipperData.number+'.jpg');
-            $('#data_skipper_pict').attr('style', 'border-color:'+skipperData.color+'; box-shadow:0 0 0 10px rgba('+hexToRgb(skipperData.color)+',0.2);');
-            $('#data_skipper').text(skipperData.skipper);
-            $('#data_team').text(skipperData.team);
-            $('#data_postion').text(skipperData.position);
-            $('#data_speed').text(skipperData.speed);
-            $('#data_heading').text(skipperData.heading+'°');
-            $('#data_dist').text(skipperData.dist+' nm');
-            $('#data_vmgmax').text(skipperData.vmgmax+' nds');
-
-            // Foiler
-            if (skipperData.foiler){
-              $('#data_foiler').text('foiler').addClass('foiler').removeClass('derive');
-            } else {
-              $('#data_foiler').text('Derives').addClass('derive').removeClass('foiler');
-            }
-
-            // Speed chart
-            var speed_history = skipperData.speed_history;
-            var labels = [];
-            for (var i = 0; i < speed_history.length; ++i) {
-              labels.push('+'+i.toString());
-            }
-            console.log(labels)
-            var ctx = document.getElementById('speedChart').getContext('2d');
-            var sidebarChart = new Chart(ctx, setSideBarChartConfig(labels, speed_history));
-        
-            // position history
-            var htmlData = '';
-            $.each(skipperData.position_history, function(key, val) {
-              htmlData += '<tr><td><span class="grey">J+</span>'+skipperData.position_history[key][0]+'</td><td>'+skipperData.position_history[key][1]+'</td><td>'+skipperData.position_history[key][2]+' <span class="grey">nds</span></td></tr>';
-            });
-            $('#positionHistory>tbody').html(htmlData);
-          });
-        }
       
       };
     </script>
