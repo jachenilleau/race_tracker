@@ -61,6 +61,7 @@
     <!-- add chartjs -->
     <link rel="stylesheet" href="static/chartjs/Chart.min.css" >
     <script type="text/javascript" src="static/chartjs/Chart.min.js"></script>
+    <script type="text/javascript" src="static/chartjs-plugin-annotation.js"></script>
     <!-- add timer -->
     <script type="text/javascript" src="static/easytimer.min.js"></script>
     <!-- fontello -->
@@ -95,7 +96,7 @@
        </div>
        <div class="bloc metrics">
          <div><div>Position</div><div id="data_postion">--</div></div>
-         <div><div>Vitesse</div><div id="data_speed">--</div></div>
+         <div><div>Vitesse</div><div><span  id="data_speed">--</span> kt</div></div>
          <div><div>Cap</div><div id="data_heading">--</div></div>
        </div>
        <div class="bloc">
@@ -155,7 +156,7 @@
         return parseInt(result[1], 16) +', '+ parseInt(result[2], 16)+ ', '+ parseInt(result[3], 16);
       }
 
-      function setSideBarChartConfig(label, data){
+      function setSideBarChartConfig(label, data, average){
         return {
           type: 'line',
           data: {
@@ -178,7 +179,7 @@
                   ticks: {
                       beginAtZero: true,
                       fontColor: '#FFFFFF',
-                      max: 40,
+                      max: 35,
                   },
                   gridLines: {
                     color: "#333A43",
@@ -201,6 +202,20 @@
             },
             tooltips: {
               enabled: false
+            },
+            annotation: {
+              annotations: [{
+                type: 'line',
+                mode: 'horizontal',
+                scaleID: 'y-axis-0',
+                value: average,
+                borderColor: 'rgba(220,20,60, 0.7)',
+                borderWidth: 2,
+                label: {
+                  enabled: false,
+                  content: 'Average'
+                }
+              }]
             }
           }
         };
@@ -414,18 +429,18 @@
           // ----- LAYER CONTROL ---- //
 
           var baseLayers = {
-            "Clear" : clear,
-            "Dark" : dark,
-            "Satelite" : satelit
+            "Claire" : clear,
+            "Foncé" : dark,
+            "Satellite" : satelit
             
           };
           
           var overlays = {
             "OpenSeaMap" : openSeaMap,
-            "Wind": wind10mLayerGroup,
-            "Day/Night": terminator,
+            "Vent": wind10mLayerGroup,
+            "Jour/nuit": terminator,
             'Foilers': foilersLayer,
-            "daggerBoard": daggerBoardLayer,
+            "Dérives": daggerBoardLayer,
             //"Navionics" : myNavionicsOverlay
           };
 
@@ -446,12 +461,18 @@
               var skipper = data[id];
               var current = skipper.classements.slice(-1)[0];
               
+              var vitessePanel = skipper.classements.slice(-12);
               var vitesses = [];
               var labels = [];
-              $.each( skipper.classements.slice(-12), function( i, elem ) {
+              var total = 0;
+              
+              $.each( vitessePanel, function( i, elem ) {
                 vitesses.push(elem.vitesse);
                 labels.push(elem.heure.slice(0, -3));
+                total += elem.vitesse;
               });
+
+              var average = total / vitessePanel.length;
 
               // Stuff
               $('#data_skipper_pict').attr('src', 'static/img/avatar/'+id+'.jpg');
@@ -468,17 +489,17 @@
               if (skipper.foiler){
                 $('#data_foiler').text('foiler').addClass('foiler').removeClass('derive');
               } else {
-                $('#data_foiler').text('Derives').addClass('derive').removeClass('foiler');
+                $('#data_foiler').text('Dérive').addClass('derive').removeClass('foiler');
               }
 
               // Speed chart
               var ctx = document.getElementById('speedChart').getContext('2d');
-              var sidebarChart = new Chart(ctx, setSideBarChartConfig(labels, vitesses));
+              var sidebarChart = new Chart(ctx, setSideBarChartConfig(labels, vitesses, average));
           
               // position history
               var htmlData = '';
               //$.each(skipperData.position_history, function(key, val) {
-               // htmlData += '<tr><td><span class="grey">J+</span>'+skipperData.position_history[key][0]+'</td><td>'+skipperData.position_history[key][1]+'</td><td>'+skipperData.position_history[key][2]+' <span class="grey">nds</span></td></tr>';
+               // htmlData += '<tr><td><span class="grey">J+</span>'+skipperData.position_history[key][0]+'</td><td>'+skipperData.position_history[key][1]+'</td><td>'+skipperData.position_history[key][2]+' <span class="grey">kt</span></td></tr>';
               //});
               $('#positionHistory>tbody').html(htmlData);
           }
