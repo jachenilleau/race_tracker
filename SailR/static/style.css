@@ -208,6 +208,12 @@ div.metrics>div>div:last-child, .chronodata>div>div:last-child{
   text-align: center;
 }
 
+div.leaflet-control-layers-overlays > label:nth-child(4){
+  border-top: 1px solid #ddd;
+  margin: 10px -10px 0 -6px;
+  padding: 6px 6px 0 6px;
+}
+
 @keyframes breathing {
   0% {
     transform: scale(1);

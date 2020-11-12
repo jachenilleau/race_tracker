@@ -205,20 +205,21 @@
         var clear = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 19,
           attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-        }).addTo(map);
+        });
 
 
-        // Add OSM tiles
-        var dark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-          maxZoom: 20,
-          attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+        // Add Dark OSM tiles
+        var dark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+          subdomains: 'abcd',
+	        maxZoom: 19,
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
         });
 
 
         // Add Imagery tiles
         var satelit = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
           attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-        });
+        }).addTo(map);
 
 
         // Add Zoom control
@@ -277,15 +278,18 @@
                 minVelocity: 0,
                 maxVelocity: 30,
                 particleAge: 90,
-                lineWidth: 1,
+                lineWidth: 2,
                 particleMultiplier: 0.0033,
-                frameRate: 25,
-                colorScale: ["#2468b4", "#3c9dc2", "#80cdc1", "#97daa8", "#c6e7b5", "#eef7d9", "#ffee9f", "#fcd97d", "#ffb664", "#fc964b", "#fa7034", "#f54020", "#ed2d1c", "#dc1820", "#b40023"]
+                frameRate: 18,
+                //colorScale: ["#2468b4", "#3c9dc2", "#80cdc1", "#97daa8", "#c6e7b5", "#eef7d9", "#ffee9f", "#fcd97d", "#ffb664", "#fc964b", "#fa7034", "#f54020", "#ed2d1c", "#dc1820", "#b40023"]
+                //colorScale: ['#ffffcc', '#f7eebf', '#f0dcb2', '#e8cba5', '#dfba98', '#d7aa8b', '#ce997f', '#c58973', '#bc7867', '#b3685b', '#a95750', '#9f4645', '#95343a', '#8b2030', '#800026']
+                colorScale: ['#ffffff', '#ebf4e7', '#d7e9ce', '#c3deb3', '#b0d396', '#ffa91e', '#fc9527', '#f78130', '#f06e38', '#e75a41', '#dc464a', '#cf3155', '#be1b63', '#a90374', '#8b008b']
+                //colorScale: ['#f8fbff', '#e7ebf4', '#d7dbe9', '#c7cbde', '#b7bbd3', '#a7acc8', '#979dbe', '#878eb3', '#7780a9', '#68719e', '#586394', '#485689', '#37497f', '#243c75', '#07306b']
               });
         
             wind10mLayerGroup.addLayer(this[wind10mName]);
             wind10mArray[actualTimeIndex] = wind10mLayerGroup.getLayer(wind10mLayerGroup.getLayerId(this[wind10mName]));
-            wind10mLayerGroup;
+            wind10mLayerGroup.addTo(map);
           });
         }
 
@@ -297,30 +301,10 @@
         },100);
 
         // ------ TERMINATOR ----- //
-        var terminator = L.terminator().addTo(map);
+        var terminator = L.terminator({fillOpacity:0.2}).addTo(map);
         setInterval(function() {
           terminator.setTime();
         }, 60000);
-
-        
-        // ----- LAYER CONTROL ---- //
-
-        var baseLayers = {
-          "Clear" : clear,
-          "Dark" : dark,
-          "Satelite" : satelit
-          
-        };
-        
-        var overlays = {
-          "OpenSeaMap" : openSeaMap,
-          "Wind": wind10mLayerGroup,
-          "Day/Night": terminator,
-          //"Navionics" : myNavionicsOverlay
-        };
-
-        layerControl = L.control.layers(baseLayers, overlays, {position: 'topleft'});
-        layerControl.addTo(map);
 
         // ------- DST DATA ------ //
         $.getJSON( "dst.json"+"?"+Math.random(), function( data ) {
@@ -339,21 +323,28 @@
 
         // ------ BOAT DATA ------ //
         var boatPositions = [];
+        var foilerBoatsGroup = [];
+        var daggerBoardBoatsGroup = [];
+        var foilerTraceGroup = [];
+        var daggerBoardTraceGroup = [];
 
         $.getJSON( "vg2020.json"+"?"+Math.random(), function( data ) {
           $.each( data, function( key, val ) {
             var latlngs = [];
             var lastPosition = null;
             var lastRotation = null;
-            
+          
+            // --- TRACE ---- //
             $.each( val.classements, function( elemK, elemV ) {
               lastPosition = [elemV.latitude, elemV.longitude];
               lastRotation = elemV.cap;
               latlngs.push(lastPosition);
-            }); 
-            
+            });
+    
             // Trace boat line
-            var polyline = L.polyline(latlngs, {color: val.couleur}).addTo(map);
+            var trace = L.polyline(latlngs, {color: val.couleur}).addTo(map);
+
+            // ----- MARKER ----- //
             
             // Design boat icon
             var width = 40;
@@ -361,21 +352,57 @@
             var boatIcon = L.icon({
                 iconUrl: 'static/img/markers/' + key + '.png',
                 iconSize:     [width, height],
-                iconAnchor:   [width/2, width/2],
-                popupAnchor:  [0, 0]
+                iconAnchor:   [width/2, width/2]
             });
           
-          // Add boa on map
-          var boat = L.marker(lastPosition, {id: key, icon: boatIcon, rotationAngle: lastRotation,title:val.skipper}).addTo(map);
+          // Create boat marker
+          var boat = L.marker(lastPosition, {id: key, icon: boatIcon, rotationAngle: lastRotation,title:val.skipper});
           
-          // Add click boat
+          // Add click on the boat
           boat.on("click", function(event){
             var id = event.sourceTarget.options.id;
             openSidebar(id);
           });
+
+          // Group by foiler / daggerBoard
+          var isFoiler = true; // Ajouter le boolean ici
+          if (isFoiler){
+            foilerTraceGroup.push(trace);
+            foilerBoatsGroup.push(boat);
+          } else {
+            daggerBoardTraceGroup.push(trace);
+            daggerBoardBoatsGroup.push(boat);
+          }
           
           boatPositions.push(lastPosition);
         });
+
+          // add Groups to map
+          var foilerTraceLayer = L.layerGroup(foilerTraceGroup).addTo(map);
+          var daggerBoardTraceLayer = L.layerGroup(daggerBoardTraceGroup).addTo(map); 
+          var foilersLayer = L.layerGroup(foilerBoatsGroup).addLayer(foilerTraceLayer).addTo(map);
+          var daggerBoardLayer= L.layerGroup(daggerBoardBoatsGroup).addLayer(daggerBoardTraceLayer).addTo(map);        
+
+          // ----- LAYER CONTROL ---- //
+
+          var baseLayers = {
+            "Clear" : clear,
+            "Dark" : dark,
+            "Satelite" : satelit
+            
+          };
+          
+          var overlays = {
+            "OpenSeaMap" : openSeaMap,
+            "Wind": wind10mLayerGroup,
+            "Day/Night": terminator,
+            'Foilers': foilersLayer,
+            "daggerBoard": daggerBoardLayer,
+            //"Navionics" : myNavionicsOverlay
+          };
+
+          layerControl = L.control.layers(baseLayers, overlays, {position: 'topleft'});
+          layerControl.addTo(map);
 
           // autoFit map
           map.fitBounds(boatPositions);
@@ -384,9 +411,9 @@
           $('#skipperCount').html(boatPositions.length);
 
         });
-        
+
         // ----- SIDEBAR POPULATE FUNCTION ----- //
-        
+
         function openSidebar(id){
           var url = "skipper.json"+"?id="+id+'&r='+Math.random();
           $.getJSON( url, function( skipperData ) {
