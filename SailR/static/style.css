@@ -86,6 +86,10 @@ body {
   font-weight: normal;
 }
 
+a {
+  color:white
+}
+
 .bloc{
   background-color: #1E242C;
   border-radius: 20px;
