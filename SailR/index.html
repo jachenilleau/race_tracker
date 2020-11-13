@@ -371,13 +371,13 @@
 
 
         // Navionics Overlay
-        // var myNavionicsOverlay = new JNC.Leaflet.NavionicsOverlay({
-        //   navKey: 'Navionics_webapi_00583',
-        //   chartType: JNC.NAVIONICS_CHARTS.NAUTICAL,
-        //   isTransparent: false,
-        //   logoPayoff: false,
-        //   zIndex: 1
-        // }).addTo(map);
+        var myNavionicsOverlay = new JNC.Leaflet.NavionicsOverlay({
+          navKey: 'Navionics_webapi_00583',
+          chartType: JNC.NAVIONICS_CHARTS.NAUTICAL,
+          isTransparent: false,
+          logoPayoff: false,
+          zIndex: 1
+        });
 
 
         // Add openSeaMap Overlay
@@ -538,11 +538,11 @@
           
           var overlays = {
             "OpenSeaMap" : openSeaMap,
+            "Navionics" : myNavionicsOverlay,
             "Vent": wind10mLayerGroup,
             "Jour/nuit": terminator,
             'Foilers': foilersLayer,
             "Dérives": daggerBoardLayer,
-            //"Navionics" : myNavionicsOverlay
           };
 
           layerControl = L.control.layers(baseLayers, overlays, {position: 'topleft'});
