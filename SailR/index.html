@@ -183,7 +183,6 @@
                 
       function windcolor(force){
         var colors = ['#ffffff', '#eaf0db', '#dfdfb1', '#e1ca7c', '#ffa71d', '#ff8b1b', '#f97025', '#ef5532', '#e03a42', '#cc1e55', '#b1016d', '#8b008b'];
-          console.log(force);
           if(force <=1){
             return colors[0];
           }
@@ -507,6 +506,7 @@
           boat.on("click", function(event){
             var id = event.sourceTarget.options.id;
             openSidebar(id);
+            map.panTo(lastPosition);
           });
 
           // Group by foiler / daggerBoard
