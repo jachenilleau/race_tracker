@@ -525,7 +525,7 @@
               var htmlData = '';
               $.each(skipper.classements, function(key, val) {
 
-               htmlData += '<tr><td><span class="grey">J+</span>'+Math.floor(key/4)+' '+val.heure+'</td><td>'+val.position+'</td><td>'+val.VMG+' <span class="grey">kt</span></td></tr>';
+               htmlData += '<tr><td><span class="grey">J+</span>'+Math.floor(key/6)+' '+val.heure+'</td><td>'+val.position+'</td><td>'+val.VMG+' <span class="grey">kt</span></td></tr>';
               });
               $('#positionHistory>tbody').html(htmlData);
           }
