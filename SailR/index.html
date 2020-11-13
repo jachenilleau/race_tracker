@@ -74,7 +74,7 @@
       <div class="container txtheader">Cartographie non officielle du <span class="blue">Vendée-Globe 2020/2021</span></div>
       </div>
       <div id="map"></div>
-      <div class="black-container">
+      <div id="footer" class="black-container">
         <div class="container chronodata">
           <div id="timer">
             <div>Chronométre</div>
@@ -100,9 +100,53 @@
          <div><div>Cap</div><div id="data_heading">--</div></div>
        </div>
        <div class="bloc metrics">
-         <div><div>Vent</div><div id="data_vent">--</div></div>
-         <div><div>Pluie</div><div><span  id="data_pluie">--</span></div></div>
-         <div><div>Couverture Nuageuse</div><div id="data_nuage">--</div></div>
+         <div><div>Vent</div>
+         <div class="withicon">
+           <div class="icondata" id='data_direction'>
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 511.998 511.998" style="enable-background:new 0 0 511.998 511.998;" xml:space="preserve">
+              <path d="M505.743,6.249c-6.08-6.101-15.211-7.893-23.168-4.672l-469.333,192c-8.768,3.605-14.123,12.544-13.12,21.973
+                c0.981,9.429,8.064,17.067,17.387,18.773l220.139,40.021l40.043,220.139c1.685,9.323,9.323,16.405,18.752,17.408
+                c0.747,0.064,1.493,0.107,2.219,0.107c8.576,0,16.448-5.184,19.755-13.269l192-469.333
+                C513.658,21.459,511.823,12.329,505.743,6.249z"/>
+            </svg>
+          </div>
+           <span id="data_vent">--</span>
+          </div>
+        </div>
+
+         <div><div>Pluie</div>
+          <div class="withicon">
+            <div  class="icondata">
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 410.823 410.823" style="enable-background:new 0 0 410.823 410.823;" xml:space="preserve">
+               <path d="M5.595,254.875c-17.185,46.513,6.539,98.118,53.048,115.317c46.474,17.203,98.103-6.577,115.312-53.046
+                 c17.175-46.468-31.479-173.544-31.479-173.544S22.821,208.372,5.595,254.875z M35.054,273.141
+                 c5.685,50.553,34.358,67.908,34.358,67.908C18.311,325.793,35.054,273.141,35.054,273.141z"/>
+               <path d="M395.391,259.702c0,0-52.531,28.454-60.083,48.864c-7.54,20.411,2.873,43.066,23.285,50.616
+                 c20.399,7.535,43.06-2.884,50.614-23.278C416.761,315.505,395.391,259.702,395.391,259.702z M348.232,316.572
+                 c2.503,22.202,15.086,29.817,15.086,29.817C340.889,339.719,348.232,316.572,348.232,316.572z"/>
+               <path d="M368.837,177.115c14.061-38.057-25.778-142.083-25.778-142.083s-97.944,53.086-112.03,91.106
+                 c-14.074,38.028,5.364,80.34,43.398,94.384C312.473,234.624,354.746,215.17,368.837,177.115z M255.121,141.088
+                 c4.663,41.38,28.137,55.596,28.137,55.596C241.416,184.205,255.121,141.088,255.121,141.088z"/>
+               </svg>
+          </div>
+            <span id="data_pluie">--</span>
+          </div>
+         </div>
+         <div><div>Nuages</div>
+         <div class="withicon">
+          <div  class="icondata">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+              <path d="m255.736 186.569c2.627-.214 5.264-.322 7.902-.322 22.617 0 43.44 7.823 59.911 20.902 6.253-1.256 12.695-1.915 19.259-1.915 41.721 0 78.592 26.539 92.5 64.828 2.763-.233 5.538-.35 8.315-.35 8.377 0 16.511 1.055 24.28 3.035 5.46-15.417 8.443-31.996 8.443-49.26 0-81.581-66.371-147.951-147.951-147.951-48.212 0-91.108 23.184-118.136 58.985 20.734 11.035 37.196 29.435 45.477 52.048z"/>
+              <path d="m241.994 269.712c2.777 0 5.553.117 8.314.35 7.368-20.283 21.182-37.267 38.746-48.757-7.835-3.252-16.417-5.057-25.416-5.057-5.15 0-10.285.591-15.26 1.758-3.948.926-8.104.214-11.519-1.976-3.415-2.188-5.798-5.667-6.605-9.641-6.263-30.814-33.674-53.179-65.179-53.179-31.504 0-58.915 22.365-65.179 53.18-.808 3.975-3.19 7.453-6.605 9.641-3.414 2.188-7.569 2.903-11.519 1.975-4.974-1.167-10.108-1.758-15.26-1.758-36.674 0-66.512 29.837-66.512 66.513s29.838 66.514 66.514 66.514h78.917c8.804-45.276 48.751-79.563 96.563-79.563z"/>
+              <path d="m443.624 299.712c-5.296 0-10.573.608-15.688 1.807-3.948.927-8.104.214-11.519-1.975-3.415-2.188-5.798-5.667-6.605-9.642-6.438-31.677-34.617-54.669-67.004-54.669-32.386 0-60.564 22.992-67.004 54.669-.808 3.975-3.19 7.453-6.605 9.641-3.415 2.19-7.57 2.901-11.52 1.975-5.112-1.199-10.39-1.807-15.686-1.807-37.702 0-68.376 30.673-68.376 68.376s30.674 68.376 68.376 68.376h201.63c37.703 0 68.376-30.673 68.376-68.376s-30.672-68.375-68.375-68.375z"/>
+              </svg>
+          </div>
+          <span id="data_nuage">--</span>
+        </div>
+       </div>
        </div>
        <div class="bloc">
           <h2 class="sidebar-title">Vitesse sur 48 heures</h2>
@@ -136,6 +180,51 @@
       var depart = new Date(2020, 10, 8, 14, 20);
       var dateNow = new Date();
       var timerdelta = Math.abs(dateNow -depart) / 1000;
+                
+      function windcolor(force){
+        var colors = ['#ffffff', '#eaf0db', '#dfdfb1', '#e1ca7c', '#ffa71d', '#ff8b1b', '#f97025', '#ef5532', '#e03a42', '#cc1e55', '#b1016d', '#8b008b'];
+          console.log(force);
+          if(force <=1){
+            return colors[0];
+          }
+          if(force <=5){
+            return colors[1];
+          }
+          if(force <=11){
+            return colors[2];
+          }
+          if(force <=19){
+            return colors[3];
+          }
+          if(force <=28){
+            return colors[4];
+          }
+          if(force <=38){
+            return colors[5];
+          }
+          if(force <=49){
+            return colors[6];
+          }
+          if(force <=61){
+            return colors[7];
+          }
+          if(force <=74){
+            return colors[8];
+          }
+          if(force <=88){
+            return colors[9];
+          }
+          if(force <=102){
+            return colors[10];
+          }
+          if(force <=112){
+            return colors[11];
+          }
+          if(force <=117){
+            return colors[12];
+          }
+          return colors[18];
+      }
 
       var timer = new easytimer.Timer();
       timer.start({precision: 'seconds', startValues: {seconds: timerdelta}});
@@ -329,11 +418,8 @@
                 lineWidth: 2,
                 particleMultiplier: 0.0033,
                 frameRate: 10,
-                //colorScale: ["#2468b4", "#3c9dc2", "#80cdc1", "#97daa8", "#c6e7b5", "#eef7d9", "#ffee9f", "#fcd97d", "#ffb664", "#fc964b", "#fa7034", "#f54020", "#ed2d1c", "#dc1820", "#b40023"]
-                //colorScale: ['#ffffcc', '#f7eebf', '#f0dcb2', '#e8cba5', '#dfba98', '#d7aa8b', '#ce997f', '#c58973', '#bc7867', '#b3685b', '#a95750', '#9f4645', '#95343a', '#8b2030', '#800026']
                 colorScale: ['#ffffff', '#ebf4e7', '#d7e9ce', '#c3deb3', '#b0d396', '#ffa91e', '#fc9527', '#f78130', '#f06e38', '#e75a41', '#dc464a', '#cf3155', '#be1b63', '#a90374', '#8b008b']
-                //colorScale: ['#f8fbff', '#e7ebf4', '#d7dbe9', '#c7cbde', '#b7bbd3', '#a7acc8', '#979dbe', '#878eb3', '#7780a9', '#68719e', '#586394', '#485689', '#37497f', '#243c75', '#07306b']
-              });
+               });
         
             wind10mLayerGroup.addLayer(this[wind10mName]);
             wind10mArray[actualTimeIndex] = wind10mLayerGroup.getLayer(wind10mLayerGroup.getLayerId(this[wind10mName]));
@@ -359,14 +445,14 @@
           L.polygon(data, {color: "red", weight: 1}).addTo(map);
         }); 
 		
-		// ------- AEZ DATA ------ //
-		$.getJSON( "aez.json"+"?"+Math.random(), function( data ) {
-			var aez=[];
-			//Inversion Lat/Lon
-			$.each(data, function(index,value){
-			
-			aez.push([value[1],value[0]]);
-			});
+		    // ------- AEZ DATA ------ //
+        $.getJSON( "aez.json"+"?"+Math.random(), function( data ) {
+          var aez=[];
+          //Inversion Lat/Lon
+          $.each(data, function(index,value){
+          
+          aez.push([value[1],value[0]]);
+          });
           L.polyline(aez, {color: "red", weight: 1}).addTo(map);
         }); 
 		
@@ -498,15 +584,18 @@
               $('#data_postion').text(current.position);
               $('#data_speed').text(current.vitesse);
               $('#data_heading').text(current.cap+'°');
-              $('#data_vent').text(current.Meteo.wind.speed+'kt / '+current.Meteo.wind.deg+'°');
-              if (typeof current.Meteo.rain !== 'undefined') {
-    				$('#data_pluie').text(current.Meteo.rain["1h"]+'mm / 1h');
-				}
-              else{
+              $('#data_vent').html('<span>Direction: '+current.Meteo.wind.deg+'°</span><span>'+current.Meteo.wind.speed+'kt</span>');
+              $('#data_direction>svg').css('transform', 'rotate('+(current.Meteo.wind.deg + 180) % 360+'deg)');
+              $('#data_direction>svg>path').css('fill', windcolor(current.Meteo.wind.speed));
               
-              		$('#data_pluie').text('0mm / 1h');
+              if (typeof current.Meteo.rain !== 'undefined') {
+    				    $('#data_pluie').html('<span>Sur 1 heure</span><span>'+current.Meteo.rain["1h"]+'mm</span>');
+				      }
+              else{
+              	$('#data_pluie').html('<span>Sur 1 heure</span><span>0mm</span>');
               }
-              $('#data_nuage').text(current.Meteo.clouds.all);
+              
+              $('#data_nuage').html('<span>Couverture</span><span>'+current.Meteo.clouds.all+'%</span>');
               $('#data_dist').text(current.DTF+' nm');
               $('#data_vmgmax').text(current.VMG+' nds');
 
@@ -523,9 +612,14 @@
           
               // position history
               var htmlData = '';
+              var reversedHistory = [];
               $.each(skipper.classements, function(key, val) {
+                reversedHistory.push({'day':Math.floor(key/4), ...val});
+              });
 
-               htmlData += '<tr><td><span class="grey">J+</span>'+Math.floor(key/4)+' '+val.heure+'</td><td>'+val.position+'</td><td>'+val.VMG+' <span class="grey">kt</span></td></tr>';
+              $.each(reversedHistory.reverse(), function(key, val) {
+
+               htmlData += '<tr><td><span class="grey">J+</span>'+val.day+' '+val.heure+'</td><td>'+val.position+'</td><td>'+val.VMG+' <span class="grey">kt</span></td></tr>';
               });
               $('#positionHistory>tbody').html(htmlData);
           }

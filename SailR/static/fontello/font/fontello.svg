@@ -7,6 +7,8 @@
 <font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
 <missing-glyph horiz-adv-x="1000" />
 <glyph glyph-name="cancel-circle" unicode="&#x2716;" d="M465 797q184 0 315-131t131-316-131-315-315-132-316 132-131 315 131 316 316 131z m220-588l-141 142 141 141-79 79-142-141-141 141-79-79 141-141-141-142 79-79 141 141 142-141z" horiz-adv-x="928" />
+
+<glyph glyph-name="direction" unicode="&#xf124;" d="M782 655l-357-714q-10-20-32-20-3 0-8 1-13 3-20 13t-8 22v322h-321q-13 0-22 7t-13 20 2 23 17 17l714 357q7 4 16 4 15 0 25-10 9-8 10-20t-3-22z" horiz-adv-x="785.7" />
 </font>
 </defs>
 </svg>
