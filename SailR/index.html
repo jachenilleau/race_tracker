@@ -614,7 +614,7 @@
               var htmlData = '';
               var reversedHistory = [];
               $.each(skipper.classements, function(key, val) {
-                reversedHistory.push({'day':Math.floor(key/4), ...val});
+                reversedHistory.push({'day':Math.floor(key/6), ...val});
               });
 
               $.each(reversedHistory.reverse(), function(key, val) {
