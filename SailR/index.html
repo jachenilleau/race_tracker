@@ -131,7 +131,7 @@
       var depart = new Date(2020, 10, 8, 14, 20);
       var dateNow = new Date();
       var timerdelta = Math.abs(dateNow -depart) / 1000;
-      console.log(timerdelta)
+
       var timer = new easytimer.Timer();
       timer.start({precision: 'seconds', startValues: {seconds: timerdelta}});
       timer.addEventListener('secondsUpdated', function (e) {
@@ -353,7 +353,18 @@
         $.getJSON( "dst.json"+"?"+Math.random(), function( data ) {
           L.polygon(data, {color: "red", weight: 1}).addTo(map);
         }); 
-
+		
+		// ------- AEZ DATA ------ //
+		$.getJSON( "aez.json"+"?"+Math.random(), function( data ) {
+			var aez=[];
+			//Inversion Lat/Lon
+			$.each(data, function(index,value){
+			
+			aez.push([value[1],value[0]]);
+			});
+          L.polyline(aez, {color: "red", weight: 1}).addTo(map);
+        }); 
+		
         // ------ SIDEBAR ----- //
 
         var sidebar = L.control.sidebar('sidebar', {
@@ -408,8 +419,7 @@
           });
 
           // Group by foiler / daggerBoard
-          var isFoiler = true; // Ajouter le boolean ici
-          if (isFoiler){
+          if (val.isFoiler){
             foilerTraceGroup.push(trace);
             foilerBoatsGroup.push(boat);
           } else {
@@ -459,6 +469,7 @@
           function openSidebar(id){
               sidebar.show();
               var skipper = data[id];
+              
               var current = skipper.classements.slice(-1)[0];
               
               var vitessePanel = skipper.classements.slice(-12);
@@ -482,11 +493,11 @@
               $('#data_postion').text(current.position);
               $('#data_speed').text(current.vitesse);
               $('#data_heading').text(current.cap+'°');
-              $('#data_dist').text('-- nm');
-              $('#data_vmgmax').text('-- nds');
+              $('#data_dist').text(current.DTF+' nm');
+              $('#data_vmgmax').text(current.VMG+' nds');
 
               // Foiler
-              if (skipper.foiler){
+              if (skipper.isFoiler){
                 $('#data_foiler').text('foiler').addClass('foiler').removeClass('derive');
               } else {
                 $('#data_foiler').text('Dérive').addClass('derive').removeClass('foiler');
@@ -498,9 +509,10 @@
           
               // position history
               var htmlData = '';
-              //$.each(skipperData.position_history, function(key, val) {
-               // htmlData += '<tr><td><span class="grey">J+</span>'+skipperData.position_history[key][0]+'</td><td>'+skipperData.position_history[key][1]+'</td><td>'+skipperData.position_history[key][2]+' <span class="grey">kt</span></td></tr>';
-              //});
+              $.each(skipper.classements, function(key, val) {
+
+               htmlData += '<tr><td><span class="grey">J+</span>'+Math.floor(key/4)+' '+val.heure+'</td><td>'+val.position+'</td><td>'+val.VMG+' <span class="grey">kt</span></td></tr>';
+              });
               $('#positionHistory>tbody').html(htmlData);
           }
 
