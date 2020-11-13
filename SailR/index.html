@@ -99,6 +99,11 @@
          <div><div>Vitesse</div><div><span  id="data_speed">--</span> kt</div></div>
          <div><div>Cap</div><div id="data_heading">--</div></div>
        </div>
+       <div class="bloc metrics">
+         <div><div>Vent</div><div id="data_vent">--</div></div>
+         <div><div>Pluie</div><div><span  id="data_pluie">--</span></div></div>
+         <div><div>Couverture Nuageuse</div><div id="data_nuage">--</div></div>
+       </div>
        <div class="bloc">
           <h2 class="sidebar-title">Vitesse sur 48 heures</h2>
           <canvas id="speedChart" height="150"></canvas>
@@ -323,7 +328,7 @@
                 particleAge: 90,
                 lineWidth: 2,
                 particleMultiplier: 0.0033,
-                frameRate: 18,
+                frameRate: 10,
                 //colorScale: ["#2468b4", "#3c9dc2", "#80cdc1", "#97daa8", "#c6e7b5", "#eef7d9", "#ffee9f", "#fcd97d", "#ffb664", "#fc964b", "#fa7034", "#f54020", "#ed2d1c", "#dc1820", "#b40023"]
                 //colorScale: ['#ffffcc', '#f7eebf', '#f0dcb2', '#e8cba5', '#dfba98', '#d7aa8b', '#ce997f', '#c58973', '#bc7867', '#b3685b', '#a95750', '#9f4645', '#95343a', '#8b2030', '#800026']
                 colorScale: ['#ffffff', '#ebf4e7', '#d7e9ce', '#c3deb3', '#b0d396', '#ffa91e', '#fc9527', '#f78130', '#f06e38', '#e75a41', '#dc464a', '#cf3155', '#be1b63', '#a90374', '#8b008b']
@@ -493,6 +498,15 @@
               $('#data_postion').text(current.position);
               $('#data_speed').text(current.vitesse);
               $('#data_heading').text(current.cap+'°');
+              $('#data_vent').text(current.Meteo.wind.speed+'kt / '+current.Meteo.wind.deg+'°');
+              if (typeof current.Meteo.rain !== 'undefined') {
+    				$('#data_pluie').text(current.Meteo.rain["1h"]+'mm / 1h');
+				}
+              else{
+              
+              		$('#data_pluie').text('0mm / 1h');
+              }
+              $('#data_nuage').text(current.Meteo.clouds.all);
               $('#data_dist').text(current.DTF+' nm');
               $('#data_vmgmax').text(current.VMG+' nds');
 
