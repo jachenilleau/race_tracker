@@ -585,7 +585,7 @@
               $('#data_speed').text(current.vitesse);
               $('#data_heading').text(current.cap+'°');
               $('#data_vent').html('<span>Direction: '+current.Meteo.wind.deg+'°</span><span>'+current.Meteo.wind.speed+'kt</span>');
-              $('#data_direction>svg').css('transform', 'rotate('+(current.Meteo.wind.deg + 180) % 360+'deg)');
+              $('#data_direction>svg').css('transform', 'rotate('+(current.Meteo.wind.deg - 45) % 360+'deg)');
               $('#data_direction>svg>path').css('fill', windcolor(current.Meteo.wind.speed));
               
               if (typeof current.Meteo.rain !== 'undefined') {
