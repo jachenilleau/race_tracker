@@ -491,7 +491,7 @@
         var foilerTraceGroup = [];
         var daggerBoardTraceGroup = [];
 
-        $.getJSON( "vg2020.json"+"?"+Math.random(), function( data ) {
+        $.getJSON( "classement.json"+"?"+Math.random(), function( data ) {
           $.each( data, function( key, val ) {
             var latlngs = [];
             var lastPosition = null;
@@ -589,7 +589,7 @@
               
               $.each( vitessePanel, function( i, elem ) {
                 vitesses.push(elem.vitesse);
-                labels.push(elem.heure.slice(0, -3));
+                labels.push(elem.Date.slice(0, -3));
                 total += elem.vitesse;
               });
 
@@ -603,18 +603,18 @@
               $('#data_postion').text(current.position);
               $('#data_speed').text(current.vitesse);
               $('#data_heading').text(current.cap+'°');
-              $('#data_vent').html('<span>Direction: '+current.Meteo.wind.deg+'°</span><span>'+current.Meteo.wind.speed+'kt</span>');
-              $('#data_direction>svg').css('transform', 'rotate('+(current.Meteo.wind.deg +135) % 360+'deg)');
-              $('#data_direction>svg>path').css('fill', windcolor(current.Meteo.wind.speed));
+              $('#data_vent').html('<span>Direction: '+skipper.Meteo.wind.deg+'°</span><span>'+skipper.Meteo.wind.speed+'kt</span>');
+              $('#data_direction>svg').css('transform', 'rotate('+(skipper.Meteo.wind.deg +135) % 360+'deg)');
+              $('#data_direction>svg>path').css('fill', windcolor(skipper.Meteo.wind.speed));
               
-              if (typeof current.Meteo.rain !== 'undefined') {
-    				    $('#data_pluie').html('<span>Sur 1 heure</span><span>'+current.Meteo.rain["1h"]+'mm</span>');
+              if (typeof skipper.Meteo.rain !== 'undefined') {
+    				    $('#data_pluie').html('<span>Sur 1 heure</span><span>'+skipper.Meteo.rain["1h"]+'mm</span>');
 				      }
               else{
               	$('#data_pluie').html('<span>Sur 1 heure</span><span>0mm</span>');
               }
               
-              $('#data_nuage').html('<span>Couverture</span><span>'+current.Meteo.clouds.all+'%</span>');
+              $('#data_nuage').html('<span>Couverture</span><span>'+skipper.Meteo.clouds.all+'%</span>');
               $('#data_dist').text(current.DTF+' nm');
               $('#data_vmgmax').text(current.VMG+' nds');
 
@@ -638,7 +638,7 @@
 
               $.each(reversedHistory.reverse(), function(key, val) {
 
-               htmlData += '<tr><td><span class="grey">J+</span>'+val.day+' '+val.heure+'</td><td>'+val.position+'</td><td>'+val.VMG+' <span class="grey">kt</span></td></tr>';
+               htmlData += '<tr><td><span class="grey">J+</span>'+val.day+' '+val.Date+'</td><td>'+val.position+'</td><td>'+val.VMG+' <span class="grey">kt</span></td></tr>';
               });
               $('#positionHistory>tbody').html(htmlData);
           }
