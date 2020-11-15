@@ -50,6 +50,7 @@
 
     <title>SailR</title>
     <script src="static/jquery-3.5.1.min.js" ></script>
+    <script src="static/moment.js" ></script>
     <!-- Leaflet -->
     <link rel="stylesheet" href="static/leaflet/leaflet.css"/>
     <script src="static/leaflet/leaflet.js" ></script>
@@ -524,6 +525,7 @@
           // Add click on the boat
           boat.on("click", function(event){
             var id = event.sourceTarget.options.id;
+            console.log(id)
             openSidebar(id);
             map.panTo(lastPosition);
           });
@@ -589,13 +591,15 @@
               
               $.each( vitessePanel, function( i, elem ) {
                 vitesses.push(elem.vitesse);
-                labels.push(elem.Date.slice(0, -3));
+                var datetime = moment(elem.Date);
+                labels.push(datetime.format('HH:mm'));
                 total += elem.vitesse;
               });
 
               var average = total / vitessePanel.length;
 
               // Stuff
+              var wind = (skipper.Meteo.wind.speed*1.94);
               $('#data_skipper_pict').attr('src', 'static/img/avatar/'+id+'.jpg');
               $('#data_skipper_pict').attr('style', 'border-color:'+skipper.couleur+'; box-shadow:0 0 0 10px rgba('+hexToRgb(skipper.couleur)+',0.2);');
               $('#data_skipper').text(skipper.skipper);
@@ -603,9 +607,9 @@
               $('#data_postion').text(current.position);
               $('#data_speed').text(current.vitesse);
               $('#data_heading').text(current.cap+'°');
-              $('#data_vent').html('<span>Direction: '+skipper.Meteo.wind.deg+'°</span><span>'+skipper.Meteo.wind.speed+'kt</span>');
+              $('#data_vent').html('<span>Direction: '+skipper.Meteo.wind.deg+'°</span><span>'+wind.toFixed(2)+'kt</span>');
               $('#data_direction>svg').css('transform', 'rotate('+(skipper.Meteo.wind.deg +135) % 360+'deg)');
-              $('#data_direction>svg>path').css('fill', windcolor(skipper.Meteo.wind.speed));
+              $('#data_direction>svg>path').css('fill', windcolor(wind));
               
               if (typeof skipper.Meteo.rain !== 'undefined') {
     				    $('#data_pluie').html('<span>Sur 1 heure</span><span>'+skipper.Meteo.rain["1h"]+'mm</span>');
@@ -631,14 +635,9 @@
           
               // position history
               var htmlData = '';
-              var reversedHistory = [];
-              $.each(skipper.classements, function(key, val) {
-                reversedHistory.push({'day':Math.floor(key/6), ...val});
-              });
-
-              $.each(reversedHistory.reverse(), function(key, val) {
-
-               htmlData += '<tr><td><span class="grey">J+</span>'+val.day+' '+val.Date+'</td><td>'+val.position+'</td><td>'+val.VMG+' <span class="grey">kt</span></td></tr>';
+              $.each(skipper.classements.reverse(), function(key, val) {
+              var datetime = moment(val.Date);
+               htmlData += '<tr><td>'+datetime.format('DD/MM/YYYY HH:mm')+'</td><td>'+val.position+'</td><td>'+val.VMG+' <span class="grey">kt</span></td></tr>';
               });
               $('#positionHistory>tbody').html(htmlData);
           }
