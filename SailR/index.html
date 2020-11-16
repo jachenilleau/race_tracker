@@ -696,7 +696,7 @@
               $('#data_team').text(skipper.bateau);
               $('#data_postion').text(current.position);
               if(current.vitesse>0){
-                $('#data_speedforce>svg').css('animation', 'rotating '+Math.round(30/current.vitesse)+'s linear infinite');
+                $('#data_speedforce>svg').css('animation', 'rotating '+35/current.vitesse+'s linear infinite');
               }
               $('#data_speed').html('<span>&nbsp;</span><span>'+current.vitesse+'kt</span>');
               $('#data_heading').html('<span>&nbsp;</span><span>'+current.cap+'°</span>');
