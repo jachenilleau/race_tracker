@@ -90,7 +90,7 @@
     <!-- fontello -->
     <script type="text/javascript" src="static/tablesorter/dist/js/jquery.tablesorter.min.js"></script>
     <!-- Custom -->
-    <link rel="stylesheet" href="static/style.css?v=12" />
+    <link rel="stylesheet" href="static/style.css?v=11" />
   </head>
   <body>
     <div class="black-container">
@@ -114,6 +114,7 @@
       
       <div>
         <div class="container">
+          <div class="responsivetable">
           <table cellspacing="0" id="Ranking">
             <thead>
               <tr>
@@ -131,6 +132,7 @@
               <tbody></tbody>
             </thead>
           </table>
+          </div>
         </div>
       </div>
 
@@ -152,7 +154,9 @@
               <div class="icondata" id='data_speedforce'>
               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+              <g transform="matrix(-1,0,0,1,32,0)">
                 <path d="M14.995,11.314C12.764,10.494 11.17,8.349 11.17,5.835C11.17,2.615 13.785,0 17.005,0L17.005,13.053C17.916,13.364 18.637,14.085 18.947,14.995L20.686,14.995C21.506,12.764 23.651,11.17 26.165,11.17C29.385,11.17 32,13.785 32,17.005L18.947,17.005C18.636,17.916 17.915,18.637 17.005,18.947L17.005,20.653L16.914,20.653C19.193,21.448 20.83,23.617 20.83,26.165C20.83,29.385 18.215,32 14.995,32L14.995,18.947C14.084,18.636 13.363,17.915 13.053,17.005L11.314,17.005C10.494,19.236 8.349,20.83 5.835,20.83C2.615,20.83 0,18.215 0,14.995L13.053,14.995C13.364,14.084 14.085,13.363 14.995,13.053L14.995,11.314Z"/>
+              </g>
               </svg>
             </div>
             <span id="data_speed">--</span>
@@ -480,7 +484,7 @@
           wind10mName = wind10mBaseName.replace(/{h}/g, (actualTimeIndex - baseIndex) * actualInterval);
           
           $.getJSON(wind10mBaseURL + wind10mName + ".json", function(data) {
-            this[wind10mName] = L.velocityLayer({
+            wind10mName = L.velocityLayer({
                 displayValues: true,
                 displayOptions: {
                     velocityType: "Wind",
@@ -497,9 +501,9 @@
                 frameRate: 10,
                 colorScale: ['#ffffff', '#ebf4e7', '#d7e9ce', '#c3deb3', '#b0d396', '#ffa91e', '#fc9527', '#f78130', '#f06e38', '#e75a41', '#dc464a', '#cf3155', '#be1b63', '#a90374', '#8b008b']
                });
-        
-            wind10mLayerGroup.addLayer(this[wind10mName]);
-            wind10mArray[actualTimeIndex] = wind10mLayerGroup.getLayer(wind10mLayerGroup.getLayerId(this[wind10mName]));
+            wind10mLayerGroup.addLayer(wind10mName);
+            wind10mArray[actualTimeIndex] = wind10mLayerGroup.getLayer(wind10mLayerGroup.getLayerId(wind10mName));
+            
             wind10mLayerGroup.addTo(map);
           });
         }
