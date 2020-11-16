@@ -602,7 +602,22 @@
           var dashedTrace = []
           boat.on('mouseover', function(event){
             var id = event.sourceTarget.options.id;
-
+			$.each(foilerBoatsGroup, function(key,val)
+			{
+			  if(val.options.id!=id){
+			    val.setOpacity(0.3);
+			    val.setZIndexOffset(0);
+			  }
+			
+			});
+			$.each(daggerBoardBoatsGroup, function(key,val)
+			{
+			  if(val.options.id!=id){
+			    val.setOpacity(0.3);
+			    val.setZIndexOffset(0);
+			  }
+			
+			});
             $.each( traces, function( key, val ) {
               if(val.options.id == 'p_'+id) {
                 val.setStyle({opacity:0});
@@ -614,6 +629,15 @@
           });
 
           boat.on('mouseout', function(event){
+          	$.each(daggerBoardBoatsGroup, function(key,val)
+			{val.setOpacity(1);
+			 val.setZIndexOffset(1000);
+		    
+			});
+			$.each(foilerBoatsGroup, function(key,val)
+			{val.setOpacity(1);
+		    val.setZIndexOffset(1000);
+			});
             $.each( traces, function( key, val ) {   
               val.setStyle({opacity:1, weight:2});
             });
