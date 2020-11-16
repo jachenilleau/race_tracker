@@ -407,15 +407,7 @@
             timeInterval: dataTimeInterval,
             period: dataPeriod,
             currentTime: actualTime
-          },
-          timeDimensionControl: true,
-          timeDimensionControlOptions: {
-          position: "bottomright",
-          loopButton: false,
-          limitSliders: false,
-          playButton: false,
-          speedSlider: false
-        } }).setView({lon: 0, lat: 0}, 2);
+          }}).setView({lon: 0, lat: 0}, 2);
 
 
         // --- LAYOUTS --- //
@@ -685,7 +677,19 @@
 
           layerControl = L.control.layers(baseLayers, overlays, {position: 'topleft'});
           layerControl.addTo(map);
-
+		  wind10mLayerGroup.on("remove",function(){
+		  	map.removeControl(timeDimensionControl);
+		  });
+		  wind10mLayerGroup.on("add",function(){
+		  timeDimensionControl = L.control.timeDimension({
+          position: "bottomright",
+          loopButton: false,
+          limitSliders: false,
+          playButton: false,
+          speedSlider: false
+        } ).addTo(map);
+        });
+		  
           // autoFit map
           map.fitBounds(boatPositions);
 
