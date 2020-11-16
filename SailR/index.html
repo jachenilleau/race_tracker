@@ -127,7 +127,7 @@
                 <th>DTL open</th>
                 <th>DTF</th>
                 <th>VMG</th>
-                <th>VMG WP</th>
+                <th>VMG open</th>
               </tr>
               <tbody></tbody>
             </thead>
@@ -331,7 +331,7 @@
         return parseInt(result[1], 16) +', '+ parseInt(result[2], 16)+ ', '+ parseInt(result[3], 16);
       }
 
-      function setSideBarChartConfig(label, data, average){
+      function setSideBarChartConfig(label, data, average, min, max){
         return {
           type: 'line',
           data: {
@@ -352,9 +352,10 @@
             scales: {
               yAxes: [{
                   ticks: {
-                      beginAtZero: true,
+                      
                       fontColor: '#FFFFFF',
-                      max: 35,
+                      suggestedMin: min,
+                      suggestedMax: max,
                   },
                   gridLines: {
                     color: "#333A43",
@@ -680,6 +681,8 @@
               
               var vitessePanel = skipper.classements.slice(-12);
               var vitesses = [];
+              var vitesse_max = 0;
+              var vitesse_min = 100;
               var labels = [];
               var total = 0;
               
@@ -688,6 +691,12 @@
                 var datetime = moment(elem.Date);
                 labels.push(datetime.format('HH:mm'));
                 total += elem.vitesse;
+                if(elem.vitesse>vitesse_max){
+                	vitesse_max=elem.vitesse;
+                }
+                if(elem.vitesse<vitesse_min){
+                	vitesse_min=elem.vitesse;
+                }
               });
 
               var average = total / vitessePanel.length;
@@ -700,7 +709,7 @@
               $('#data_team').text(skipper.bateau);
               $('#data_postion').text(current.position);
               if(current.vitesse>0){
-                $('#data_speedforce>svg').css('animation', 'rotating '+Math.round(30/current.vitesse)+'s linear infinite');
+                $('#data_speedforce>svg').css('animation', 'rotating '+35/current.vitesse+'s linear infinite');
               }
               $('#data_speed').html('<span>&nbsp;</span><span>'+current.vitesse+'kt</span>');
               $('#data_heading').html('<span>&nbsp;</span><span>'+current.cap+'°</span>');
@@ -729,8 +738,9 @@
 
               // Speed chart
               var ctx = document.getElementById('speedChart').getContext('2d');
-              var sidebarChart = new Chart(ctx, setSideBarChartConfig(labels, vitesses, average));
-          
+
+              var sidebarChart = new Chart(ctx, setSideBarChartConfig(labels, vitesses, average, vitesse_min, vitesse_max));
+          	  
               // position history
               var htmlData = '';
               $.each(skipper.classements.reverse(), function(key, val) {
@@ -755,7 +765,7 @@
 
 
           var htmlData = '';
-          console.log(ranking)
+    
           $.each(ranking, function(key, val) {
             var datetime = moment(val.Date);
             var foiler = (data[val.id].isFoiler === true) ? 'Foiler' :'Dérives';
@@ -767,7 +777,7 @@
               <td>'+val.vitesse.toFixed(1)+' <span class="grey">kt</span></td>\
               <td>'+val.cap+' <span class="grey">°</span></td>\
               <td>'+val.DTL.toFixed(1)+' <span class="grey">nm</span></td>\
-              <td>'+val.DTL_open.toFixed(1)+' <span class="grey">kt</span></td>\
+              <td>'+val.DTL_open.toFixed(1)+' <span class="grey">nm</span></td>\
               <td>'+val.DTF.toFixed(1)+' <span class="grey">nm</span></td>\
               <td>'+val.VMG.toFixed(1)+' <span class="grey">kt</span></td>\
               <td>'+val.VMG_wp.toFixed(1)+' <span class="grey">kt</span></td>\
