@@ -89,6 +89,9 @@
     <link rel="stylesheet" href="static/fontello/css/fontello.css" />
     <!-- fontello -->
     <script type="text/javascript" src="static/tablesorter/dist/js/jquery.tablesorter.min.js"></script>
+    <!-- mouse coordinates -->
+    <link rel="stylesheet" href="static/mousecoordinates/L.Control.MousePosition.css" />
+    <script src="static/mousecoordinates/L.Control.MousePosition.js"></script>
     <!-- Custom -->
     <link rel="stylesheet" href="static/style.css?v=11" />
   </head>
@@ -432,7 +435,8 @@
           attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
         }).addTo(map);
 
-
+		//Add Mouse Coordinates
+		L.control.mousePosition().addTo(map);
         // Add Zoom control
         L.control.zoom({
             position: 'topright'
