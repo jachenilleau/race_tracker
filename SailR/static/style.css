@@ -23,19 +23,11 @@ body {
 }
 
 #map{
-  position: absolute;
-  top: 62px;
-  bottom: 101px;
-  left: 0;
-  right: 0;
+  height: 75%;
   background-color: #1E242C;
 }
 
 #footer{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
 }
 
 #sidebar{
@@ -62,7 +54,6 @@ body {
   border-radius: 50px;
   border: 6px solid;
   margin-right: 24px;
-  animation: breathing 5s ease-out infinite normal;
 }
 
 #sidebar .header h1{
@@ -101,7 +92,7 @@ a {
 }
 
 .grey{
-  color: #4F5B66;
+  color: #728494;
 }
 
 .metrics{
@@ -115,7 +106,7 @@ div.metrics>div>div:first-child, .chronodata>div>div:first-child, .txtheader{
   font-family: 'Montserrat', serif;
   font-weight: 700;
   font-size: 11px;
-  color: #4F5B66;
+  color: #728494;
   text-align: center;
 }
 
@@ -185,27 +176,73 @@ div.metrics>div>div:last-child, .chronodata>div>div:last-child{
   background: linear-gradient(180deg, rgba(30,36,44,0) 0%, rgba(30,36,44,1) 100%);
 }
 
-#sidebar table{
+#sidebar table, #Ranking{
   width: 100%;
   text-align: center;
   padding-bottom: 24px;
 }
 
-#sidebar table th{
+#sidebar table th, #Ranking th{
   font-size: 16px;
   border-bottom: 2px solid #363F47;
-  color:#4F5B66;
+  color:#728494;
   padding: 10px 0;
 }
 
-#sidebar table td{
+#sidebar table td, #Ranking td{
   padding: 10px 0;
   font-size: 16px;
   border-bottom: 1px solid #363F47;
 }
 
-#sidebar table tr:last-child td{
+#sidebar table tr:last-child td, #Ranking tr:last-child td{
   border-bottom: 0px solid #363F47;
+}
+
+#Ranking td, #Ranking th{
+  padding: 10px;
+}
+
+#Ranking th{
+  font-size: 13px;
+  padding: 10px 20px 10px 10px;
+  color:white;
+}
+
+#Ranking{
+  width: 100%;
+}
+
+#Ranking tr:nth-child(even) {
+  background-color:#363F47;
+}
+
+#Ranking td:nth-child(3), #Ranking th:nth-child(3){
+  text-align: left;
+}
+
+#skp{
+  display: flex;
+  align-items: center;
+}
+
+#skp img{
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  border: 2px solid;
+  margin-right: 14px;
+}
+
+#skp>div>div:first-child{
+  font-family: 'Montserrat', serif;
+  font-weight: bold;
+}
+
+#skp>div>div:last-child{
+  font-family: 'Montserrat', serif;
+  color: #728494;
+  font-size: 12px;
 }
 
 .boat-type{
@@ -276,16 +313,50 @@ div.leaflet-control-layers-overlays > label:nth-child(4){
   padding: 6px 6px 0 6px;
 }
 
-@keyframes breathing {
-  0% {
-    transform: scale(1);
-  }
 
-  50% {
-    transform: scale(1.05);
-  }
+.tablesorter-default .header,
+.tablesorter-default .tablesorter-header {
+  background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAAP///////yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+  background-position: center right;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  white-space: normal;
+  padding: 4px 20px 4px 4px
+}
 
-  100% {
-    transform: scale(1);
+.tablesorter-default thead .headerSortUp,
+.tablesorter-default thead .tablesorter-headerAsc,
+.tablesorter-default thead .tablesorter-headerSortUp {
+  background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+  border-bottom: #fff 2px solid
+}
+
+.tablesorter-default thead .headerSortDown,
+.tablesorter-default thead .tablesorter-headerDesc,
+.tablesorter-default thead .tablesorter-headerSortDown {
+  background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+  border-bottom: #fff 2px solid
+}
+
+#data_postion{
+  font-size: 47px;
+}
+
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
+

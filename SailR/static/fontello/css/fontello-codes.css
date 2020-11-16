@@ -1,3 +1,5 @@
 
-.icon-cancel-circle:before { content: '\2716'; } /* '✖' */
+.icon-foiler:before { content: '\2716'; } /* '✖' */
+.icon-cancel-circle:before { content: '\e800'; } /* '' */
+.icon-derive:before { content: '\e801'; } /* '' */
 .icon-direction:before { content: '\f124'; } /* '' */

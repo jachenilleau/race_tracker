@@ -54,6 +54,7 @@
     <!-- Leaflet -->
     <link rel="stylesheet" href="static/leaflet/leaflet.css"/>
     <script src="static/leaflet/leaflet.js" ></script>
+    <script src="static/L.Path.DashFlow.js" ></script>
     <!--leaflet-velocity-->
     <link rel="stylesheet" href="static/velocity/leaflet-velocity.css" />
     <script src="static/velocity/leaflet-velocity.js"></script>
@@ -86,14 +87,18 @@
     <script type="text/javascript" src="static/easytimer.min.js"></script>
     <!-- fontello -->
     <link rel="stylesheet" href="static/fontello/css/fontello.css" />
+    <!-- fontello -->
+    <script type="text/javascript" src="static/tablesorter/dist/js/jquery.tablesorter.min.js"></script>
     <!-- Custom -->
-    <link rel="stylesheet" href="static/style.css" />
+    <link rel="stylesheet" href="static/style.css?v=12" />
   </head>
   <body>
     <div class="black-container">
       <div class="container txtheader">Cartographie non officielle du <span class="blue">Vendée-Globe 2020/2021</span> - <a target="_blank" href="https://github.com/volodiaja/race_tracker/">Github</a></div>
       </div>
+      
       <div id="map"></div>
+      
       <div id="footer" class="black-container">
         <div class="container chronodata">
           <div id="timer">
@@ -103,8 +108,32 @@
           <div>
             <div>Skippers en course</div>
             <div><span class="blue" id="skipperCount">33</span> / 33</div>
+          </div>
+       </div>
+      </div>
+      
+      <div>
+        <div class="container">
+          <table cellspacing="0" id="Ranking">
+            <thead>
+              <tr>
+                <th>Classement</th>
+                <th>Cl. Open</th>
+                <th>Skipper</th>
+                <th>Vitesse</th>
+                <th>Cap</th>
+                <th>DTL</th>
+                <th>DTL open</th>
+                <th>DTF</th>
+                <th>VMG</th>
+                <th>VMG WP</th>
+              </tr>
+              <tbody></tbody>
+            </thead>
+          </table>
         </div>
       </div>
+
       <div id="sidebar">
         <button id="close"><i class="icon-cancel-circle"></i></button>
        <div class="header">
@@ -116,9 +145,34 @@
        </div>
        <div class="bloc metrics">
          <div><div>Position</div><div id="data_postion">--</div></div>
-         <div><div>Vitesse</div><div><span  id="data_speed">--</span> kt</div></div>
-         <div><div>Cap</div><div id="data_heading">--</div></div>
+ 
+          <div>
+            <div>Vitesse</div>
+            <div class="withicon">
+              <div class="icondata" id='data_speedforce'>
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                <path d="M14.995,11.314C12.764,10.494 11.17,8.349 11.17,5.835C11.17,2.615 13.785,0 17.005,0L17.005,13.053C17.916,13.364 18.637,14.085 18.947,14.995L20.686,14.995C21.506,12.764 23.651,11.17 26.165,11.17C29.385,11.17 32,13.785 32,17.005L18.947,17.005C18.636,17.916 17.915,18.637 17.005,18.947L17.005,20.653L16.914,20.653C19.193,21.448 20.83,23.617 20.83,26.165C20.83,29.385 18.215,32 14.995,32L14.995,18.947C14.084,18.636 13.363,17.915 13.053,17.005L11.314,17.005C10.494,19.236 8.349,20.83 5.835,20.83C2.615,20.83 0,18.215 0,14.995L13.053,14.995C13.364,14.084 14.085,13.363 14.995,13.053L14.995,11.314Z"/>
+              </svg>
+            </div>
+            <span id="data_speed">--</span>
+           </div>
+          </div>
+
+         <div>
+          <div>Cap</div>
+          <div class="withicon">
+            <div class="icondata" id='data_cap'>
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+              <path d="M9.872,32C9.872,32 9.454,24.217 9.946,20.372C10.943,12.579 14.257,4.131 15.495,1.171C15.576,0.983 15.761,0.861 15.966,0.861C16.171,0.861 16.357,0.983 16.438,1.171C17.675,4.131 20.989,12.579 21.986,20.372C22.477,24.217 22.059,32 22.059,32L9.872,32Z"/>
+            </svg>
+          </div>
+          <span id="data_heading">--</span>
+         </div>
+        </div>
        </div>
+
        <div class="bloc metrics">
          <div><div>Vent</div>
          <div class="withicon">
@@ -200,7 +254,11 @@
       var depart = new Date(2020, 10, 8, 14, 20);
       var dateNow = new Date();
       var timerdelta = Math.abs(dateNow -depart) / 1000;
-                
+             
+      function truncate(str, n){
+        return (str.length > n) ? str.substr(0, n-1) + '&hellip;' : str;
+      };
+
       function windcolor(force){
         var colors = ['#ffffff', '#eaf0db', '#dfdfb1', '#e1ca7c', '#ffa71d', '#ff8b1b', '#f97025', '#ef5532', '#e03a42', '#cc1e55', '#b1016d', '#8b008b'];
           if(force <=1){
@@ -489,24 +547,31 @@
         var boatPositions = [];
         var foilerBoatsGroup = [];
         var daggerBoardBoatsGroup = [];
+        var traces = [];
         var foilerTraceGroup = [];
         var daggerBoardTraceGroup = [];
+        var ranking = []; 
 
         $.getJSON( "classement.json"+"?"+Math.random(), function( data ) {
           $.each( data, function( key, val ) {
             var latlngs = [];
             var lastPosition = null;
             var lastRotation = null;
+            var lastClassement = null;
           
             // --- TRACE ---- //
             $.each( val.classements, function( elemK, elemV ) {
               lastPosition = [elemV.latitude, elemV.longitude];
               lastRotation = elemV.cap;
               latlngs.push(lastPosition);
+              lastClassement = elemV;
             });
+
+            latlngs.reverse();
+            ranking.push({'id': key, ...lastClassement});
     
             // Trace boat line
-            var trace = L.polyline(latlngs, {color: val.couleur}).addTo(map);
+            var trace = L.polyline(latlngs, {id: 'p_'+key, color: val.couleur, weight: 2}).addTo(map);
 
             // ----- MARKER ----- //
             
@@ -515,20 +580,12 @@
             var height = 60;
             var boatIcon = L.icon({
                 iconUrl: 'static/img/markers/' + key + '.png',
-                iconSize:     [width, height],
-                iconAnchor:   [width/2, width/2]
+                iconSize:     [width/1.5, height/1.5],
+                iconAnchor:   [width/3, height/3]
             });
           
           // Create boat marker
           var boat = L.marker(lastPosition, {id: key, icon: boatIcon, rotationAngle: lastRotation,title:val.skipper});
-          
-          // Add click on the boat
-          boat.on("click", function(event){
-            var id = event.sourceTarget.options.id;
-            console.log(id)
-            openSidebar(id);
-            map.panTo(lastPosition);
-          });
 
           // Group by foiler / daggerBoard
           if (val.isFoiler){
@@ -538,9 +595,44 @@
             daggerBoardTraceGroup.push(trace);
             daggerBoardBoatsGroup.push(boat);
           }
+
+          //copy
+          traces.push(trace);
           
+          // Add click on the boat
+          boat.on("click", function(event){
+            var id = event.sourceTarget.options.id;
+            openSidebar(id);
+            map.panTo(lastPosition);
+          });
+
+          var dashedTrace = []
+          boat.on('mouseover', function(event){
+            var id = event.sourceTarget.options.id;
+
+            $.each( traces, function( key, val ) {
+              if(val.options.id == 'p_'+id) {
+                val.setStyle({opacity:0});
+                dashedTrace.push(L.polyline(val.getLatLngs(), {color: val.options.color, weight: 4, dashArray: "8 8", dashSpeed: Math.round(data[id].classements[data[id].classements.length-1].vitesse)}).addTo(map));
+              } else{
+                val.setStyle({weigh:2, opacity:0.3});
+              }
+            });
+          });
+
+          boat.on('mouseout', function(event){
+            $.each( traces, function( key, val ) {   
+              val.setStyle({opacity:1, weight:2});
+            });
+            $.each( dashedTrace, function( key, val ) {   
+              map.removeLayer(val);
+            });
+          });
+                    
           boatPositions.push(lastPosition);
         });
+
+
 
           // add Groups to map
           var foilerTraceLayer = L.layerGroup(foilerTraceGroup).addTo(map);
@@ -574,15 +666,13 @@
 
           // Count boat for skipper count
           $('#skipperCount').html(boatPositions.length);
-
-
+          
           // ----- SIDEBAR POPULATE FUNCTION ----- //
 
           function openSidebar(id){
               sidebar.show();
               var skipper = data[id];
-              
-              var current = skipper.classements.slice(-1)[0];
+              var current = skipper.classements[skipper.classements.length-1];
               
               var vitessePanel = skipper.classements.slice(-12);
               var vitesses = [];
@@ -605,8 +695,12 @@
               $('#data_skipper').text(skipper.skipper);
               $('#data_team').text(skipper.bateau);
               $('#data_postion').text(current.position);
-              $('#data_speed').text(current.vitesse);
-              $('#data_heading').text(current.cap+'°');
+              if(current.vitesse>0){
+                $('#data_speedforce>svg').css('animation', 'rotating '+Math.round(30/current.vitesse)+'s linear infinite');
+              }
+              $('#data_speed').html('<span>&nbsp;</span><span>'+current.vitesse+'kt</span>');
+              $('#data_heading').html('<span>&nbsp;</span><span>'+current.cap+'°</span>');
+              $('#data_cap>svg').css('transform', 'rotate('+current.cap+'deg)');
               $('#data_vent').html('<span>Direction: '+skipper.Meteo.wind.deg+'°</span><span>'+wind.toFixed(2)+'kt</span>');
               $('#data_direction>svg').css('transform', 'rotate('+(skipper.Meteo.wind.deg +135) % 360+'deg)');
               $('#data_direction>svg>path').css('fill', windcolor(wind));
@@ -639,11 +733,46 @@
               var datetime = moment(val.Date);
                htmlData += '<tr><td>'+datetime.format('DD/MM/YYYY HH:mm')+'</td><td>'+val.position+'</td><td>'+val.VMG+' <span class="grey">kt</span></td></tr>';
               });
+              skipper.classements.reverse();
               $('#positionHistory>tbody').html(htmlData);
           }
 
+          // ---- RANKING --- //
+
+          ranking.sort(function(a, b) {
+            var keyA = a.position;
+            var keyB = b.position;
+            // Compare the 2 dates
+            if (keyA < keyB) return -1;
+            if (keyA > keyB) return 1;
+            return 0;
+          });
+
+
+
+          var htmlData = '';
+          console.log(ranking)
+          $.each(ranking, function(key, val) {
+            var datetime = moment(val.Date);
+            var foiler = (data[val.id].isFoiler === true) ? 'Foiler' :'Dérives';
+            var foilerCl = (data[val.id].isFoiler === true) ? 'foiler' :'derive';
+            htmlData += '<tr>\
+              <td>'+val.position+'</td>\
+              <td>'+val.classement_open+'</td>\
+              <td><div id="skp"><img style="border-color:'+data[val.id].couleur+'" src="static/img/avatar/'+val.id+'.jpg" /><div><div>'+data[val.id].skipper+'</div><div>'+truncate(data[val.id].bateau, 20)+'<span class="boat-type '+foilerCl+'">'+foiler+'</span></div></div></td>\
+              <td>'+val.vitesse.toFixed(1)+' <span class="grey">kt</span></td>\
+              <td>'+val.cap+' <span class="grey">°</span></td>\
+              <td>'+val.DTL.toFixed(1)+' <span class="grey">nm</span></td>\
+              <td>'+val.DTL_open.toFixed(1)+' <span class="grey">kt</span></td>\
+              <td>'+val.DTF.toFixed(1)+' <span class="grey">nm</span></td>\
+              <td>'+val.VMG.toFixed(1)+' <span class="grey">kt</span></td>\
+              <td>'+val.VMG_wp.toFixed(1)+' <span class="grey">kt</span></td>\
+              </tr>';
+          });
+          $('#Ranking>tbody').html(htmlData);
+          $("#Ranking").tablesorter();
+
         });
-      
       };
     </script>
   </body>
