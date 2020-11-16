@@ -327,7 +327,7 @@
         return parseInt(result[1], 16) +', '+ parseInt(result[2], 16)+ ', '+ parseInt(result[3], 16);
       }
 
-      function setSideBarChartConfig(label, data, average){
+      function setSideBarChartConfig(label, data, average, min, max){
         return {
           type: 'line',
           data: {
@@ -348,9 +348,10 @@
             scales: {
               yAxes: [{
                   ticks: {
-                      beginAtZero: true,
+                      
                       fontColor: '#FFFFFF',
-                      max: 35,
+                      suggestedMin: min,
+                      suggestedMax: max,
                   },
                   gridLines: {
                     color: "#333A43",
@@ -676,6 +677,8 @@
               
               var vitessePanel = skipper.classements.slice(-12);
               var vitesses = [];
+              var vitesse_max = 0;
+              var vitesse_min = 100;
               var labels = [];
               var total = 0;
               
@@ -684,6 +687,12 @@
                 var datetime = moment(elem.Date);
                 labels.push(datetime.format('HH:mm'));
                 total += elem.vitesse;
+                if(elem.vitesse>vitesse_max){
+                	vitesse_max=elem.vitesse;
+                }
+                if(elem.vitesse<vitesse_min){
+                	vitesse_min=elem.vitesse;
+                }
               });
 
               var average = total / vitessePanel.length;
@@ -725,8 +734,9 @@
 
               // Speed chart
               var ctx = document.getElementById('speedChart').getContext('2d');
-              var sidebarChart = new Chart(ctx, setSideBarChartConfig(labels, vitesses, average));
-          
+
+              var sidebarChart = new Chart(ctx, setSideBarChartConfig(labels, vitesses, average, vitesse_min, vitesse_max));
+          	  
               // position history
               var htmlData = '';
               $.each(skipper.classements.reverse(), function(key, val) {
@@ -751,7 +761,7 @@
 
 
           var htmlData = '';
-          console.log(ranking)
+    
           $.each(ranking, function(key, val) {
             var datetime = moment(val.Date);
             var foiler = (data[val.id].isFoiler === true) ? 'Foiler' :'Dérives';
