@@ -478,7 +478,7 @@
         var wind10mLayerGroup = new L.layerGroup([], {});
         wind10mArray.length = map.timeDimension._availableTimes.length;
         var actualTimeIndex = map.timeDimension._currentTimeIndex;
-        updateLayer(wind10mArray[actualTimeIndex]);
+        
 
         function updateLayer(Layer){ //updates the actual layer
           wind10mLayerGroup.clearLayers();
@@ -508,13 +508,8 @@
             wind10mLayerGroup.addTo(map);
           });
         }
+		
 
-        window.setInterval(function() { //check if time index changed
-          if (actualTimeIndex != map.timeDimension._currentTimeIndex) {
-          actualTimeIndex = map.timeDimension._currentTimeIndex;
-          updateLayer(wind10mArray[actualTimeIndex]);
-          }
-        },100);
 
         // ------ TERMINATOR ----- //
         var terminator = L.terminator({fillOpacity:0.2}).addTo(map);
@@ -556,7 +551,7 @@
         var foilerTraceGroup = [];
         var daggerBoardTraceGroup = [];
         var ranking = []; 
-
+		var heure_dernier_classement;
         $.getJSON( "classement.json"+"?"+Math.random(), function( data ) {
           $.each( data, function( key, val ) {
             var latlngs = [];
@@ -574,7 +569,8 @@
 
             latlngs.reverse();
             ranking.push({'id': key, ...lastClassement});
-    
+    		// Heure dernier classement
+    		heure_dernier_classement = new Date(lastClassement.Date);
             // Trace boat line
             var trace = L.polyline(latlngs, {id: 'p_'+key, color: val.couleur, weight: 2}).addTo(map);
 
@@ -636,9 +632,33 @@
                     
           boatPositions.push(lastPosition);
         });
+        
+          // Alignement météo sur dernier classement
+		 
+			var heure_recherche = startTime;
+			var index_meteo=0;
 
-
-
+			if(heure_dernier_classement>=startTime && heure_dernier_classement<=endTime){
+				while(heure_dernier_classement>heure_recherche){
+ 					index_meteo++;
+ 					heure_recherche.setHours(heure_recherche.getHours()+actualInterval);
+ 				}
+				if((heure_recherche-heure_dernier_classement)>3*60*60*3600)
+				{
+					index_meteo--;
+				}
+				map.timeDimension.nextTime(index_meteo-actualTimeIndex,false);
+ 				actualTimeIndex=index_meteo;
+			}
+		  updateLayer(wind10mArray[actualTimeIndex]);
+		  //update weather layer based on slider
+		  window.setInterval(function() { //check if time index changed
+          if (actualTimeIndex != map.timeDimension._currentTimeIndex) {
+          actualTimeIndex = map.timeDimension._currentTimeIndex;
+          updateLayer(wind10mArray[actualTimeIndex]);
+          }
+        },100);
+		  
           // add Groups to map
           var foilerTraceLayer = L.layerGroup(foilerTraceGroup).addTo(map);
           var daggerBoardTraceLayer = L.layerGroup(daggerBoardTraceGroup).addTo(map); 
