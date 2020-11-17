@@ -55,6 +55,7 @@
     <link rel="stylesheet" href="static/leaflet/leaflet.css"/>
     <script src="static/leaflet/leaflet.js" ></script>
     <script src="static/L.Path.DashFlow.js" ></script>
+    <script src="static/leaflet.antimeridian-src.js" ></script>
     <!--leaflet-velocity-->
     <link rel="stylesheet" href="static/velocity/leaflet-velocity.css" />
     <script src="static/velocity/leaflet-velocity.js"></script>
@@ -526,7 +527,7 @@
           
           aez.push([value[1],value[0]]);
           });
-          L.polyline(aez, {color: "red", weight: 1}).addTo(map);
+          L.polyline(aez, {color: "red", weight: 1}).bindTooltip("Zone d'Exclusion Antarctique", {sticky:true, direction:'bottom'}).addTo(map);
         }); 
 		
         // ------ SIDEBAR ----- //
@@ -547,7 +548,8 @@
         var foilerTraceGroup = [];
         var daggerBoardTraceGroup = [];
         var ranking = []; 
-		var heure_dernier_classement;
+		    var heure_dernier_classement;
+        
         $.getJSON( "classement.json"+"?"+Math.random(), function( data ) {
           $.each( data, function( key, val ) {
             var latlngs = [];
@@ -565,10 +567,11 @@
 
             latlngs.reverse();
             ranking.push({'id': key, ...lastClassement});
-    		// Heure dernier classement
-    		heure_dernier_classement = new Date(lastClassement.Date);
+            // Heure dernier classement
+            heure_dernier_classement = new Date(lastClassement.Date);
             // Trace boat line
-            var trace = L.polyline(latlngs, {id: 'p_'+key, color: val.couleur, weight: 2}).addTo(map);
+            //var trace = L.polyline(latlngs, {id: 'p_'+key, color: val.couleur, weight: 2}).addTo(map);
+            var trace = new L.Wrapped.Polyline(latlngs, {id: 'p_'+key, color: val.couleur, weight: 2}).addTo(map);
 
             // ----- MARKER ----- //
             
@@ -582,7 +585,7 @@
             });
           
           // Create boat marker
-          var boat = L.marker(lastPosition, {id: key, icon: boatIcon, rotationAngle: lastRotation,title:val.skipper});
+          var boat = L.marker(lastPosition, {id: key, icon: boatIcon, rotationAngle: lastRotation}).bindTooltip('['+lastClassement.position+ '] ' + val.skipper + ' - ' + val.bateau, {offset:L.point(10,0), direction:'right'});
 
           // Group by foiler / daggerBoard
           if (val.isFoiler){
@@ -625,7 +628,7 @@
             $.each( traces, function( key, val ) {
               if(val.options.id == 'p_'+id) {
                 val.setStyle({opacity:0});
-                dashedTrace.push(L.polyline(val.getLatLngs(), {color: val.options.color, weight: 4, dashArray: "8 8", dashSpeed: Math.round(data[id].classements[data[id].classements.length-1].vitesse)}).addTo(map));
+                dashedTrace.push(new L.Wrapped.Polyline(val.getLatLngs(), {color: val.options.color, weight: 4, dashArray: "8 8", dashSpeed: Math.round(data[id].classements[data[id].classements.length-1].vitesse)}).addTo(map));
               } else{
                 val.setStyle({weigh:2, opacity:0.3});
               }
@@ -838,6 +841,11 @@
           $('#Ranking>tbody').html(htmlData);
           $("#Ranking").tablesorter();
 
+        });
+
+        $.getJSON( "armel.json", function( armeltrace ) {
+
+          new L.Wrapped.Polyline(armeltrace, {color: "grey", weight: 2, dashArray: [2,4]}).bindTooltip("Armel Le Cléac'h - Banque Populaire / VG2016", {sticky:true}).addTo(map);
         });
       };
     </script>
