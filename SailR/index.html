@@ -94,7 +94,7 @@
     <link rel="stylesheet" href="static/mousecoordinates/L.Control.MousePosition.css" />
     <script src="static/mousecoordinates/L.Control.MousePosition.js"></script>
     <!-- Custom -->
-    <link rel="stylesheet" href="static/style.css?v=11" />
+    <link rel="stylesheet" href="static/style.css?v=12" />
   </head>
   <body>
     <div class="black-container">
@@ -460,9 +460,30 @@
 
 
         // Add openSeaMap Overlay
+        var openweathermapClouds = L.tileLayer('https://tile.openweathermap.org/map/clouds_new/{z}/{x}/{y}.png?appid=4a3f984d1742f11478df5e7ac0845ef5', {
+          attribution: 'Weather from <a href="http://openweathermap.org">OpenWeatherMap</a>'
+        });
+
+        var openweathermapPrecipitation= L.tileLayer('https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=4a3f984d1742f11478df5e7ac0845ef5', {
+          attribution: 'Weather from <a href="http://openweathermap.org">OpenWeatherMap</a>'
+        });
+
+        var openweathermapPression = L.tileLayer('https://tile.openweathermap.org/map/pressure_new/{z}/{x}/{y}.png?appid=4a3f984d1742f11478df5e7ac0845ef5', {
+          attribution: 'Weather from <a href="http://openweathermap.org">OpenWeatherMap</a>'
+        });
+
+        var openweathermapWind = L.tileLayer('https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid=4a3f984d1742f11478df5e7ac0845ef5', {
+          attribution: 'Weather from <a href="http://openweathermap.org">OpenWeatherMap</a>'
+        });
+
+        var openweathermapTemp = L.tileLayer('https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=4a3f984d1742f11478df5e7ac0845ef5', {
+          attribution: 'Weather from <a href="http://openweathermap.org">OpenWeatherMap</a>'
+        });
+
+        // Add openSeaMap Overlay
         var openSeaMap = L.tileLayer('https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png', {
           attribution: 'Map data: &copy; <a href="http://www.openseamap.org">OpenSeaMap</a> contributors'
-        }).addTo(map);
+        });
 
 
         // Wind
@@ -700,26 +721,32 @@
           var overlays = {
             "OpenSeaMap" : openSeaMap,
             "Navionics" : myNavionicsOverlay,
-            "Vent": wind10mLayerGroup,
             "Jour/nuit": terminator,
             'Foilers': foilersLayer,
             "Dérives": daggerBoardLayer,
+            "Vent (anim)": wind10mLayerGroup,
+            'Vent (static)': openweathermapWind,
+            'Nuages': openweathermapClouds,
+            'Précipitations': openweathermapPrecipitation,
+            'Pression': openweathermapPression,
+            'Température': openweathermapTemp,
           };
 
           layerControl = L.control.layers(baseLayers, overlays, {position: 'topleft'});
           layerControl.addTo(map);
-		  wind10mLayerGroup.on("remove",function(){
-		  	map.removeControl(timeDimensionControl);
-		  });
-		  wind10mLayerGroup.on("add",function(){
-		  timeDimensionControl = L.control.timeDimension({
-          position: "bottomright",
-          loopButton: false,
-          limitSliders: false,
-          playButton: false,
-          speedSlider: false
-        } ).addTo(map);
-        });
+
+          wind10mLayerGroup.on("remove",function(){
+            map.removeControl(timeDimensionControl);
+          });
+          wind10mLayerGroup.on("add",function(){
+          timeDimensionControl = L.control.timeDimension({
+              position: "bottomright",
+              loopButton: false,
+              limitSliders: false,
+              playButton: false,
+              speedSlider: false
+            } ).addTo(map);
+            });
 		  
           // autoFit map
           map.fitBounds(boatPositions);
