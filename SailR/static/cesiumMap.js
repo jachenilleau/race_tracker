@@ -25,8 +25,6 @@ function initMap(containerId){
 }
 
 function addBoatToMap(key,boat){
-
-    console.log(key);
     // Billboard size
     var width = 40;
     var height = 60;
@@ -80,13 +78,18 @@ function addBoatToMap(key,boat){
     //boatsEntities.push(boatEntity);
 }
 
-function addDSTZone(zonePoints,zoneName){
+function addZone(zonePoints,zoneName,flipCoords){
     // Points
     var ptsArray = [];
     //Inversion Lat/Lon
     $.each(zonePoints, function(index,value){
-        ptsArray.push(value[0]);
-        ptsArray.push(value[1]);
+        if(flipCoords == true){
+            ptsArray.push(value[1]);
+            ptsArray.push(value[0]);
+        }else{
+            ptsArray.push(value[0]);
+            ptsArray.push(value[1]);
+        }
     });
     // Build polygon
     var dstZone = viewer.entities.add({
@@ -101,4 +104,26 @@ function addDSTZone(zonePoints,zoneName){
             })
         }
     });
+}
+
+function addPolyline(linePts,lineName){
+
+    // map points
+    const polylinePoints = [];
+    $.each(linePts,function(index,value){
+        //const position = Cesium.Cartesian3.fromDegrees(value[1],value[0],0.0);
+        polylinePoints.push(value[1]);
+        polylinePoints.push(value[0]);
+    })
+
+    var polylineEntity = new Cesium.Entity({
+        name:lineName,
+        polyline: {
+            positions: Cesium.Cartesian3.fromDegreesArray(polylinePoints),
+            width: 0.5,
+            material: Cesium.Color.WHITE
+        }
+    });
+
+    viewer.entities.add(polylineEntity);
 }

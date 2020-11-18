@@ -545,9 +545,12 @@
 
         // ------- DST DATA ------ //
         $.getJSON( "dst.json"+"?"+Math.random(), function( data ) {
+          // Add to 2d map
           L.polygon(data, {color: "red", weight: 1}).addTo(map);
+         
+          // Add to 3d map
           $.each(data, function(index,zone){
-            addDSTZone(zone,"Zone interdite");
+            addZone(zone,"Zone interdite",true);
           });
         }); 
 		
@@ -558,8 +561,10 @@
           $.each(data, function(index,value){         
             aez.push([value[1],value[0]]);
           });
+          // Add to 2d map
           L.polyline(aez, {color: "red", weight: 1}).bindTooltip("Zone d'Exclusion Antarctique", {sticky:true, direction:'bottom'}).addTo(map);
-          addDSTZone(data,"Zone des glaces");
+          // Add to 3d map
+          addZone(data,"Zone des glaces",false);
         }); 
 		
         // ------ SIDEBAR ----- //
@@ -885,8 +890,8 @@
         });
 
         $.getJSON( "armel.json", function( armeltrace ) {
-
           new L.Wrapped.Polyline(armeltrace, {color: "grey", weight: 2, dashArray: [2,4]}).bindTooltip("Armel Le Cléac'h - Banque Populaire / VG2016", {sticky:true}).addTo(map);
+          addPolyline(armeltrace,"Armel Le Cléac'h - Banque Populaire / VG2016");
         });
       };
     </script>
