@@ -67,6 +67,9 @@
     <!-- add Leafleet sidebar -->
     <link rel="stylesheet" href="static/leaflet-sidebar/src/L.Control.Sidebar.css" />
     <script src="static/leaflet-sidebar/src/L.Control.Sidebar.js"></script>
+    <!-- add Cesium 3D map -->
+    <script src="https://cesiumjs.org/releases/1.75/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesiumjs.org/releases/1.75/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
     <!--for timeslider-->
     <script type="text/javascript" src="static/timedimension/iso8601.min.js"></script>
     <script type="text/javascript" src="static/timedimension/leaflet.timedimension.noLayers.src.js"></script>
@@ -103,7 +106,8 @@
       <div class="container txtheader">Cartographie non officielle du <span class="blue">Vendée-Globe 2020/2021</span> - <a target="_blank" href="https://github.com/volodiaja/race_tracker/">Github</a></div>
       </div>
       
-      <div id="map"></div>
+      <div id="map" style="display: none;"></div>
+      <div id="map3D"></div>
       
       <div id="footer" class="black-container">
         <div class="container chronodata">
@@ -415,6 +419,8 @@
             currentTime: actualTime
           }}).setView({lon: 0, lat: 0}, 2);
 
+        // --- Build 3D map ---
+        initMap('map3D');
 
         // --- LAYOUTS --- //
 
@@ -539,18 +545,26 @@
 
         // ------- DST DATA ------ //
         $.getJSON( "dst.json"+"?"+Math.random(), function( data ) {
+          // Add to 2d map
           L.polygon(data, {color: "red", weight: 1}).addTo(map);
+         
+          // Add to 3d map
+          $.each(data, function(index,zone){
+            addZone(zone,"Zone interdite",true);
+          });
         }); 
 		
 		    // ------- AEZ DATA ------ //
         $.getJSON( "aez.json"+"?"+Math.random(), function( data ) {
           var aez=[];
           //Inversion Lat/Lon
-          $.each(data, function(index,value){
-          
-          aez.push([value[1],value[0]]);
+          $.each(data, function(index,value){         
+            aez.push([value[1],value[0]]);
           });
+          // Add to 2d map
           L.polyline(aez, {color: "red", weight: 1}).bindTooltip("Zone d'Exclusion Antarctique", {sticky:true, direction:'bottom'}).addTo(map);
+          // Add to 3d map
+          addZone(data,"Zone des glaces",false);
         }); 
 		
         // ------ SIDEBAR ----- //
@@ -677,6 +691,9 @@
           });
                     
           boatPositions.push(lastPosition);
+
+          // Add boat to 3D map
+          addBoatToMap(key,val);
         });
         
           // Alignement météo sur dernier classement
@@ -873,8 +890,8 @@
         });
 
         $.getJSON( "armel.json", function( armeltrace ) {
-
           new L.Wrapped.Polyline(armeltrace, {color: "grey", weight: 2, dashArray: [2,4]}).bindTooltip("Armel Le Cléac'h - Banque Populaire / VG2016", {sticky:true}).addTo(map);
+          addPolyline(armeltrace,"Armel Le Cléac'h - Banque Populaire / VG2016");
         });
       };
     </script>
