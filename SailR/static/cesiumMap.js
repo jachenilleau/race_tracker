@@ -74,8 +74,6 @@ function addBoatToMap(key,boat){
     });
 
     viewer.entities.add(boatEntity);
-
-    //boatsEntities.push(boatEntity);
 }
 
 function addZone(zonePoints,zoneName,flipCoords){
