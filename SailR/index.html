@@ -573,27 +573,36 @@
         
         $.getJSON( "classement.json"+"?"+Math.random(), function( data ) {
           $.each( data, function( key, val ) {
+          
             var latlngs = [];
             var lastPosition = null;
             var lastRotation = null;
             var lastClassement = null;
-          
+          	
             // --- TRACE ---- //
             $.each( val.classements, function( elemK, elemV ) {
-              lastPosition = [elemV.latitude, elemV.longitude];
-              lastRotation = elemV.cap;
-              latlngs.push(lastPosition);
+            
+              if (typeof elemV.latitude !== 'undefined' && typeof elemV.longitude !== 'undefined') {
+              	lastPosition = [elemV.latitude, elemV.longitude];
+              	lastRotation = elemV.cap;
+              	latlngs.push(lastPosition);
+              }
               lastClassement = elemV;
             });
-
+		
             latlngs.reverse();
+
+
             ranking.push({'id': key, ...lastClassement});
             // Heure dernier classement
             heure_dernier_classement = new Date(lastClassement.Date);
             // Trace boat line
             //var trace = L.polyline(latlngs, {id: 'p_'+key, color: val.couleur, weight: 2}).addTo(map);
+        
+			if(lastClassement.status=="RAC"){
+			boatPositions.push(lastPosition);
             var trace = new L.Wrapped.Polyline(latlngs, {id: 'p_'+key, color: val.couleur, weight: 2}).addTo(map);
-
+			
             // ----- MARKER ----- //
             
             // Design boat icon
@@ -607,7 +616,7 @@
           
           // Create boat marker
           var boat = L.marker(lastPosition, {id: key, icon: boatIcon, rotationAngle: lastRotation}).bindTooltip('['+lastClassement.position+ '] ' + val.skipper + ' - ' + val.bateau, {offset:L.point(10,0), direction:'right'});
-
+		
           // Group by foiler / daggerBoard
           if (val.isFoiler){
             foilerTraceGroup.push(trace);
@@ -616,7 +625,7 @@
             daggerBoardTraceGroup.push(trace);
             daggerBoardBoatsGroup.push(boat);
           }
-
+	
           //copy
           traces.push(trace);
           
@@ -674,7 +683,9 @@
             });
           });
                     
-          boatPositions.push(lastPosition);
+         
+          }
+
         });
         
           // Alignement météo sur dernier classement
@@ -749,7 +760,7 @@
             });
 		  
           // autoFit map
-          map.fitBounds(boatPositions);
+          //map.fitBounds(boatPositions);
 
           // Count boat for skipper count
           $('#skipperCount').html(boatPositions.length);
@@ -836,8 +847,18 @@
           // ---- RANKING --- //
 
           ranking.sort(function(a, b) {
+			if (typeof a.position !== 'undefined') {
             var keyA = a.position;
+            }
+            else{
+            var keyA = 1000;
+            }
+        	if (typeof b.position !== 'undefined') {
             var keyB = b.position;
+            }
+            else{
+            var keyB = 1000;
+            }
             // Compare the 2 dates
             if (keyA < keyB) return -1;
             if (keyA > keyB) return 1;
@@ -849,25 +870,38 @@
           var htmlData = '';
     
           $.each(ranking, function(key, val) {
+			
             var datetime = moment(val.Date);
             var foiler = (data[val.id].isFoiler === true) ? 'Foiler' :'Dérives';
             var foilerCl = (data[val.id].isFoiler === true) ? 'foiler' :'derive';
+            if(val.status=="RAC"){
             htmlData += '<tr>\
-              <td>'+val.position+'</td>\
-              <td>'+val.classement_open+'</td>\
-              <td><div id="skp"><img style="border-color:'+data[val.id].couleur+'" src="static/img/avatar/'+val.id+'.jpg" /><div><div>'+data[val.id].skipper+'</div><div>'+truncate(data[val.id].bateau, 20)+'<span class="boat-type '+foilerCl+'">'+foiler+'</span></div></div></td>\
-              <td>'+val.vitesse.toFixed(1)+' <span class="grey">kt</span></td>\
-              <td>'+val.cap+' <span class="grey">°</span></td>\
-              <td>'+val.DTL.toFixed(1)+' <span class="grey">nm</span></td>\
-              <td>'+val.DTL_open.toFixed(1)+' <span class="grey">nm</span></td>\
-              <td>'+val.DTF.toFixed(1)+' <span class="grey">nm</span></td>\
-              <td>'+val.VMG.toFixed(1)+' <span class="grey">kt</span></td>\
-              <td>'+val.VMG_wp.toFixed(1)+' <span class="grey">kt</span></td>\
-              </tr>';
+				  <td>'+val.position+'</td>\
+				  <td>'+val.classement_open+'</td>\
+				  <td><div id="skp"><img style="border-color:'+data[val.id].couleur+'" src="static/img/avatar/'+val.id+'.jpg" /><div><div>'+data[val.id].skipper+'</div><div>'+truncate(data[val.id].bateau, 20)+'<span class="boat-type '+foilerCl+'">'+foiler+'</span></div></div></td>\
+				  <td>'+val.vitesse.toFixed(1)+' <span class="grey">kt</span></td>\
+				  <td>'+val.cap+' <span class="grey">°</span></td>\
+				  <td>'+val.DTL.toFixed(1)+' <span class="grey">nm</span></td>\
+				  <td>'+val.DTL_open.toFixed(1)+' <span class="grey">nm</span></td>\
+				  <td>'+val.DTF.toFixed(1)+' <span class="grey">nm</span></td>\
+				  <td>'+val.VMG.toFixed(1)+' <span class="grey">kt</span></td>\
+				  <td>'+val.VMG_wp.toFixed(1)+' <span class="grey">kt</span></td>\
+				  </tr>';
+              }
+             if(val.status=="RET"){
+             	  htmlData += '<tr>\
+             	   <td colspan=2>'+val.classement_open+'</td>\
+				  <td><div id="skp"><img style="border-color:'+data[val.id].couleur+'" src="static/img/avatar/'+val.id+'.jpg" /><div><div>'+data[val.id].skipper+'</div><div>'+truncate(data[val.id].bateau, 20)+'<span class="boat-type '+foilerCl+'">'+foiler+'</span></div></div></td>\
+				  <td colspan=7>Abandon</span></td>\
+				 </tr>';
+             
+             }
+              
+              
           });
           $('#Ranking>tbody').html(htmlData);
           $("#Ranking").tablesorter();
-
+			
         });
 
         $.getJSON( "armel.json", function( armeltrace ) {
