@@ -130,8 +130,8 @@
                 <th>DTL</th>
                 <th>DTL open</th>
                 <th>DTF</th>
-                <th>VMG</th>
-                <th>VMG open</th>
+                <th>CMG</th>
+                <th>CMG open</th>
               </tr>
               <tbody></tbody>
             </thead>
@@ -242,7 +242,7 @@
               <tr>
                 <th>Jour</th>
                 <th>classement</th>
-                <th>VMG</th>
+                <th>CMG</th>
               </tr>
               <tbody></tbody>
             </thead>
@@ -252,7 +252,7 @@
         </div>
         <div class="bloc metrics">
           <div><div>Distance restante</div><div id="data_dist">--</div></div>
-          <div><div>VMG MAX</div><div id="data_vmgmax">--</div></div>
+          <div><div>CMG MAX</div><div id="data_vmgmax">--</div></div>
         </div>
       </div>
     </div>
@@ -851,13 +851,13 @@
             var keyA = a.position;
             }
             else{
-            var keyA = 1000;
+            var keyA = a.classement_open;
             }
         	if (typeof b.position !== 'undefined') {
             var keyB = b.position;
             }
             else{
-            var keyB = 1000;
+            var keyB = b.classement_open;
             }
             // Compare the 2 dates
             if (keyA < keyB) return -1;
@@ -890,7 +890,7 @@
               }
              if(val.status=="RET"){
              	  htmlData += '<tr>\
-             	   <td colspan=2>'+val.classement_open+'</td>\
+             	  <td colspan=2>'+val.classement_open+'</td>\
 				  <td><div id="skp"><img style="border-color:'+data[val.id].couleur+'" src="static/img/avatar/'+val.id+'.jpg" /><div><div>'+data[val.id].skipper+'</div><div>'+truncate(data[val.id].bateau, 20)+'<span class="boat-type '+foilerCl+'">'+foiler+'</span></div></div></td>\
 				  <td colspan=7>Abandon</span></td>\
 				 </tr>';
